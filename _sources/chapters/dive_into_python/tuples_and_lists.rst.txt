@@ -69,7 +69,9 @@ Show the Answer
 
    print(recovered_tuple)
 
-   """*This is a tricky way to get a tuple or a list from the user. It's not very safe but it is easy to do so for now. You will learn the more proper way to this later."""
+   """*This is a tricky way to get a tuple or a list from the user.
+   It's not very safe but it is easy to do so for now.
+   You will learn the more proper way to this later."""
 
 .. raw:: html
 

@@ -45,7 +45,15 @@ Show the Answer
 
    <div class="hiddenanswer">
 
-``{.python frame="single" backgroundcolor="\\color" language="Python" showstringspaces="false" basicstyle "\\ttfamily"}     lst = eval(input()) m = int(input()) length = len(lst) print(lst[length // 2 - m: m - length // 2])  # notice the slicing operator``
+.. code:: python
+
+   lst = eval(input())
+
+   m = int(input())
+
+   length = len(lst)
+
+   print(lst[length // 2 - m: m - length // 2])  # notice the slicing operator
 
 .. raw:: html
 

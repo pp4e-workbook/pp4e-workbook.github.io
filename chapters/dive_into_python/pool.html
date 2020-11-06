@@ -238,36 +238,36 @@ Output:
 </pre></div>
 </div>
 <button type="button" class="collapsible" onclick="toggle()"><p>Show the Answer</p>
-</button><div class="hiddenanswer"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span># the capacities of faucets
-f1 = int(input())
-f2 = int(input())
-f3 = int(input())
-f4 = int(input())
-f5 = int(input())
+</button><div class="hiddenanswer"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># the capacities of faucets</span>
+<span class="n">f1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">f3</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">f4</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">f5</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 
-# depths of 4th and 5th faucets
-d4 = int(input())
-d5 = int(input())
+<span class="c1"># depths of 4th and 5th faucets</span>
+<span class="n">d4</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">d5</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 
-# length, width and depth of the pool
-l_p = int(input())
-w_p = int(input())
-d_p = int(input())
+<span class="c1"># length, width and depth of the pool</span>
+<span class="n">l_p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">w_p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">d_p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 
-# heights of the fourth and fifth faucets from the bottom of the pool
-h4 = d_p - d4
-h5 = d_p - d5
+<span class="c1"># heights of the fourth and fifth faucets from the bottom of the pool</span>
+<span class="n">h4</span> <span class="o">=</span> <span class="n">d_p</span> <span class="o">-</span> <span class="n">d4</span>
+<span class="n">h5</span> <span class="o">=</span> <span class="n">d_p</span> <span class="o">-</span> <span class="n">d5</span>
 
-# Time to fill the volume between the bottom up to height of fourth faucet
-t1 = (h4 * w_p * l_p) / (f1 + f2 + f3)
+<span class="c1"># Time to fill the volume between the bottom up to height of fourth faucet</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="p">(</span><span class="n">h4</span> <span class="o">*</span> <span class="n">w_p</span> <span class="o">*</span> <span class="n">l_p</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">f1</span> <span class="o">+</span> <span class="n">f2</span> <span class="o">+</span> <span class="n">f3</span><span class="p">)</span>
 
-# Time to fill the volume between the faucet four and five
-t2 = ((h5 - h4) * w_p * l_p) / (f1 + f2 + f3 - f4)
+<span class="c1"># Time to fill the volume between the faucet four and five</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="p">((</span><span class="n">h5</span> <span class="o">-</span> <span class="n">h4</span><span class="p">)</span><span class="o">*</span> <span class="n">w_p</span> <span class="o">*</span> <span class="n">l_p</span><span class="p">)</span> <span class="o">/</span><span class="p">(</span><span class="n">f1</span> <span class="o">+</span> <span class="n">f2</span> <span class="o">+</span> <span class="n">f3</span> <span class="o">-</span> <span class="n">f4</span><span class="p">)</span>
 
-# Time to fill the rest
-t3 = ((d_p - h5) * w_p * l_p) / (f1 + f2 + f3 - f4 - f5)
+<span class="c1"># Time to fill the rest</span>
+<span class="n">t3</span> <span class="o">=</span> <span class="p">((</span><span class="n">d_p</span> <span class="o">-</span> <span class="n">h5</span><span class="p">)</span> <span class="o">*</span> <span class="n">w_p</span> <span class="o">*</span> <span class="n">l_p</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">f1</span> <span class="o">+</span> <span class="n">f2</span> <span class="o">+</span> <span class="n">f3</span> <span class="o">-</span> <span class="n">f4</span> <span class="o">-</span> <span class="n">f5</span><span class="p">)</span>
 
-print(“Time to fill the pool is %.f mins” % (t1 + t2 + t3))
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Time to fill the pool is %.f mins&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">t1</span> <span class="o">+</span> <span class="n">t2</span> <span class="o">+</span> <span class="n">t3</span><span class="p">))</span>
 </pre></div>
 </div>
 </div></div>
