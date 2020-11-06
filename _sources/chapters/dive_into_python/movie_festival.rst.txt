@@ -1,0 +1,58 @@
+
+Movie Festival |2|
+~~~~~~~~~~~~~~~~~~
+
+Enzo Gorlomi is a famous movie critic. A movie festival will take place
+in Paris and Gorlomi wants to watch every single movie. He gets so
+excited that he loses track of time. Gorlomi starts watching the movies
+at 11 o’clock and goes on for *n* hours nonstop. You input *n*.
+
+Can you remind Gorlomi what time it is after he finishes watching all
+the movies? (The 24-hour clock is used to denote the time)
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   5
+
+   Output:
+   16
+
+   Input:
+   18
+
+   Output:
+   5
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   n = int(input())
+
+   time = (11+n)%24
+
+   print(time)
+
+.. raw:: html
+
+   </div>

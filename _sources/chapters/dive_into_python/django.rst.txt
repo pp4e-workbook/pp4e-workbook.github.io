@@ -1,0 +1,46 @@
+
+Exercise: Django |3|
+~~~~~~~~~~~~~~~~~~~~
+
+|image1|
+
+Dr. King Schultz and Django, as ruthless warriors of justice, are
+wandering around America and hunting down wanted criminals. There are
+*n* criminals they need to seize in total. For the first criminal they
+take down, they receive *100* U.S. Dollars. Afterwards, for each
+lawbreaker they apprehend, they are paid $100 more than the previous
+one. Namely; if they take down 3 criminals one by one, they are going to
+earn $100, $200 and $300 for the first, second and third one
+respectively. However, bullets are not cheap these days. One bullet
+costs :math:`m` Dollars. They are brooding on how much they are going to
+profit, after wasting all those expensive bullets on filthy criminals.
+
+Given *n* (in the first line) and *m* (in the second line) as input, can
+you find how much money they are going to earn? Obviously, since Django
+is an experienced sharpshooter, they will not use more than one bullet
+for one criminal.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |3| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+.. |image1| image:: ../../figures/ch4_django.jpg
+   :class: width400
+
+.. code:: default
+
+   Input:
+   4
+   50
+
+   Output:
+   800
+
+   Input:
+   5
+   72
+
+   Output:
+   1140

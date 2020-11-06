@@ -1,0 +1,84 @@
+
+Dive into Python
+================
+
+.. toctree::
+   debt
+
+.. toctree::
+   varying_debt
+
+.. toctree::
+   division
+
+.. toctree::
+   greetings
+
+.. toctree::
+   headphones
+
+.. toctree::
+   conflict_of_metrics
+
+.. toctree::
+   lcd_shipment
+
+.. toctree::
+   jogging_at_devrim
+
+.. toctree::
+   tiling_the_floor
+
+.. toctree::
+   tiling_the_floor_min
+
+.. toctree::
+   movie_festival
+
+.. toctree::
+   circle_and_sphere
+
+.. toctree::
+   reflection_point
+
+.. toctree::
+   bmi
+
+.. toctree::
+   distance_between_circles
+
+.. toctree::
+   cube_extraction
+
+.. toctree::
+   pool
+
+.. toctree::
+   django
+
+.. toctree::
+   vector
+
+.. toctree::
+   slogan
+
+.. toctree::
+   grading_in_ceng314
+
+.. toctree::
+   fuel_tank
+
+.. toctree::
+   tuples_and_lists
+
+.. toctree::
+   inner_elements
+
+.. toctree::
+   lego
+
+.. toctree::
+   dictionaries
+
+.. toctree::
+   min_and_max_of_three

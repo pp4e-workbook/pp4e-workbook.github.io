@@ -1,0 +1,25 @@
+
+Exercise: Greetings |1|
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that asks the user for their name and greets them
+accordingly.
+
+You can ask for the name and greet the user anyway you like. Note that
+the ``input`` can take a ``str`` argument which it then uses as a
+*prompt*.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |1| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: python
+
+   "Hello, what is your name?"
+
+   >>> Emre
+
+   "Nice to meet you, Emre!"

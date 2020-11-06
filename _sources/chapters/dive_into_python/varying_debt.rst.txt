@@ -1,0 +1,54 @@
+
+Varying Debt |1|
+~~~~~~~~~~~~~~~~
+
+Consider the previous question, and adjust your code which can calculate
+the monthly payment for any amount of *given* debt.
+
+You can take the input from the user as a *float*.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |1| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: python
+
+   Input:
+   1000.0
+
+   Output:
+   187.69
+
+   Input:
+   2000.0
+
+   Output:
+   375.39
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   debt = float(input())
+   total_money = debt * (1.02 ** 6)
+   monthly_payment = total_money / 6
+   print("%.2f" % monthly_payment)
+
+.. raw:: html
+
+   </div>

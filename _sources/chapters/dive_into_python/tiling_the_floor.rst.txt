@@ -1,0 +1,61 @@
+
+Tiling the Floor |2|
+~~~~~~~~~~~~~~~~~~~~
+
+We want to cover the floor of a room with tiles without leaving any gap.
+All tiles are squares and are of the same length.
+
+Write a program that inputs a width and length (two *integers*) of the
+room and calculates the maximum possible (*integer*) length of a tile
+and prints it.
+
+**Hint:** *You can use the ``gcd()`` function from the ‘math’ module.*
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   24
+   8
+
+   Output:
+   8
+
+   Input:
+   1
+   12
+
+   Output:
+   1
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   from math import gcd        # importing gcd function
+   x = int(input())
+   y = int(input())
+
+   print(gcd(x,y))
+
+.. raw:: html
+
+   </div>

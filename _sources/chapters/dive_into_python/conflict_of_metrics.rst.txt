@@ -1,0 +1,40 @@
+
+Exercise: Conflict of Metrics |1|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You need to go from a building in the city of Pawnee to a building in
+the city of Eagleton. Your boss Ron gives you the distance between two
+buildings in miles because he identifies himself as a *Proud American*.
+But your friend Donna, who is going to drive you there, uses a European
+car and she tells you the average speed you can travel in km/h
+(kilometers per hour).
+
+Given the distance in miles on the first line and speed in km/h on the
+second line, calculate the time it will take you to travel to Eagleton
+in minutes. Print this time as a *float* with 2 digits after decimal
+point.
+
+**Hint:** *One mile is approximately 1.6 kilometer.*
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |1| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   60
+   100
+
+   Output:
+   57.60
+
+   Input:
+   79
+   150
+
+   Output:
+   50.56

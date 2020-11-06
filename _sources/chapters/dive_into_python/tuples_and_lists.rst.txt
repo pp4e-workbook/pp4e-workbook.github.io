@@ -1,0 +1,78 @@
+
+Tuples and Lists |3|
+~~~~~~~~~~~~~~~~~~~~
+
+Tuples are useful to keep the data and prevent any changes on them.
+Lists on the other hand are mutable and enable changes on the data. As
+you may already know, both types can be heterogenous. In other words,
+the data contained by these types do not have to be in the same type.
+
+In this example question, you will observe the properties of these types
+and how we can exploit them.
+
+Suppose you’re given a tuple by the user, in the first input line. This
+tuple should contain only integers. The user has forgotten one of them
+and used a ``"?"`` string in place of it. After remembering the value of
+this integer, in the second line of the input he enters a two-tuple. The
+first number is the index of the ``"?"`` and the second is the integer
+value that is going to be substituted in place of ``"?"`` .
+
+You are expected to fix the original tuple with this later information
+and print the corrected tuple.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |3| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   (1,2,3,"?",5)
+   (3,4)
+
+   Output:
+   (1,2,3,4,5)
+
+   Input:
+   (1,3,5,7,12,14,"?",40)
+   (6,17)
+
+   Output:
+   (1,3,5,7,12,14,17,40)
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   original_tuple = eval(input())          # *see below for explanation
+   index, missing_number = eval(input())   # notice tuple matching
+
+   lst = list(original_tuple)              # cast tuple to list so that you can change
+   lst[index] = missing_number
+
+   recovered_tuple = tuple(lst)            # cast list back to tuple again.
+
+   print(recovered_tuple)
+
+.. raw:: html
+
+   </div>
+
+\* *This is a tricky way to get a tuple or a list from the user. It’s
+not very safe but it is easy to do so for now. You will learn the more
+proper way to this later.*

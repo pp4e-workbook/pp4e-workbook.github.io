@@ -1,0 +1,32 @@
+
+Exercise: Circle and Sphere |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that inputs a radius *r* from the user and computes the
+area of a circle with radius *r* and the volume of a sphere with radius
+*r*. (Print 2 digits after the decimal point)
+
+**Hint:** *You can use the ``math`` module to import the pi constant*.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: python
+
+   Input:
+   5
+
+   Output:
+   circle area: 78.54
+   sphere volume: 523.6
+
+   Input:
+   4.25
+
+   Output:
+   circle area: 56.75
+   sphere volume: 321.56

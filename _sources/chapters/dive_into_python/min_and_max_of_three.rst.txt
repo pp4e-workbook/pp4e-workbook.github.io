@@ -1,0 +1,38 @@
+
+Exercise: Minimum and Maximum of Three |5|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that starts by reading three *integers* from the user.
+Then, use the built-in ``min`` and ``max`` functions to find the
+smallest and the largest values, respectively.
+
+The middle value can be *calculated* once the minimum and the maximum
+numbers are found. *(Think how you can do it without using
+conditionals.)*
+
+Finally, print the three values in *ascending* order in the same line.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |5| image:: ../../figures/difficulty_five.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   20
+   10
+   15
+
+   Output:
+   10 15 20
+
+   Input:
+   8
+   13
+   1
+
+   Output:
+   1 8 13

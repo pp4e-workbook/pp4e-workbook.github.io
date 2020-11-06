@@ -1,0 +1,19 @@
+
+The Workbook for Programming with Python for Engineers
+======================================================
+
+|image0|
+
+The workbook accompanying the `Programming with Python for
+Engineers <https://pp4e-book.github.io>`__ book is presented here.
+Supplementary exercises for each chapter will be available in due
+course.
+
+.. |image0| image:: figures/cover.png
+   :class: width500
+
+.. toctree::
+   :maxdepth: 1
+   :numbered:
+
+   chapters/dive_into_python/index.md

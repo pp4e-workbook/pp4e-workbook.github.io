@@ -1,0 +1,73 @@
+
+LCD Shipment |2|
+~~~~~~~~~~~~~~~~
+
+|image1|
+
+A company sells two types of electronic components; LCD screens and
+electronic ink displays. LCD screens weigh 63 grams and electronic ink
+displays weigh 30 grams.
+
+Ask the user for the total number of screens of each type to ship as
+*integers* and calculate the total weight of the shipment. Print the
+results as the same type.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+.. |image1| image:: ../../figures/ch4_eink_display.jpg
+   :class: width300
+
+.. code:: python
+
+   Input:
+   400
+   500
+
+   Output:
+   Total weight of LCD screens: 25200
+   Total weight of e ink displays: 15000
+
+   Input:
+   120
+   200
+
+   Output:
+   Total weight of LCD screens: 7560
+   Total weight of e ink displays: 6000
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   LCD_WEIGHT = 63
+   EINK_WEIGHT = 30
+
+   lcd_count = int(input("Enter the number of LCD screens: "))
+
+   eink_count = int(input("Enter the number of e ink displays: "))
+
+   total_lcd_weight = LCD_WEIGHT * lcd_count
+   total_eink_weight = EINK_WEIGHT * eink_count
+
+   print("Total weight of LCD screens: %d" % total_lcd_weight)
+   print("Total weight of e ink displays: %d" % total_eink_weight)
+
+.. raw:: html
+
+   </div>

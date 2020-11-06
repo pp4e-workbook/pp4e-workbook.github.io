@@ -1,0 +1,30 @@
+
+Exercise: Tiling the Floor with Minimum Tiles |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider the previous problems with tiles. Now write a program that
+calculates the minimum possible count of tiles required for the given
+room.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. code:: default
+
+   Input:
+   24
+   8
+
+   Output:
+   4
+
+   Input:
+   1
+   12
+
+   Output:
+   12
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty

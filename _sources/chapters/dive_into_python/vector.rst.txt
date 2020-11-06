@@ -1,0 +1,84 @@
+
+Vector |3|
+~~~~~~~~~~
+
+You need to complete two steps in this task. There are 3 points given to
+you in the order of *x1*, *y1*, *x2*, *y2*, *x3*, *y3*.
+
+Firstly you need to convert given coordinates into vectors, represented
+as as *tuples* (e.g. *p1* as *(x1,y1)*).
+
+Secondly, you will add the first two vectors, print the result, then
+subtract the third one and print the result. Do not use the variables
+you used earlier to get the input. The purpose here is to get familiar
+with the indexing of a tuple.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |3| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   1
+   0
+   2
+   3
+   1
+   4
+
+   Output:
+   (3, 3)
+   (2, -1)
+
+   Input:
+   5
+   3
+   2
+   2
+   0
+   -2
+
+   Output:
+   (7, 5)
+   (7, 7)
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   x1 = int(input())
+   y1 = int(input())
+   x2 = int(input())
+   y2 = int(input())
+   x3 = int(input())
+   y3 = int(input())
+
+   p1 = (x1, y1)
+   p2 = (x2, y2)
+   p3 = (x3, y3)
+
+   vector = (p1[0]+p2[0], p1[1]+p2[1])
+   translated_point = (vector[0]-p3[0], vector[1]-p3[1])
+
+   print(vector)
+   print(translated_point)
+
+.. raw:: html
+
+   </div>

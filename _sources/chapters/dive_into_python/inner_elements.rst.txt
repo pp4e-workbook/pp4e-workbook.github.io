@@ -1,0 +1,52 @@
+
+Inner Elements |3|
+~~~~~~~~~~~~~~~~~~
+
+In this question you are required to write a program that prints the
+innermost *m* elements in list format for a given list of length *n*. It
+is guaranteed that *m ≤ n*, and both numbers *m* and *n* are of the same
+parity.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |3| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   [1,2,3,4,5,6]
+   2
+
+   Output:
+   [3,4]
+
+
+   Input:
+   [10,4,6,2,7,32,6,76,99]
+   3
+
+   Output:
+   [2,7,32]
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+``{.python frame="single" backgroundcolor="\\color" language="Python" showstringspaces="false" basicstyle "\\ttfamily"} lst = eval(input()) m = int(input()) length = len(lst) print(lst[lst[(length-m)//2: (length+m) // 2]])     # notice the slicing operator``
+
+.. raw:: html
+
+   </div>

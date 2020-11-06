@@ -1,0 +1,32 @@
+
+Exercise: Headphones |1|
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+You want to buy a new pair of headphones from Amazon. The tax percentage
+applied to products at Amazon is 20%.
+
+Write a program that calculates the tax for the product. First, you
+shall read an *integer* from the input; then calculate the tax value;
+finally, print the result value as a *float*. (1 digit after decimal
+point is sufficient)
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |1| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: default
+
+   Input 1:
+   200
+
+   Output 1:
+   40.0
+
+   Input 2:
+   100
+
+   Output 2:
+   20.0

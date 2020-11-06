@@ -1,0 +1,59 @@
+
+Exercise: Distance between Circles |3|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the two-dimensional plane, it is expected to find the shortest
+distance between two circles that are defined by their radiuses and
+coordinates of their centers. As it can be seen in the figure below, you
+are expected to determine the length of the **bold** line and print it.
+
+If the two circle intersect each other, the length would be 0 or less,
+however, you can ignore that case, since no such input will be given.
+
+|image1|
+
+**Hint:** *``sqrt()`` function is available to import from the ``math``
+library. You can use it to find the square root of a number.*
+
+Input format is: - x coordinate of the first circle - y coordinate of
+the first circle - radius of the first circle - x coordinate of the
+second circle - y coordinate of the second circle - radius of the second
+circle
+
+Output format is:
+
+-  Length of the shortest distance (printing 2 digits after the decimal
+   point is sufficient)
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |3| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+.. |image1| image:: ../../figures/ch4_circles_distance.png
+   :class: width400
+
+.. code:: python
+
+   Input:
+   1
+   2
+   2
+   4
+   5
+   1
+
+   Output:
+   1.24
+
+   Input:
+   3
+   3
+   2
+   10
+   15
+   5
+
+   Output:
+   6.89

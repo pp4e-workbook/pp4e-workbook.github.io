@@ -1,0 +1,102 @@
+
+Dictionaries |5|
+~~~~~~~~~~~~~~~~
+
+Dictionaries in Python are useful types to create lookup tables and
+small databases. In this question you will design such a mini-database
+to hold the grades of 3 students.
+
+In this database you will hold 2 grades (midterm and final grades) of a
+student as a tuple. These tuples must be indexed with the id of the
+student.
+
+After the information needed to create this database is given, you will
+be given an id for one of the students to calculate the average of
+his/her grades.
+
+So, input format will be given in each line in the following order:
+
+-  ID of the 1st Student
+-  Midterm Grade of the 1st Student
+-  Final Grade of the 1st Student
+-  ID of the 2nd Student
+-  Midterm Grade of the 2nd Student
+-  Final Grade of the 2nd Student
+-  ID of the 3rd Student
+-  Midterm Grade of the 3rd Student
+-  Final Grade of the 3rd Student
+-  ID of the student whose grades will be calculated
+
+IDs will be given as *integer*\ s and grades will be given as *floats*.
+You should output the calculated average grade of the given student as a
+*float*. 1 digit after the decimal point is sufficient for this output.
+
+**Hint:** *While creating the database, you can use the same variables
+instead of defining new ones.*
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |5| image:: ../../figures/difficulty_five.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   1234567
+   40
+   70
+   3334444
+   90
+   80
+   2981356
+   35.4
+   12
+   2981356
+
+   Output:
+   23.7
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   db = dict()
+
+   student_id = int(input())
+   midterm = float(input())
+   final = float(input())
+   db[student_id] = (midterm, final)
+
+   student_id = int(input())
+   midterm = float(input())
+   final = float(input())
+   db[student_id] = (midterm, final)
+
+   student_id = int(input())
+   midterm = float(input())
+   final = float(input())
+   db[student_id] = (midterm, final)
+
+   student_id = int(input())
+
+   (midterm, final) = db[student_id]   # notice the tuple matching
+   average = (midterm + final) / 2
+   print("%.1f" % average)
+
+.. raw:: html
+
+   </div>

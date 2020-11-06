@@ -1,0 +1,61 @@
+
+Division |1|
+~~~~~~~~~~~~
+
+Write a program that takes two integers as input and divides the first
+number (the dividend) with the second number (the divisor). The program
+should print both the results of the division and the remainder.
+
+You can assume that the first number is always bigger than the second
+number, and both numbers are positive integers.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |1| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: python
+
+   Input:
+   8
+   3
+
+   Output:
+   2
+   1
+
+   Input:
+   17
+   5
+
+   Output:
+   3
+   2
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   dividend = int(input())
+   divisor = int(input())
+
+   print(dividend // divisor)  # notice integer division operator
+   print(dividend % divisor)
+
+.. raw:: html
+
+   </div>

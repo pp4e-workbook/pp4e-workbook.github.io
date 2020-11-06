@@ -1,0 +1,40 @@
+
+Exercise: BMI |2|
+~~~~~~~~~~~~~~~~~
+
+The *BMI* is defined as the body weight in kilogram divided by square of
+height in meters.
+
+Write a program that calculates BMI (Body Mass Index):
+
+-  First, read two *integers* from the input, the height in centimeters
+   and the weight in kilogram, respectively.
+-  Then calculate the BMI and round the value to an integer.
+
+-  Finally, print the result value.
+
+**Hint:** *You can use the built-in ``round`` function to round the
+float value to an integer.*
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   180
+   80
+
+   Output:
+   25
+
+   Input:
+   160
+   55
+
+   Output:
+   21

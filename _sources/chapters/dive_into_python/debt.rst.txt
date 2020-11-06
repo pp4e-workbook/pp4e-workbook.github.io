@@ -1,0 +1,39 @@
+
+Debt |0|
+~~~~~~~~
+
+Suppose you have borrowed $3000 with 2% monthly interest. For every
+month you do not pay, your total debt becomes 1.02 times the original
+debt.
+
+Assuming that your plan is to return the money within 6 months and you
+want to return it in equal amounts, write a program that outputs the
+amount of money you have to pay every month until you clear your debt
+(printing 2 digits after decimal point is sufficient).
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. |0| image:: ../../figures/indicated_difficulty_one.png
+   :class: indicateddifficulty
+
+.. code:: python
+
+   total_money = 3000 * (1.02 ** 6)        # notice the power operator
+   monthly_payment = total_money / 6
+   print("%.2f" % monthly_payment)     # 2 digits after decimal point
+
+.. raw:: html
+
+   </div>

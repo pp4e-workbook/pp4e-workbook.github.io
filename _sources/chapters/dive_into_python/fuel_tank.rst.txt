@@ -1,0 +1,56 @@
+
+Exercise: Fuel Tank |4|
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a program that calculates how many times a truck needs to refill
+its tank to complete a trip of a given length and the remaining liters
+of fuel in the truck’s tank at the end of the trip.
+
+The capacity of the truck’s fuel tank and its fuel consumption per 100
+kilometers will be given as input followed by the length of the trip.
+For the output you need to print the number of times to refill and the
+remaining liters of fuel respectively. Note that you should print two
+decimal places for the remaining liters of fuel.
+
+You can assume that initially the tank is full. Also, the truck refills
+its tank when it is completely empty. The only exception is it will not
+refill the empty tank if the trip is completed (*see the 3rd example in
+the sample i/o*).
+
+**Hint:** *You can use the ``ceil`` function from the math library.*
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |4| image:: ../../figures/difficulty_four.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   150
+   30
+   1100
+
+   Output:
+   2
+   120.00
+
+   Input:
+   300
+   27
+   1234
+
+   Output:
+   1
+   266.82
+
+   Input:
+   150
+   30
+   1000
+
+   Output:
+   1
+   0.00
