@@ -99,12 +99,12 @@ Show the Answer
    t1 = (h4 * w_p * l_p) / (f1 + f2 + f3)
 
    # Time to fill the volume between the faucet four and five
-   t2 = ((h5 – h4) * w_p * l_p) / (f1 + f2 + f3 – f4)
+   t2 = ((h5 - h4) * w_p * l_p) / (f1 + f2 + f3 - f4)
 
    # Time to fill the rest
-   t3 = ((d_p- h5) * w_p * l_p) / (f1 + f2 + f3 - f4 – f5)
+   t3 = ((d_p - h5) * w_p * l_p) / (f1 + f2 + f3 - f4 - f5)
 
-   print(“Time to fill the pool is %.4f mins”%(t1+t2+t3))
+   print(“Time to fill the pool is %.f mins” % (t1 + t2 + t3))
 
 .. raw:: html
 
