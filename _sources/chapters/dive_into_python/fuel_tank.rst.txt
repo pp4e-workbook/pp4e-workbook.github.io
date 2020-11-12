@@ -17,7 +17,8 @@ its tank when it is completely empty. The only exception is it will not
 refill the empty tank if the trip is completed (*see the 3rd example in
 the sample i/o*).
 
-**Hint:** *You can use the ``ceil`` function from the math library.*
+**Hint:** You can use the :math:`\color{purple}{\texttt{ceil()}}`
+function from the :math:`\color{purple}{\texttt{math}}` library.
 
 .. container:: sampleio
 

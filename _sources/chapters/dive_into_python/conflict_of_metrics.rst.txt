@@ -14,7 +14,7 @@ second line, calculate the time it will take you to travel to Eagleton
 in minutes. Print this time as a *float* with 2 digits after decimal
 point.
 
-**Hint:** *One mile is approximately 1.6 kilometer.*
+**Hint:** One mile is approximately 1.6 kilometer.
 
 .. container:: sampleio
 

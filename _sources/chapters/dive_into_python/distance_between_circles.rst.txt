@@ -12,8 +12,9 @@ however, you can ignore that case, since no such input will be given.
 
 |image1|
 
-**Hint:** *``sqrt()`` function is available to import from the ``math``
-library. You can use it to find the square root of a number.*
+**Hint:** :math:`\color{purple}{\texttt{sqrt()}}` function is available
+to import from the :math:`\color{purple}{\texttt{math}}` library. You
+can use it to find the square root of a number.
 
 Input format is: - x coordinate of the first circle - y coordinate of
 the first circle - radius of the first circle - x coordinate of the

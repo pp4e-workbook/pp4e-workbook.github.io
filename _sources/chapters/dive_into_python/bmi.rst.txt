@@ -13,8 +13,9 @@ Write a program that calculates BMI (Body Mass Index):
 
 -  Finally, print the result value.
 
-**Hint:** *You can use the built-in ``round`` function to round the
-float value to an integer.*
+**Hint:** You can use the built-in
+:math:`\color{purple}{\texttt{round()}}` function to round the float
+value to an integer.
 
 .. container:: sampleio
 

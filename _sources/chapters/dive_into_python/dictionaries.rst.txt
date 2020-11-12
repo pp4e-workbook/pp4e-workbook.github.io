@@ -31,8 +31,8 @@ IDs will be given as *integer*\ s and grades will be given as *floats*.
 You should output the calculated average grade of the given student as a
 *float*. 1 digit after the decimal point is sufficient for this output.
 
-**Hint:** *While creating the database, you can use the same variables
-instead of defining new ones.*
+**Hint:** While creating the database, you can use the same variables
+instead of defining new ones.
 
 .. container:: sampleio
 

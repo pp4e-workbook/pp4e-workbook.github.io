@@ -6,8 +6,8 @@ Write a program that asks the user for their name and greets them
 accordingly.
 
 You can ask for the name and greet the user anyway you like. Note that
-the ``input`` can take a ``str`` argument which it then uses as a
-*prompt*.
+the :math:`\color{purple}{\texttt{input()}}` can take a *string*
+argument which it then uses as a *prompt*.
 
 .. container:: sampleio
 

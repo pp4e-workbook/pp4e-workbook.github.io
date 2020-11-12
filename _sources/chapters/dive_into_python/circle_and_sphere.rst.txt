@@ -6,7 +6,8 @@ Write a program that inputs a radius *r* from the user and computes the
 area of a circle with radius *r* and the volume of a sphere with radius
 *r*. (Print 2 digits after the decimal point)
 
-**Hint:** *You can use the ``math`` module to import the pi constant*.
+**Hint:** You can use the :math:`\color{purple}{\texttt{math}}` module
+to import the :math:`\color{purple}{\texttt{pi}}` constant.
 
 .. container:: sampleio
 

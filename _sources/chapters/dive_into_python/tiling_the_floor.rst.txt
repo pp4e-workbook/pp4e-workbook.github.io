@@ -9,7 +9,8 @@ Write a program that inputs a width and length (two *integers*) of the
 room and calculates the maximum possible (*integer*) length of a tile
 and prints it.
 
-**Hint:** *You can use the ``gcd()`` function from the ‘math’ module.*
+**Hint:** You can use the :math:`\color{purple}{\texttt{gcd()}}`
+function from the :math:`\color{purple}{\texttt{math}}` module.
 
 .. container:: sampleio
 

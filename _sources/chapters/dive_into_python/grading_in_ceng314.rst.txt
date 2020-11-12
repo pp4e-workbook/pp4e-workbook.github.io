@@ -16,8 +16,9 @@ assignments in this course.
 The student has obtained a sum of 24 over 40, which computes as 3 over
 5. The output will be 3.*
 
-**Hint:** *You might want to use the function ``min()``. It takes a
-list, or at least two arguments and returns the least element*
+**Hint:** You might want to use the function
+:math:`\color{purple}{\texttt{min()}}`. It takes a list, or at least two
+arguments and returns the least element.
 
 .. container:: sampleio
 

@@ -11,9 +11,9 @@ you act in conformity: you start counting with 1.
 
 **Can you find the final state of the Lego?**
 
-**Hint:** *‘lego[0:5] = [1]’ replaces first 5 elements of an array with
+**Hint:** ``lego[0:5] = [1]`` replaces first 5 elements of an array with
 only one element as ‘1’. Use repetition operator for the list to solve
-this problem.*
+this problem.
 
 .. container:: sampleio
 
