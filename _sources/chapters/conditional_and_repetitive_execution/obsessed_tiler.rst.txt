@@ -7,8 +7,8 @@ Obsessed Tiler |2|
 A tiler whose job is to tile the floor is obsessed with symmetry. The
 tiles that he is using are two colored squares of the same size. So, it
 is possible to represent the floor layout as a :math:`N\times N` matrix
-with binary entries denoting the colors. An entry is either 0, for one
-type of the color or 1 for the other type of color.
+with binary entries denoting the colors. An entry is either 1, for one
+type of the color or 0 for the other type of color.
 
 For instance, the tile given in the figure above can be represented with
 the following list:
@@ -22,7 +22,7 @@ the following list:
 
    [[1, 0, 0, 1], [0, 1, 1, 0], [0, 1, 1, 0], [1, 0, 0 ,1]]
 
-where 0 and 1 is representing the blue and light orange color
+where 1 and 0 is representing the blue and light orange color
 respectively.
 
 | He wants to know whether a given tiling is diagonally (main diagonal)
