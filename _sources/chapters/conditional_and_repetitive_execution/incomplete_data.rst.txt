@@ -1,0 +1,59 @@
+
+Exercise: Incomplete Data |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+| In a scientific calculation, matrices are commonly used for data
+  representation. Suppose you are given a matrix :math:`(M\times N)`
+  where you need to calculate the average of all the real numbers in the
+  matrix. However, there is a problem in the matrix and some of the
+  values are corrupted and given as ‘NaN’ string (stands for not a
+  number).
+| Write a program that skips the corrupted numbers and outputs the
+  average of rest in the given matrix. 3 digits after the decimal point
+  is enough for our calculation and you can use the built-in
+  :math:`\color{purple}{\texttt{round()}}` function for this purpose.
+
+-  :math:`M` and :math:`N` can be any positive integer.
+
+-  Assume that the two dimensional list of floats representing the
+   matrix will be given to you in variable :math:`\texttt{R}`.
+
+*Hint:* It is necessary to keep the count of uncorrepted data in the
+given matrix
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   R = [[0.139, 0.216, 'NaN', 0.163],
+        [0.418, 0.335, 0.217, 0.419],
+        [0.097, 0.252, 0.458, 0.384]]
+
+   Output:
+   0.282
+
+   Input:
+   R = [[0.855, 'NaN', 'NaN', 0.661],
+        [0.713, 'NaN', 0.306, 0.805],
+        ['NaN', 'NaN', 0.562, 0.1],
+        ['NaN', 0.895, 0.132, 0.795],
+        [0.453, 0.519, 0.662, 'NaN']]
+
+   Output:
+   0.574
+
+   Input:
+   R = [[0.464, 0.856, 'NaN', 0.126, 0.707],
+        [0.822, 0.453, 0.941, 'NaN', 0.985],
+        [0.535, 0.169, 'NaN', 0.334, 0.566],
+        [0.136, 0.133, 0.513, 'NaN', 'NaN'],
+        [0.054, 0.686, 0.19, 0.164, 0.737]]
+
+   Output:
+   0.479

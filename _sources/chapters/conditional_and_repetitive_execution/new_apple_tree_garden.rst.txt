@@ -1,0 +1,32 @@
+
+Exercise: New Apple Garden Tree |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+| Imagine the same garden in the question above. This time, the workers
+  decide to divide the garden **vertically**. Namely, each worker will
+  be responsible for the trees in a **column**.
+| Write a script to find out which column produces the maximum number of
+  apples in a given garden and print it.
+| *Hint: You need to adjust the nested loop in the previous solution, so
+  that the traverse of the garden can be column-wise.*
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   G = [[30, 40, 20, 50], [60, 20, 40, 10], [50, 30, 70, 60], [30, 40, 40, 20]]
+
+   Output:
+   [30, 60, 50, 30]
+
+   Input:
+   G = [[90, 10, 90, 40, 10], [70, 70, 80, 20, 30], [40, 60, 20, 90, 40], [40, 50, 50, 30, 20], [20, 30, 30, 80, 30], [90, 70, 20, 10, 60], [70, 90, 40, 40, 10]]
+
+   Output:
+   [90, 70, 40, 40, 20, 90, 70]

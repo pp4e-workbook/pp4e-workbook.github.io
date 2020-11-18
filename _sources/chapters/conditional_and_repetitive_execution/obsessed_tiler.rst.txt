@@ -1,0 +1,101 @@
+
+Obsessed Tiler |2|
+~~~~~~~~~~~~~~~~~~
+
+|image1|
+
+A tiler whose job is to tile the floor is obsessed with symmetry. The
+tiles that he is using are two colored squares of the same size. So, it
+is possible to represent the floor layout as a :math:`N\times N` matrix
+with binary entries denoting the colors. An entry is either 0, for one
+type of the color or 1 for the other type of color.
+
+For instance, the tile given in the figure above can be represented with
+the following list:
+
+.. |2| image:: ../../figures/difficulty_four.png
+   :class: difficulty
+.. |image1| image:: ../../figures/ch5_tile.png
+   :class: width300
+
+.. code:: default
+
+   [[1, 0, 0, 1], [0, 1, 1, 0], [0, 1, 1, 0], [1, 0, 0 ,1]]
+
+where 0 and 1 is representing the blue and light orange color
+respectively.
+
+| He wants to know whether a given tiling is diagonally (main diagonal)
+  symmetric or not.
+
+Write a program that determines whether the given tile is symmetric or
+not and prints True or False accordingly.
+
+-  :math:`N` can be any positive integer that is greater than or equal
+   to 3.
+
+-  Assume that the nested list of integers representing the tile will be
+   given to you as variable :math:`\texttt{T}`.
+
+*Note that the earlier you detect the asymmetry, the more efficient
+program you get. So, try to write your code in the way that the outer
+loop is breakable as well.*
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. code:: default
+
+   Input:
+   [[1, 0, 0], [1, 0, 1], [1, 0, 1]]
+
+   Output:
+   False
+
+   Input:
+   T = [[1, 0, 1, 1], [0, 1, 0, 1], [1, 0, 1, 0], [1, 1, 0, 1]]
+
+   Output:
+   True
+
+   Input:
+   T = [[1, 0, 0, 1, 0], [0, 0, 0, 1, 1], [0, 0, 0, 1, 0], [1, 1, 1, 0, 1], [0, 1, 0, 1, 1]]
+
+   Output:
+   True
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   N = len(T)
+
+   result = True
+
+   for i in range(N):
+        if not result:
+            break
+
+        for j in range(N):
+            if T[i][j] != T[j][i]:
+                result = False
+                break
+
+   print(result)
+
+.. raw:: html
+
+   </div>

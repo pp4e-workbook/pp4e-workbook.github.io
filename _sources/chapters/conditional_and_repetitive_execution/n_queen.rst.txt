@@ -1,0 +1,108 @@
+
+N-Queen |2|
+~~~~~~~~~~~
+
+| In this question you are required to check the correctness of possible
+  solutions to the widely known :math:`N` Queen Problem. This problem is
+  the problem of placing :math:`N` chess queens on an :math:`N \times N`
+  chessboard such that no two queens attack each other. Your program
+  will check the possible solution, will print ``"YES"`` if the solution
+  is correct, and will print ``"NO"`` if it is incorrect.
+| The :math:`N \times N` board will be given in the following format:
+
+-  | It will be stored in a variable named :math:`\texttt{board}` as a
+     list of lists of strings.
+
+-  | The list of lists will not be ill-formed. It will consist of N
+     sublists, each consisting of N strings.
+
+-  | Each string in those sublists will be either "_" (denoting empty
+     square), or "q" (denoting a square with a queen on it).
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_five.png
+   :class: difficulty
+
+.. code:: default
+
+   board = [ ["_", "q", "q"]
+           , ["_", "_", "_"]
+           , ["q", "_", "_"]
+           ]
+
+   Output:
+   NO
+
+
+   board = [ ["_", "_", "q", "_"]
+           , ["q", "_", "_", "_"]
+           , ["_", "_", "_", "q"]
+           , ["_", "q", "_", "_"]
+           ]
+
+   Output:
+   YES
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   # try with different boards
+   board = [ ["_", "_", "_", "q"]
+           , ["q", "_", "_", "_"]
+           , ["_", "_", "q", "_"]
+           , ["_", "q", "_", "_"]
+           ]
+
+   length = len(board)
+
+   valid = True
+
+   for i in range(length):
+       if not valid:
+           break
+       queens_in_row = 0 #each row should have exactly one queen
+       for j in range(length):
+           if not valid:
+               break
+           elif board[i][j] == "q":
+               if queens_in_row != 0: #two queens in the same row
+                   valid = False
+               #check squares in the j'th column of the previous rows
+               for k in range(i):
+                   if not valid:
+                       break
+                   elif board[k][j] == "q": #two queens in the same column
+                       valid = False
+                   elif j + k - i >= 0 and board[k][j + k - i] == "q": #diagonal
+                       valid = False
+                   elif j + i - k < length and board[k][j + i - k] == "q":
+                       valid = False
+               queens_in_row = 1
+       if queens_in_row != 1: #empty row
+           valid = False
+           break
+
+   if valid:
+       print("YES")
+   else:
+       print("NO")
+
+.. raw:: html
+
+   </div>

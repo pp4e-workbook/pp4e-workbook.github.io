@@ -1,0 +1,50 @@
+
+Exercise: Connect Four |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Connect Four is a popular board game which is played by two players. In
+this game, players take a colored discs (red for one player, yellow for
+another) and drop them into a column in a suspended grid. The discs fall
+down until there are no available space left in the column. If any of
+the players form a diagonal, horizontal or vertical line with four of
+the players discs, player wins.
+
+Write a program that determines for a given board state whether there is
+a winner or not. The game grid is always :math:`N\times N`,
+:math:`N \ge 4`. :math:`N` is given in the first inut line. In the
+following :math:`N` lines the board configuration is given row by row,
+represented as strings with :math:`N` elements each. The elements are
+``’R’`` for red, ``’Y’`` for yellow and ``’.’`` for empty.
+
+Print ``"yes"`` if there is a winner, ``"yes"`` if not.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_four.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   4
+   YRYR
+   RYRY
+   YRYR
+   RYRY
+
+   Output:
+   yes
+
+
+   Input:
+   4
+   RY..
+   YYYR
+   RYRY
+   YRRY
+
+
+   Output:
+   no

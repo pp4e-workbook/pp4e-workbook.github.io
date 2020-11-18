@@ -1,0 +1,86 @@
+
+Letter Grade |2|
+~~~~~~~~~~~~~~~~
+
+| In our letter grade system, our total point obtained in a course is
+  converted to a letter grade. In this question, you will write a
+  program that reads the total point from the user and prints the
+  corresponding letter grade.
+| Total point intervals and their letter grade equivalents:
+| - 90-100 :math:`\rightarrow` AA
+| - 85-89 :math:`\rightarrow` BA
+| - 80-84 :math:`\rightarrow` BB
+| - 75-79 :math:`\rightarrow` CB
+| - 70-74 :math:`\rightarrow` CC
+| - 65-69 :math:`\rightarrow` DC
+| - 60-64 :math:`\rightarrow` DD
+| - 50-59 :math:`\rightarrow` FD
+| - 0-49 :math:`\rightarrow` FF
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   50
+
+   Output:
+   FD
+
+   Input:
+   71
+
+   Output:
+   CC
+
+   Input:
+   89
+
+   Output:
+   BA
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   total_point = int(input())
+
+   if 0 <= total_point < 50:
+       print("FF")
+   elif 50 <= total_point < 60:
+       print("FD")
+   elif 60 <= total_point < 65:
+       print("DD")
+   elif 65 <= total_point < 70:
+       print("DC")
+   elif 70 <= total_point < 75:
+       print("CC")
+   elif 75 <= total_point < 80:
+       print("CB")
+   elif 80 <= total_point < 85:
+       print("BB")
+   elif 85 <= total_point < 90:
+       print("BA")
+   elif 90 <= total_point <= 100:
+       print("AA")
+
+.. raw:: html
+
+   </div>

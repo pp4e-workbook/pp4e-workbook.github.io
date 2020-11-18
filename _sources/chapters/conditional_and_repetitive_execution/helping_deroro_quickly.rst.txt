@@ -1,0 +1,82 @@
+
+Helping Deroro Quickly |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Consider the previous question, when the total width of the building
+:math:`W` gets larger, writing a solution that works in a short time
+becomes much harder.
+
+Can you write a solution that can quickly determine whether a shape can
+be constructed or not?
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_five.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   19
+   5
+   3
+
+   Output:
+   YES
+
+   Input:
+   97
+   12
+   17
+
+   Output:
+   NO
+
+   Input:
+   1000000
+   3
+   5
+
+   Output:
+   NO
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   # This solution uses is an optimization technique called
+   # memorization which is NOT in the context of this course.
+
+   W = int(input())
+   A = int(input())
+   B = int(input())
+
+   achievable = {0: True}
+
+   for i in range(0, W):
+       if(i in achievable):
+           achievable[i+A] = True
+           achievable[i+B] = True
+
+   if achievable[W] == True:
+       print("YES")
+   else:
+       print("NO")
+
+.. raw:: html
+
+   </div>

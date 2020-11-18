@@ -1,0 +1,12 @@
+
+Exercise: Good Old Tiling |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+| Look at the Question `Tiling the
+  Floor <https://pp4e-workbook.github.io/chapters/dive_into_python/tiling_the_floor.html>`__
+  in the previous chapter. Now, try to write program without
+  :math:`\color{purple}{\texttt{gcd()}}` function.
+| *Hint: "The Euclid Algorithm"*
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty

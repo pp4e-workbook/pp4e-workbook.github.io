@@ -1,0 +1,34 @@
+
+Exercise: Office Olympics |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It’s Office Olympics time! Jim is trying to find the medalists by
+finding the three people that have the highest scores. Can you help him
+find the three people who have the most wins?
+
+Write a program that takes a list of 2-tuples which consists of a string
+and an integer representing the name of people and their score and
+prints a list of 3 strings which are the names of 3 winners. You can
+assume that there are always at least three contestants in the Olympics.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   wins_list = [("jim", 11), ("pam", 9), ("dwight", 12), ("oscar", 2), ("micheal", 17), ("angela", 3), ("kevin", 1)]
+
+   Output:
+   ["micheal", "dwight", "jim"]
+
+   Input:
+   B = [("jim", 1), ("pam", 4), ("jan", 10), ("creed", 7), ("micheal", 5), ("meredith", 2), ("phyllis", 28)]
+
+   Output:
+
+   ["phyllis", "jan", "creed"]

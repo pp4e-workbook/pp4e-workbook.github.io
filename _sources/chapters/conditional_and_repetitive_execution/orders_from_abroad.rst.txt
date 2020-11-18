@@ -1,0 +1,85 @@
+
+Orders from Abroad |2|
+~~~~~~~~~~~~~~~~~~~~~~
+
+Turkey has recently changed their tax policy against orders coming from
+abroad. The new tax policy is as follows.
+
+-  If price is within the interval (0,100], no tax.
+
+-  If price is within the interval (100,1000], tax rate is 10%.
+
+-  If the price of the product is greater than 1000, the applied tax
+   rate is 20%.
+
+Write a program that calculates the total tax amount when :math:`N` many
+items are purchased.
+
+The first line of input is :math:`N` as an integer, the count of items.
+Each of the following :math:`N` lines contain the price of an item
+purchased as an integer.
+
+The output should be the total tax amount as a float.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   5
+   100
+   200
+   300
+   400
+   500
+
+
+   Output:
+   140.0
+
+   Input:
+   3
+   80
+   1000
+   200
+
+   Output:
+   120.0
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   N = int(input())
+   total_tax = 0
+
+   for _ in range(N):
+       price = int(input())
+
+       if 100 < price <= 1000:
+           total_tax += price * (1/10)
+       elif 1000 < price:
+           total_tax += price * (2/10)
+
+   print (total_tax)
+
+.. raw:: html
+
+   </div>
