@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>FUNCTIONS &#8212; The Workbook for Programming with Python for Engineers 0.0.1 documentation</title>
+
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/d2l.css" />
+    <link rel="stylesheet" href="../../_static/material-design-lite-1.3.0/material.red-deep_orange.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx_materialdesign_theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fontawesome/all.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fonts.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/d2l.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  </head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer"><header class="mdl-layout__header mdl-layout__header--waterfall ">
+    <div class="mdl-layout__header-row">
+        
+        <nav class="mdl-navigation breadcrumb">
+            <a class="mdl-navigation__link is-active">FUNCTIONS</a>
+        </nav>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+        
+<form class="form-inline pull-sm-right" action="../../search.html" method="get">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+        <label id="quick-search-icon" class="mdl-button mdl-js-button mdl-button--icon"  for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="q"  id="waterfall-exp" placeholder="Search" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </div>
+      </div>
+      <div class="mdl-tooltip" data-mdl-for="quick-search-icon">
+      Quick search
+      </div>
+</form>
+        
+<a id="button-show-source"
+    class="mdl-button mdl-js-button mdl-button--icon"
+    href="../../_sources/chapters/functions/ch6.rst.txt" rel="nofollow">
+  <i class="material-icons">code</i>
+</a>
+<div class="mdl-tooltip" data-mdl-for="button-show-source">
+Show Source
+</div>
+        </nav>
+    </div>
+    <div class="mdl-layout__header-row header-links">
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+      </nav>
+    </div>
+</header><header class="mdl-layout__drawer">
+    
+          <!-- Title -->
+      <span class="mdl-layout-title">
+          <a class="title" href="../../index.html">
+              <span class="title-text">
+                  The Workbook for Programming with Python for Engineers
+              </span>
+          </a>
+      </span>
+    
+    
+      <div class="globaltoc">
+        <span class="mdl-layout-title toc">Table Of Contents</span>
+        
+        
+            
+            <nav class="mdl-navigation">
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../dive_into_python/index.html">1. Dive into Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/debt.html">1.1. Debt </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/varying_debt.html">1.2. Varying Debt </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/division.html">1.3. Division </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/greetings.html">1.4. Exercise: Greetings </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/headphones.html">1.5. Exercise: Headphones </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/conflict_of_metrics.html">1.6. Exercise: Conflict of Metrics </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/lcd_shipment.html">1.7. LCD Shipment </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/jogging_at_devrim.html">1.8. Exercise: Jogging at Devrim </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/tiling_the_floor.html">1.9. Tiling the Floor </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/tiling_the_floor_min.html">1.10. Exercise: Tiling the Floor with Minimum Tiles </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/movie_festival.html">1.11. Movie Festival </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/circle_and_sphere.html">1.12. Exercise: Circle and Sphere </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/reflection_point.html">1.13. Reflection Point </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/bmi.html">1.14. Exercise: BMI </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/distance_between_circles.html">1.15. Exercise: Distance between Circles </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/cube_extraction.html">1.16. Cube Extraction </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/pool.html">1.17. Pool </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/django.html">1.18. Exercise: Django </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/vector.html">1.19. Vector </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/slogan.html">1.20. Slogan </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/grading_in_ceng314.html">1.21. Exercise: Grading in CENG314 </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/fuel_tank.html">1.22. Exercise: Fuel Tank </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/tuples_and_lists.html">1.23. Tuples and Lists </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/inner_elements.html">1.24. Inner Elements </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/lego.html">1.25. Lego </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/dictionaries.html">1.26. Dictionaries </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/min_and_max_of_three.html">1.27. Exercise: Minimum and Maximum of Three </a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../conditional_and_repetitive_execution/index.html">2. Conditional and Repetitive Execution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/letter_grade.html">2.1. Letter Grade </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/even_or_odd.html">2.2. Even or Odd </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/ticket_price.html">2.3. Ticket Price </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/orders_from_abroad.html">2.4. Orders from Abroad </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/winner_team.html">2.5. Winner Team in Board Game </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/apple_tree_garden.html">2.6. Apple Tree Garden </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/new_apple_tree_garden.html">2.7. Exercise: New Apple Garden Tree </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/repeated_strings.html">2.8. Repeated Strings </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/office_olympics.html">2.9. Exercise: Office Olympics </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/good_old_tiling.html">2.10. Exercise: Good Old Tiling </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/triangle.html">2.11. Exercise: Triangle </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/fizz_buzz.html">2.12. Exercise: Fizz Buzz </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/binary_planet.html">2.13. Binary Planet </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/runlength_encoding.html">2.14. Run-length Encoding </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/connect_four.html">2.15. Exercise: Connect Four </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/obsessed_tiler.html">2.16. Obsessed Tiler </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/matrix_multiplication.html">2.17. Matrix Multiplication </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/incomplete_data.html">2.18. Exercise: Incomplete Data </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/emotional_chatbot.html">2.19. Emotional Chatbot </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/minesweeper.html">2.20. Minesweeper </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/original_minesweeper.html">2.21. Exercise: Original Minesweeper </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/n_queen.html">2.22. N-Queen </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/helping_deroro.html">2.23. Helping Deroro </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/helping_deroro_quickly.html">2.24. Helping Deroro Quickly </a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        
+        </div>
+    
+</header>
+        <main class="mdl-layout__content" tabIndex="0">
+
+	<script type="text/javascript" src="../../_static/sphinx_materialdesign_theme.js "></script>
+    <header class="mdl-layout__drawer">
+    
+          <!-- Title -->
+      <span class="mdl-layout-title">
+          <a class="title" href="../../index.html">
+              <span class="title-text">
+                  The Workbook for Programming with Python for Engineers
+              </span>
+          </a>
+      </span>
+    
+    
+      <div class="globaltoc">
+        <span class="mdl-layout-title toc">Table Of Contents</span>
+        
+        
+            
+            <nav class="mdl-navigation">
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../dive_into_python/index.html">1. Dive into Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/debt.html">1.1. Debt </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/varying_debt.html">1.2. Varying Debt </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/division.html">1.3. Division </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/greetings.html">1.4. Exercise: Greetings </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/headphones.html">1.5. Exercise: Headphones </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/conflict_of_metrics.html">1.6. Exercise: Conflict of Metrics </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/lcd_shipment.html">1.7. LCD Shipment </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/jogging_at_devrim.html">1.8. Exercise: Jogging at Devrim </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/tiling_the_floor.html">1.9. Tiling the Floor </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/tiling_the_floor_min.html">1.10. Exercise: Tiling the Floor with Minimum Tiles </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/movie_festival.html">1.11. Movie Festival </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/circle_and_sphere.html">1.12. Exercise: Circle and Sphere </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/reflection_point.html">1.13. Reflection Point </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/bmi.html">1.14. Exercise: BMI </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/distance_between_circles.html">1.15. Exercise: Distance between Circles </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/cube_extraction.html">1.16. Cube Extraction </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/pool.html">1.17. Pool </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/django.html">1.18. Exercise: Django </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/vector.html">1.19. Vector </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/slogan.html">1.20. Slogan </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/grading_in_ceng314.html">1.21. Exercise: Grading in CENG314 </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/fuel_tank.html">1.22. Exercise: Fuel Tank </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/tuples_and_lists.html">1.23. Tuples and Lists </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/inner_elements.html">1.24. Inner Elements </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/lego.html">1.25. Lego </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/dictionaries.html">1.26. Dictionaries </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/min_and_max_of_three.html">1.27. Exercise: Minimum and Maximum of Three </a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../conditional_and_repetitive_execution/index.html">2. Conditional and Repetitive Execution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/letter_grade.html">2.1. Letter Grade </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/even_or_odd.html">2.2. Even or Odd </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/ticket_price.html">2.3. Ticket Price </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/orders_from_abroad.html">2.4. Orders from Abroad </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/winner_team.html">2.5. Winner Team in Board Game </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/apple_tree_garden.html">2.6. Apple Tree Garden </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/new_apple_tree_garden.html">2.7. Exercise: New Apple Garden Tree </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/repeated_strings.html">2.8. Repeated Strings </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/office_olympics.html">2.9. Exercise: Office Olympics </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/good_old_tiling.html">2.10. Exercise: Good Old Tiling </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/triangle.html">2.11. Exercise: Triangle </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/fizz_buzz.html">2.12. Exercise: Fizz Buzz </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/binary_planet.html">2.13. Binary Planet </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/runlength_encoding.html">2.14. Run-length Encoding </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/connect_four.html">2.15. Exercise: Connect Four </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/obsessed_tiler.html">2.16. Obsessed Tiler </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/matrix_multiplication.html">2.17. Matrix Multiplication </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/incomplete_data.html">2.18. Exercise: Incomplete Data </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/emotional_chatbot.html">2.19. Emotional Chatbot </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/minesweeper.html">2.20. Minesweeper </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/original_minesweeper.html">2.21. Exercise: Original Minesweeper </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/n_queen.html">2.22. N-Queen </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/helping_deroro.html">2.23. Helping Deroro </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/helping_deroro_quickly.html">2.24. Helping Deroro Quickly </a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        
+        </div>
+    
+</header>
+
+    <div class="document">
+        <div class="page-content" role="main">
+        
+  <hr class="docutils" />
+<div class="section" id="functions">
+<h1>FUNCTIONS<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:just_average]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \largestar \largestar \largestar\)</span></div>
+</div>
+<div class="line-block">
+<div class="line">Write a function with the signature <code class="docutils literal notranslate"><span class="pre">can_average(numbers,</span> <span class="pre">k)</span></code> that
+with the given a list of integers called <code class="docutils literal notranslate"><span class="pre">numbers</span></code> and a single
+integer <code class="docutils literal notranslate"><span class="pre">k</span></code>, prints “yes” if we can remove a single element from the
+<code class="docutils literal notranslate"><span class="pre">numbers</span></code> list so that the new average is equal to <code class="docutils literal notranslate"><span class="pre">k</span></code>, prints
+“no” otherwise. Don’t forget to call your function with different
+arguments to debug it.</div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">10</span>
+<span class="mi">2</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="n">yes</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">1</span> <span class="mi">3</span>
+<span class="mi">2</span>
+
+<span class="n">Output</span>
+<span class="n">no</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">can_average</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">sum</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span> <span class="o">-</span> <span class="n">k</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;yes&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;no&quot;</span><span class="p">)</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+<span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="n">can_average</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:gcd_recursion]
+<span class="math notranslate nohighlight">\(\bigstar \largestar \largestar \largestar \largestar\)</span></div>
+</div>
+<div class="line-block">
+<div class="line">Euclid, of the Geometry fame, also proposed a <em>recursive</em> algorithm to
+find the <em>greatest common divisor</em> of two <em>positive</em> numbers <code class="docutils literal notranslate"><span class="pre">a</span></code> and
+<code class="docutils literal notranslate"><span class="pre">b</span></code>.</div>
+<div class="line">It is as follows;</div>
+</div>
+<p><strong>If</strong> <code class="docutils literal notranslate"><span class="pre">b</span></code> is 0 then <strong>return</strong> <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
+<div class="line-block">
+<div class="line"><strong>Else</strong>, set a new integer <code class="docutils literal notranslate"><span class="pre">c</span></code> to the reminder when <code class="docutils literal notranslate"><span class="pre">a</span></code> is
+divided by <code class="docutils literal notranslate"><span class="pre">b</span></code> and call the function recursively;
+<code class="docutils literal notranslate"><span class="pre">gcd_euclid(b,</span> <span class="pre">c)</span></code> and <strong>return</strong> the result.</div>
+<div class="line">Implement this function with the signature <code class="docutils literal notranslate"><span class="pre">gcd_euclid(a,</span> <span class="pre">b)</span></code> and
+use it in a script; read two integers and print their greatest common
+divisor.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">56</span>
+<span class="mi">12</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="mi">4</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">12</span>
+<span class="mi">11</span>
+
+<span class="n">Output</span>
+
+<span class="mi">1</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gcd_euclid</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span>  <span class="c1"># smallest possible</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span>
+        <span class="k">return</span> <span class="n">gcd_euclid</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>  <span class="c1"># recursion!</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="n">b</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">gcd_euclid</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:grandmas_garden]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \largestar \largestar \largestar\)</span></div>
+</div>
+<p>Your grandma has gathered all the <code class="docutils literal notranslate"><span class="pre">fruits</span></code> from her garden. However,
+she didn’t separate apples from oranges and put them all in the same
+basket. Since she is too tired now, she requested your help to separate
+oranges from apples.</p>
+<p>There is a separator in your grandma’s garden, and it can separate two
+fruits according to their weight. You know that all oranges from the
+garden weigh above <code class="docutils literal notranslate"><span class="pre">k</span></code> grams and all the apples are below that. Can
+you write a program for separator and help your grandma to find the
+counts of each of the fruit there are?</p>
+<div class="line-block">
+<div class="line"><em>You will be given weights of fruits as a list in the first line, and
+the number k in the next line. For output, you are expected to print
+the number of apples and oranges, in that order.</em></div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">102</span> <span class="mi">201</span> <span class="mi">96</span> <span class="mi">105</span>
+<span class="mi">103</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="mi">2</span> <span class="mi">2</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">50</span> <span class="mi">100</span> <span class="mi">200</span> <span class="mi">60</span> <span class="mi">70</span> <span class="mi">85</span> <span class="mi">100</span>
+<span class="mi">190</span>
+
+<span class="n">Output</span>
+<span class="mi">6</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+<span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">separator</span><span class="p">(</span><span class="n">weight</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">weight</span> <span class="o">&lt;</span> <span class="n">k</span> <span class="c1"># The function returns &quot;True&quot; when weight is smaller than k</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fruits</span><span class="p">)</span>
+<span class="n">apples_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="n">separator</span><span class="p">,</span> <span class="n">fruits</span><span class="p">)))</span> <span class="c1"># Filters the list using the separator function</span>
+<span class="n">oranges_count</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="n">apples_count</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">apples_count</span><span class="p">,</span> <span class="n">oranges_count</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:dragon_contest]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \bigstar \bigstar \largestar\)</span></div>
+</div>
+<p>There is going to be a contest between the students of the magical
+Middle Earth Technical University. All teams had to build a dragon for
+this year. After testing each dragon’s skin durability and flying
+abilities, there are only four teams left for the final firebreathing
+contest.</p>
+<p>The final contest will take place in one hour, and you wanted to come up
+with a prediction. You rated all of the team member’s knowledge on
+building fire systems. Also, because there are a limit of <code class="docutils literal notranslate"><span class="pre">k</span></code> people
+for working on the firebreathing feature of the dragon. Assuming that
+all of the teams used their best members to build the firebreathing
+feature, can you find which of the teams is most probable to win?</p>
+<div class="line-block">
+<div class="line"><em>In the first line, there is k that stands for the limit of people to
+work on the firebreathing feature. In the next four lines, there are
+lists for the teams. Each number on this list corresponds to one of
+the members in that team’s fire system building ability.</em></div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">2</span>
+<span class="mi">10</span> <span class="mi">15</span> <span class="mi">20</span> <span class="mi">20</span>
+<span class="mi">5</span> <span class="mi">5</span> <span class="mi">15</span> <span class="mi">50</span>
+<span class="mi">50</span> <span class="mi">30</span> <span class="mi">20</span> <span class="mi">10</span>
+<span class="mi">15</span> <span class="mi">20</span> <span class="mi">25</span> <span class="mi">5</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="mi">3</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">4</span>
+<span class="mi">105</span> <span class="mi">106</span> <span class="mi">105</span> <span class="mi">106</span> <span class="mi">105</span> <span class="mi">106</span>
+<span class="mi">119</span> <span class="mi">120</span> <span class="mi">260</span> <span class="mi">119</span> <span class="mi">120</span> <span class="mi">260</span>
+<span class="mi">101</span> <span class="mi">102</span> <span class="mi">211</span> <span class="mi">101</span> <span class="mi">102</span> <span class="mi">211</span>
+<span class="mi">111</span> <span class="mi">140</span> <span class="mi">213</span> <span class="mi">111</span> <span class="mi">140</span> <span class="mi">213</span>
+
+<span class="n">Output</span>
+<span class="mi">2</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">teams</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">team_estimations</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+  <span class="n">teams</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">())))</span>
+  <span class="n">teams</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+  <span class="n">team_estimations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">teams</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="o">-</span><span class="n">k</span><span class="p">:]))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">team_estimations</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">team_estimations</span><span class="p">)))</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:leslies_parks]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \largestar \largestar \largestar\)</span></div>
+</div>
+<p>Leslie Knope is the deputy director of the department of Parks and
+Recreation. She wants to build a park in front of all of her friends’
+houses. She loves her friends so much, but she also loves being a
+servant to the citizens and values their opinions. Being the reasonable
+thing to do, she holds a public forum to take a vote for each park to be
+built or not. For each park, if the votes in favor are double or more
+than the votes against, that park is decided to be built. Can you help
+Tom, Leslie’s lazy co-worker who is in charge of doing the calculation,
+so that he can decide if a park is going to be built or not?</p>
+<div class="line-block">
+<div class="line"><em>Write a function named that takes two values ``v_for`` and
+``v_against`` and returns 1 if the park is going to be built, 0 if
+not.</em></div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="n">is_built</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">36</span><span class="p">)</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="mi">0</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="n">is_built</span><span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="mi">13</span><span class="p">)</span>
+
+<span class="n">Output</span>
+
+<span class="mi">1</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_built</span><span class="p">(</span><span class="n">v_for</span><span class="p">,</span> <span class="n">v_against</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">v_for</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">v_against</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:leslies_parks_revisited]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \bigstar \largestar \largestar\)</span></div>
+</div>
+<p>Ron Swanson is Leslie’s boss who thinks government is a waste of
+taxpayers money. He hates when Leslie builds parks. So he puts an extra
+limitation on the voting process. If the votes for the park to be built
+(<code class="docutils literal notranslate"><span class="pre">v_for</span></code>) is less than the value <code class="docutils literal notranslate"><span class="pre">min_for</span></code> or votes against the park
+to be built (<code class="docutils literal notranslate"><span class="pre">v_against</span></code>) is more than the value <code class="docutils literal notranslate"><span class="pre">max_against</span></code> he
+does not allow Leslie to build that park.</p>
+<div class="line-block">
+<div class="line"><em>Update the function from the previous question to check Ron’s extra
+limitations. The new function should take 4 values, ``v_for``,
+``v_against``, ``min_for`` and ``max_against``.</em></div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="n">is_built</span><span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">24</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="mi">0</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="n">is_built</span><span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">Output</span>
+
+<span class="mi">1</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_built</span><span class="p">(</span><span class="n">v_for</span><span class="p">,</span> <span class="n">v_against</span><span class="p">,</span> <span class="n">min_for</span><span class="p">,</span> <span class="n">max_against</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">min_for</span> <span class="o">&gt;</span> <span class="n">v_for</span> <span class="ow">or</span> <span class="n">max_against</span> <span class="o">&lt;</span> <span class="n">v_against</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">v_for</span> <span class="o">&gt;=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">v_against</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:calculate_median]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \largestar \largestar \largestar\)</span></div>
+</div>
+<p>Calculus exam results are announced and your result is above the
+announced average. You want to have an idea about the letter grade you
+will get, and to do this you ask everyone you know about their exam
+results. You want to calculate the median of the results, which will
+give you some more idea about the distribution of the grades so that you
+can take a better guess about your letter grade.</p>
+<div class="line-block">
+<div class="line"><em>You will be given a list of exam results, you need to return the
+median value. If the list has an even length, return the higher of the
+two middle elements. Write a function named ``find_median`` for this
+task.</em></div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="n">find_median</span><span class="p">([</span><span class="mi">72</span><span class="p">,</span><span class="mi">32</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">33</span><span class="p">])</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="mi">33</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="n">find_median</span><span class="p">([</span><span class="mi">27</span><span class="p">,</span><span class="mi">48</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">63</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">61</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="mi">84</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span><span class="mi">46</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">46</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">69</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">57</span><span class="p">])</span>
+
+<span class="n">Output</span>
+
+<span class="mi">46</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_median</span><span class="p">(</span><span class="n">results</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">results</span><span class="p">)[</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:palindrome]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \largestar \largestar \largestar\)</span></div>
+</div>
+<p>A palindrome is a piece of text which reads the same backwards and
+forward. For example, “onion” is not a palindrome whereas “onino” is.
+Your task is to write a function that finds whether the input text is
+palindrome or not.</p>
+<div class="line-block">
+<div class="line"><em>You will be given a string, you need to return True if the string is
+a palindrome and False otherwise.</em></div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="s2">&quot;ilsa&quot;</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="kc">False</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="s2">&quot;dammitimmad&quot;</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="kc">True</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">is_palindrome</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">flag</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">s</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">flag</span><span class="o">=</span><span class="kc">False</span>
+            <span class="k">break</span>
+
+    <span class="k">return</span> <span class="n">flag</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">is_palindrome</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:divisors_game]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \bigstar \largestar \largestar\)</span></div>
+</div>
+<p>Nazif and Osman were really bored during the lockout and they have come
+up with an exciting game. The rules are simple, they both choose an
+integer and whoever has an integer with more divisors wins. Given the
+integers they have picked, can you write the function to decide who is
+the winner?</p>
+<div class="line-block">
+<div class="line"><em>You will be given two integers, first one is Nazif’s number and the
+second one is Osman’s. You should return “nazif” if Nazif wins,
+“osman” if Osman wins and “draw” if the results are equal.</em></div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">120</span> <span class="mi">144</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="s2">&quot;nazif&quot;</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">191</span> <span class="mi">190</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="s2">&quot;osman&quot;</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">4</span> <span class="mi">121</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="s2">&quot;draw&quot;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nazif</span><span class="p">,</span> <span class="n">osman</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+
+<span class="k">def</span> <span class="nf">divisors</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span><span class="o">%</span><span class="n">i</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+            <span class="n">ans</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">ans</span>
+
+<span class="k">def</span> <span class="nf">winner</span><span class="p">(</span><span class="n">nazif</span><span class="p">,</span> <span class="n">osman</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">divisors</span><span class="p">(</span><span class="n">nazif</span><span class="p">)</span>
+    <span class="n">o</span> <span class="o">=</span> <span class="n">divisors</span><span class="p">(</span><span class="n">osman</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="n">o</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;nazif&quot;</span>
+    <span class="k">elif</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">o</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;osman&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;draw&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">winner</span><span class="p">(</span><span class="n">nazif</span><span class="p">,</span> <span class="n">osman</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:sherlock_holmes]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \bigstar \bigstar \largestar\)</span></div>
+</div>
+<p>Sherlock Holmes is one of the best detectives globally, which works with
+Detective Lestrade from English Police, Scotland Yard. One day Detective
+Lestrade receives an anonymous, very long letter, which probably is
+related to the case Lestrade currently works. However, it does not look
+like a meaningful letter when you read it. That’s why he asks Holmes to
+understand what precisely the message means.</p>
+<p>Holmes understands the mystery behind the letter. The letter is
+meaningful only if you order the sentences alphabetically, but there are
+too many sentences to be ordered. That’s why Lestrade asks you, the
+computer department (Yes, it is 2010 adaptation).</p>
+<div class="line-block">
+<div class="line"><em>You will be given the whole paragraph as one line. You should write a
+python script to read the text, order the sentences alphabetically,
+and print the output. You know that all of the sentences end with a
+period, and the only place periods used the end of sentences.</em></div>
+<div class="line"><em>Hint: You can use the sort function to order sentence list
+alphabetically, split function to split using period’s and join
+function to combine them. Also split function creates an empty string
+due to the last sentence ends with a period.</em></div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="n">Probably</span> <span class="n">there</span> <span class="n">will</span> <span class="n">be</span> <span class="n">a</span> <span class="n">bank</span> <span class="n">robbery</span><span class="o">.</span> <span class="n">You</span> <span class="n">have</span> <span class="n">to</span> <span class="n">come</span> <span class="n">alone</span><span class="o">.</span> <span class="n">Meet</span> <span class="n">me</span> <span class="n">at</span> <span class="n">the</span> <span class="n">Central</span> <span class="n">Perk</span> <span class="n">at</span> <span class="mi">16</span> <span class="n">pm</span><span class="o">.</span> <span class="n">I</span> <span class="n">have</span> <span class="n">important</span> <span class="n">things</span> <span class="n">to</span> <span class="n">say</span><span class="o">.</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="n">I</span> <span class="n">have</span> <span class="n">important</span> <span class="n">things</span> <span class="n">to</span> <span class="n">say</span><span class="o">.</span> <span class="n">Meet</span> <span class="n">me</span> <span class="n">at</span> <span class="n">the</span> <span class="n">Central</span> <span class="n">Perk</span> <span class="n">at</span> <span class="mi">16</span> <span class="n">pm</span><span class="o">.</span> <span class="n">Probably</span> <span class="n">there</span> <span class="n">will</span> <span class="n">be</span> <span class="n">a</span> <span class="n">bank</span> <span class="n">robbery</span><span class="o">.</span> <span class="n">You</span> <span class="n">have</span> <span class="n">to</span> <span class="n">come</span> <span class="n">alone</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">trim_sentence</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="c1"># Remove the spaces from the start and the end of the string</span>
+
+<span class="c1"># Use the strip function to prevent empty string in the list and split the text</span>
+<span class="c1"># later trim the sentences using map and trim_sentence functions</span>
+<span class="n">items</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">trim_sentence</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)))</span>
+<span class="n">items</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="c1"># Add period at the end of the paragraph</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;. &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:discriminant_problem]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \largestar \largestar \largestar\)</span></div>
+</div>
+<p>Ozi wants to help his sister with programming, which is taking Python
+course in high school. Her teacher wants students to write a program
+that takes the coefficient of a quadratic equation and calculate that is
+there a real root of the equation using the discriminant method.</p>
+<p>The calculation is as follows. Let’s call the coefficient of the
+<span class="math notranslate nohighlight">\(x^2\)</span> <span class="math notranslate nohighlight">\(a\)</span>, coefficient of the <span class="math notranslate nohighlight">\(x\)</span> <span class="math notranslate nohighlight">\(b\)</span>, and the
+constant <span class="math notranslate nohighlight">\(c\)</span>. The discriminant is calculated using the formula
+<span class="math notranslate nohighlight">\(b^2 - 4ac\)</span>. If the discriminant value is greater than or equal to
+<span class="math notranslate nohighlight">\(0\)</span>, then there is a real root for the quadratic equation.</p>
+<div class="line-block">
+<div class="line"><em>Write a function called calculate to find discriminant, and using
+that function to decide the quadratic equation has any real root or
+not. The values :math:`a`, :math:`b`, :math:`c` will be given to you
+in a space-separated format in one line. You have to print “yes” if
+the equation has any real root, or “no” if it has not.</em></div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span> <span class="mi">1</span><span class="p">:</span>
+
+<span class="mi">1</span> <span class="o">-</span><span class="mi">4</span> <span class="mi">4</span>
+
+<span class="n">Output</span> <span class="mi">1</span><span class="p">:</span>
+
+<span class="n">yes</span>
+
+<span class="n">Input</span> <span class="mi">2</span><span class="p">:</span>
+
+<span class="mi">1</span> <span class="o">-</span><span class="mi">2</span> <span class="mi">4</span>
+
+<span class="n">Output</span> <span class="mi">2</span><span class="p">:</span>
+
+<span class="n">no</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
+
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">()</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
+
+<span class="k">if</span> <span class="n">calculate</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;yes&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;no&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:even_customers]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \bigstar \largestar \largestar\)</span></div>
+<div class="line">In this question, the task is helping a shop owner who wants to know
+whether even number of customers in her shop at any time.</div>
+</div>
+<p>Whenever she needs the answer, she should call <em>is_even</em> function with
+no argument and this function must return True or False according to the
+number of customers in the shop. To keep track of the incoming and
+outgoing customers, she will call <em>incoming</em> and <em>outgoing</em> functions.
+These functions do not take any arguments and do not return anything.</p>
+<div class="line-block">
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">even_customers</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">incoming</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">incoming</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">incoming</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_even</span><span class="p">()</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">outgoing</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_even</span><span class="p">()</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>In these sample calls, as 3 consecutive calls of <em>incoming</em> function
+shows, 3 customers arrived to the shop. That’s why the first call of
+<em>is_even</em> function returns False. Then a customer left, as indicated by
+the call of <em>outgoing</em> function. At that time there were 2 customers in
+the shop, therefore, the second call of <em>is_even</em> returns True.</p>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<p>The solution will be constructed incrementally with requested functions
+and a common, global variable. First of all, let’s define this global
+variable:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Since the definition of this variable is not in any function, it will be
+in the global scope. Therefore, all of the functions will be able to
+reach this variable.</p>
+<p>Now we can define <em>incoming</em> function as below:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">incoming</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">counter</span>
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>This function needs to update global variable <em>counter</em>, and to be able
+to do that, it is declared with global keyword at the beginning of
+function.</p>
+<p>The <em>outgoing</em> function can be defined in the same manner:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">outgoing</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">counter</span>
+    <span class="n">counter</span> <span class="o">-=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>Finally, the definition of <em>is_even</em> function becomes like following:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_even</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">counter</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+<p>Note that the global variable, <em>counter</em> is used read-only and not
+updated. Therefore declaration with global keyword is not necessary.</p>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:2d_euclidian_distance]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \largestar \largestar \largestar\)</span></div>
+</div>
+<div class="line-block">
+<div class="line">Finding the distance between two distinct <em>values</em> is a simple task
+yet it has applications in many branches including but not limited to
+image processing, computer graphics, statistics, and robotics. When
+dealing with real world objects, we usually regard those values as
+points in 2-dimensional Euclidian plane or 3-dimensional Euclidian
+space. However, scientific computations often require us to work on
+space with more than 3 dimensions, namely n-dimensional space. In the
+following examples you are required to implement functions for
+computing the distance between points in 2-dimensional plane,
+3-dimensional space, and finally n-dimensional space by generalizing
+the former two functions.</div>
+<div class="line">Implement a function <code class="docutils literal notranslate"><span class="pre">two_dim_distance(p1,</span> <span class="pre">p2)</span></code> that accepts two
+2-tuples (also called pairs) and returns the distance between these
+two points. Just like lists, you can index tuples. Also, you certainly
+need to use the <code class="docutils literal notranslate"><span class="pre">sqrt()</span></code> function from math library. After that,
+implement another fuction <code class="docutils literal notranslate"><span class="pre">three_dim_distance(p1,</span> <span class="pre">p2)</span></code> that accepts
+two 3-tuples and returns the the Euclidian distance between these two
+points in Euclidian space. Going from 2-dimensional distance to
+3-dimensional distance should be trivial.</div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">two_dim_distance</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+<span class="go">2.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">two_dim_distance</span><span class="p">((</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">))</span>
+<span class="go">25.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">three_dim_distance</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="go">13.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">three_dim_distance</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+<span class="go">2.449489742783178</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:general_euclidian_distance]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \bigstar \largestar \largestar\)</span></div>
+</div>
+<div class="line-block">
+<div class="line">Now, try to find a regularity in the distance formula while going from
+1D to 2D, or 2D to 3D. Can we generalize the notion of Euclidian
+distance to more than 3 dimensions? Implement a function
+<code class="docutils literal notranslate"><span class="pre">general_euclidian(p1,</span> <span class="pre">p2,</span> <span class="pre">n)</span></code> that takes two values <code class="docutils literal notranslate"><span class="pre">p1</span></code> and
+<code class="docutils literal notranslate"><span class="pre">p2</span></code> as n-tuples, the number of dimensions <code class="docutils literal notranslate"><span class="pre">n</span></code>, and returns the
+Euclidian distance between these two values. You need some form of
+iteration or recursion to compute this.</div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">general_euclidian</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">4</span><span class="p">)</span>
+<span class="go">2.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">general_euclidian</span><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">21</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">20.0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">general_euclidian</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">15</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+<span class="go">19.4164878389476</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">general_euclidian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span>
+        <span class="p">[(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">)]))</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Exercise</strong> [q:is_perfect]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \bigstar \bigstar \largestar\)</span></div>
+<div class="line">“In number theory, a perfect number is a positive integer that is
+equal to the sum of its positive divisors, excluding the number
+itself. For instance, 6 has divisors 1, 2 and 3 (excluding itself),
+and 1 + 2 + 3 = 6, so 6 is a perfect number.” (Wikipedia, Available
+at: <a class="reference external" href="https://en.wikipedia.org/wiki/Perfect_number">https://en.wikipedia.org/wiki/Perfect_number</a>)</div>
+<div class="line">Write a function named <em>is_perfect</em>, takes an integer and returns True
+if the given integer is perfect, and False otherwise.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">is_perfect</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_perfect</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_perfect</span><span class="p">(</span><span class="mi">28</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_perfect</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:basic_calculator]
+<span class="math notranslate nohighlight">\(\bigstar \largestar \largestar \largestar \largestar\)</span></div>
+</div>
+<p>In this question, you are expected to write a function named
+‘simple<span class="math notranslate nohighlight">\(\_\)</span>calculator’ that has two arguments which are the
+numbers and the operations as two different arrays and print the result
+of calculation. The function was named as
+‘simple<span class="math notranslate nohighlight">\(\_\)</span>calculator’ because it can do only two mathematical
+operations which are addition and substraction. As an example, let our
+first array be [1, 2, 3, 4] and our second arrray be [‘+’, ‘-’, ‘+’],
+the expected calculation that your function must do is 1 + 2 - 3 + 4. At
+final, your function must return the result value and in this example it
+is 4.</p>
+<div class="line-block">
+<div class="line">Please note that, the first array must always have 1 more element than
+the second array.</div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="nb">print</span><span class="p">(</span> <span class="n">simple_calculator</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">])</span> <span class="p">)</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="mi">0</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="nb">print</span><span class="p">(</span> <span class="n">simple_calculator</span><span class="p">([</span><span class="mi">16356</span><span class="p">,</span> <span class="o">-</span><span class="mi">34324</span><span class="p">,</span> <span class="mi">98597</span><span class="p">,</span> <span class="o">-</span><span class="mi">25483</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">])</span> <span class="p">)</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="o">-</span><span class="mi">91082</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simple_calculator</span><span class="p">(</span><span class="n">numbers</span><span class="p">,</span> <span class="n">operations</span><span class="p">):</span>
+    <span class="n">calculated_total</span> <span class="o">=</span> <span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">operations</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">operations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;+&#39;</span><span class="p">:</span>
+            <span class="n">calculated_total</span> <span class="o">+=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">operations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span>
+            <span class="n">calculated_total</span> <span class="o">-=</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">calculated_total</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:sum_of_digits]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \bigstar \bigstar \bigstar\)</span></div>
+</div>
+<p>If a number has two or more digits, the sum of the digits of that number
+is another number. In this question, firstly, you are expected to write
+a function named
+‘find<span class="math notranslate nohighlight">\(\_\)</span>sum<span class="math notranslate nohighlight">\(\_\)</span>of<span class="math notranslate nohighlight">\(\_\)</span>digits’ that finds
+the sum of the digits of the given number. Secondly, you should read an
+integer value from user as input. Then you should call this function
+with the value read from input. You should repeat the function calling
+step with the argument of the returned value of the previous call until
+the returned number has one digit. At final, you should print the last
+one digit number.</p>
+<p>For example, let’s say we read 325565 and called
+‘find<span class="math notranslate nohighlight">\(\_\)</span>sum<span class="math notranslate nohighlight">\(\_\)</span>of<span class="math notranslate nohighlight">\(\_\)</span>digits’ function
+with 325565 as argument, then the result must be 26. However, 26 is a
+two digit number, then we should call
+‘find<span class="math notranslate nohighlight">\(\_\)</span>sum<span class="math notranslate nohighlight">\(\_\)</span>of<span class="math notranslate nohighlight">\(\_\)</span>digits’ again this
+time with 26 as argument and the result must be 8. 8 is a one digit
+number, then we should stop and print 8 because we have found what we
+have been looking for.</p>
+<div class="line-block">
+<div class="line">You can use the code template in the box below and start to fill it
+with ‘find<span class="math notranslate nohighlight">\(\_\)</span>sum<span class="math notranslate nohighlight">\(\_\)</span>of<span class="math notranslate nohighlight">\(\_\)</span>digits’
+function.</div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">589564123</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="mi">7</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="mi">19999999999999</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="mi">1</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">find_sum_of_digits</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">number</span> <span class="o">%</span> <span class="mi">10</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">number</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">sum</span>
+
+<span class="k">while</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">9</span><span class="p">:</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">find_sum_of_digits</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:substring_count]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \bigstar \largestar \largestar\)</span></div>
+</div>
+<div class="line-block">
+<div class="line">Can you print the number of string <span class="math notranslate nohighlight">\(K\)</span>’s located in the
+substring <span class="math notranslate nohighlight">\(S\)</span>?</div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="n">S</span> <span class="o">=</span> <span class="s2">&quot;stanrandystancartmanstankenny&quot;</span>
+<span class="n">K</span> <span class="o">=</span> <span class="s2">&quot;stan&quot;</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="mi">3</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="n">S</span> <span class="o">=</span> <span class="s2">&quot;taktakatutakatakataktuk&quot;</span>
+<span class="n">K</span> <span class="o">=</span> <span class="s2">&quot;ta&quot;</span>
+
+<span class="n">Output</span>
+
+<span class="mi">5</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+<span class="n">K</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">substring_count</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="nb">len</span><span class="p">(</span><span class="n">k</span><span class="p">)]</span> <span class="o">==</span> <span class="n">k</span><span class="p">:</span>
+            <span class="n">ans</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">return</span> <span class="n">ans</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">substring_count</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">K</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:city_sushi]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \largestar \largestar \largestar\)</span></div>
+</div>
+<div class="line-block">
+<div class="line">Cartman wanted to eat some sushi. So, he went to City Sushi. The menu
+has <span class="math notranslate nohighlight">\(N\)</span> sushis in it, and he wants to eat all the sushis between
+<span class="math notranslate nohighlight">\(L\)</span> and <span class="math notranslate nohighlight">\(R\)</span>. Can you help him how much would it cost for
+him to eat what he wants?</div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="n">sushi_prices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="mi">25</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="n">sushi_prices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mi">9</span>
+
+<span class="n">Output</span>
+
+<span class="mi">47</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sushi_prices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">L</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+<span class="n">R</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+
+<span class="k">def</span> <span class="nf">total_price_between_l_and_r</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">l</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">ans</span> <span class="o">+=</span> <span class="n">prices</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">ans</span>
+
+<span class="c1"># alternative solution</span>
+<span class="k">def</span> <span class="nf">total_price_between_l_and_r_2</span><span class="p">(</span><span class="n">prices</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">prices</span><span class="p">[</span><span class="n">l</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="n">r</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">total_price_between_l_and_r</span><span class="p">(</span><span class="n">sushi_prices</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">R</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:range]
+<span class="math notranslate nohighlight">\(\bigstar \largestar \largestar \largestar \largestar\)</span></div>
+</div>
+<div class="line-block">
+<div class="line">In statistics, range is defined as the difference between the largest
+and the smallest values in a set of values. Implement a function that
+computes the range for a given list of integers. The elements in list
+are not necessarily in ascending order. You can use built-in function
+min and max or iterate over the list manually, storing the maximum and
+the minimum elements in temporary variables along the way.</div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">range_of</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="go">38</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">range_of</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
+<span class="go">0</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">range_of</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">range_of</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">min_elem</span><span class="p">,</span> <span class="n">max_elem</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">if</span> <span class="n">elem</span> <span class="o">&lt;</span> <span class="n">min_elem</span><span class="p">:</span>
+            <span class="n">min_elem</span> <span class="o">=</span> <span class="n">elem</span>
+        <span class="k">elif</span> <span class="n">elem</span> <span class="o">&gt;</span> <span class="n">max_elem</span><span class="p">:</span>
+            <span class="n">max_elem</span> <span class="o">=</span> <span class="n">elem</span>
+    <span class="k">return</span> <span class="n">max_elem</span> <span class="o">-</span> <span class="n">min_elem</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:mutate]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \largestar \largestar \largestar\)</span></div>
+</div>
+<div class="line-block">
+<div class="line">Write a function that takes a list of integers and returns a new list
+with all of it elements incremented by one. You need to make sure that
+the original list is not mutated. To achieve this, you will need to
+make a copy of the original list.</div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use variable assignment to be able to observe the original list after the function call</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">increment_list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Question</strong> [q:bankruptcy_countdown]</p>
+<div class="line-block">
+<div class="line"><span class="math notranslate nohighlight">\(\bigstar \bigstar \largestar \largestar \largestar\)</span></div>
+</div>
+<p>Your friend Tom co-owns an entertainment company called “Entertainment
+720”, but none of the owners know anything about finance or accounting.
+Tom asks for your help to manage their finances and you agree. When
+looking into the numbers you realize that they are about to go bankrupt.</p>
+<p>Write a function named <code class="docutils literal notranslate"><span class="pre">countdown</span></code> that calculates how many months
+Entertainment 720 has before going fully bankrupt. This function takes
+two arguments: an integer and a list of integers, as the amount of money
+Entertainment 720 has left and the monthly payments done to the
+employes, respectively.</p>
+<div class="line-block">
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="n">countdown</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="p">[</span><span class="mi">2900</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">23000</span><span class="p">])</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="mi">0</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="n">countdown</span><span class="p">(</span><span class="mi">83000</span><span class="p">,</span> <span class="p">[</span><span class="mi">7000</span><span class="p">,</span> <span class="mi">4500</span><span class="p">,</span> <span class="mi">750</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">7100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">])</span>
+
+<span class="n">Output</span>
+
+<span class="mi">4</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:best_food]
+<span class="math notranslate nohighlight">\(\bigstar \largestar \largestar \largestar \largestar\)</span></div>
+<div class="line">Ben and Leslie are fighting to decide if waffles or calzones are more
+delicious. After debating over a pros and cons list for hours, they
+flip a coin to decide.</div>
+</div>
+<p>Write a function named <code class="docutils literal notranslate"><span class="pre">best_food</span></code> that takes a string. If the string
+is <em>HEADS</em> function should return <em>CALZONES</em> and if the string is
+<em>TAILS</em> the function should return <em>WAFFLES</em>. If the string is not
+<em>HEADS</em> or <em>TAILS</em>, it should return <em>flip again</em>.</p>
+<div class="line-block">
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Input</span><span class="p">:</span>
+
+<span class="n">best_food</span><span class="p">(</span><span class="s2">&quot;HEADS&quot;</span><span class="p">)</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="n">CALZONES</span>
+
+<span class="n">Input</span><span class="p">:</span>
+
+<span class="n">best_food</span><span class="p">(</span><span class="s2">&quot;NONE&quot;</span><span class="p">)</span>
+
+<span class="n">Output</span><span class="p">:</span>
+
+<span class="n">flip</span> <span class="n">again</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">best_food</span><span class="p">(</span><span class="n">coin</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">coin</span> <span class="o">==</span> <span class="s2">&quot;HEADS&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;CALZONES&quot;</span>
+    <span class="k">elif</span> <span class="n">coin</span> <span class="o">==</span> <span class="s2">&quot;TAILS&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;WAFFLES&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">&quot;flip again&quot;</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:middle_point]
+<span class="math notranslate nohighlight">\(\bigstar \largestar \largestar \largestar \largestar\)</span></div>
+<div class="line">Write a function named <em>middle_point</em> that calculates the middle point
+of two points in a 2D plane. The Function must take two points as
+arguments, and must return the middle point.</div>
+</div>
+<p>The points are represented as a two dimensional tuple, x and y
+coordinates.</p>
+<div class="line-block">
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">middle_point</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="go">(2.5, 3.0)</span>
+
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">middle_point</span><span class="p">((</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">))</span>
+<span class="go">(-0.5, -1.0)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">middle_point</span><span class="p">(</span><span class="n">point1</span><span class="p">,</span> <span class="n">point2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">((</span><span class="n">point1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">point2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">point1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">point2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Question</strong> [q:find_first_non_prime]
+<span class="math notranslate nohighlight">\(\bigstar \bigstar \bigstar \bigstar \largestar\)</span></div>
+</div>
+<p>Write a function named <code class="docutils literal notranslate"><span class="pre">is_prime</span></code> that finds if the given number is a
+prime number or not.</p>
+<p>Then write a second function named <code class="docutils literal notranslate"><span class="pre">find_first_non_prime</span></code> to find the
+first non-prime number in the given list. If all the numbers are prime,
+return <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>You can use the code template below.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>Sample IO:</strong></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">find_first_non_prime</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+<span class="go">4</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">find_first_non_prime</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span>
+<span class="go">False</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">find_first_non_prime</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">19</span><span class="p">])</span>
+<span class="go">51</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Answer</strong></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">number</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">return</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">find_first_non_prime</span><span class="p">(</span><span class="n">items</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">item</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">item</span>
+
+    <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+
+
+        </div>
+        <div class="side-doc-outline">
+            <div class="side-doc-outline--content"> 
+            </div>
+        </div>
+
+      <div class="clearer"></div>
+    </div><div class="pagenation">
+  </div>
+        
+        </main>
+    </div>
+  </body>
+</html>

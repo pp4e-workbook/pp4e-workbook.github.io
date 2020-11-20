@@ -1,0 +1,1147 @@
+
+--------------
+
+FUNCTIONS
+=========
+
+--------------
+
+| **Question** [q:just_average]
+  :math:`\bigstar \bigstar \largestar \largestar \largestar`
+
+| Write a function with the signature ``can_average(numbers, k)`` that
+  with the given a list of integers called ``numbers`` and a single
+  integer ``k``, prints “yes” if we can remove a single element from the
+  ``numbers`` list so that the new average is equal to ``k``, prints
+  “no” otherwise. Don’t forget to call your function with different
+  arguments to debug it.
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   1 2 3 10
+   2
+
+   Output:
+
+   yes
+
+   Input:
+
+   1 3
+   2
+
+   Output
+   no
+
+| **Answer**
+
+.. code:: python
+
+   def can_average(numbers, k):
+       n = len(numbers)
+       if sum(numbers) - k * (n - 1) in numbers:
+           print("yes")
+       else:
+           print("no")
+
+   numbers = list(map(int, input().strip().split()))
+   k = int(input())
+
+   can_average(numbers, k)
+
+| **Question** [q:gcd_recursion]
+  :math:`\bigstar \largestar \largestar \largestar \largestar`
+
+| Euclid, of the Geometry fame, also proposed a *recursive* algorithm to
+  find the *greatest common divisor* of two *positive* numbers ``a`` and
+  ``b``.
+| It is as follows;
+
+**If** ``b`` is 0 then **return** ``a``.
+
+| **Else**, set a new integer ``c`` to the reminder when ``a`` is
+  divided by ``b`` and call the function recursively;
+  ``gcd_euclid(b, c)`` and **return** the result.
+| Implement this function with the signature ``gcd_euclid(a, b)`` and
+  use it in a script; read two integers and print their greatest common
+  divisor.
+
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   56
+   12
+
+   Output:
+
+   4
+
+   Input:
+
+   12
+   11
+
+   Output
+
+   1
+
+| **Answer**
+
+.. code:: python
+
+   def gcd_euclid(a, b):
+       if b == 0:
+           return a  # smallest possible
+       else:
+           c = a % b
+           return gcd_euclid(b, c)  # recursion!
+
+   a = input()
+   b = input()
+
+   result = gcd_euclid(int(a), int(b))
+   print(result)
+
+| **Question** [q:grandmas_garden]
+  :math:`\bigstar \bigstar \largestar \largestar \largestar`
+
+Your grandma has gathered all the ``fruits`` from her garden. However,
+she didn’t separate apples from oranges and put them all in the same
+basket. Since she is too tired now, she requested your help to separate
+oranges from apples.
+
+There is a separator in your grandma’s garden, and it can separate two
+fruits according to their weight. You know that all oranges from the
+garden weigh above ``k`` grams and all the apples are below that. Can
+you write a program for separator and help your grandma to find the
+counts of each of the fruit there are?
+
+| *You will be given weights of fruits as a list in the first line, and
+  the number k in the next line. For output, you are expected to print
+  the number of apples and oranges, in that order.*
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   102 201 96 105
+   103
+
+   Output:
+
+   2 2
+
+   Input:
+
+   50 100 200 60 70 85 100
+   190
+
+   Output
+   6 1
+
+| **Answer**
+
+.. code:: python
+
+   fruits = list(map(int, input().strip().split()))
+   k = int(input())
+
+   def separator(weight):
+     return weight < k # The function returns "True" when weight is smaller than k
+
+   n = len(fruits)
+   apples_count = len(list(filter(separator, fruits))) # Filters the list using the separator function
+   oranges_count = n - apples_count
+   print(apples_count, oranges_count)
+
+| **Question** [q:dragon_contest]
+  :math:`\bigstar \bigstar \bigstar \bigstar \largestar`
+
+There is going to be a contest between the students of the magical
+Middle Earth Technical University. All teams had to build a dragon for
+this year. After testing each dragon’s skin durability and flying
+abilities, there are only four teams left for the final firebreathing
+contest.
+
+The final contest will take place in one hour, and you wanted to come up
+with a prediction. You rated all of the team member’s knowledge on
+building fire systems. Also, because there are a limit of ``k`` people
+for working on the firebreathing feature of the dragon. Assuming that
+all of the teams used their best members to build the firebreathing
+feature, can you find which of the teams is most probable to win?
+
+| *In the first line, there is k that stands for the limit of people to
+  work on the firebreathing feature. In the next four lines, there are
+  lists for the teams. Each number on this list corresponds to one of
+  the members in that team’s fire system building ability.*
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   2
+   10 15 20 20
+   5 5 15 50
+   50 30 20 10
+   15 20 25 5
+
+   Output:
+
+   3
+
+   Input:
+
+   4
+   105 106 105 106 105 106 
+   119 120 260 119 120 260
+   101 102 211 101 102 211
+   111 140 213 111 140 213
+
+   Output
+   2
+
+| **Answer**
+
+.. code:: python
+
+   k = int(input())
+   teams = []
+   team_estimations = []
+
+   for i in range(4):
+     teams.append(list(map(int, input().strip().split())))
+     teams[i].sort()
+     team_estimations.append(sum(teams[i][-k:]))
+
+   print(team_estimations.index(max(team_estimations)))
+
+| **Question** [q:leslies_parks]
+  :math:`\bigstar \bigstar \largestar \largestar \largestar`
+
+Leslie Knope is the deputy director of the department of Parks and
+Recreation. She wants to build a park in front of all of her friends’
+houses. She loves her friends so much, but she also loves being a
+servant to the citizens and values their opinions. Being the reasonable
+thing to do, she holds a public forum to take a vote for each park to be
+built or not. For each park, if the votes in favor are double or more
+than the votes against, that park is decided to be built. Can you help
+Tom, Leslie’s lazy co-worker who is in charge of doing the calculation,
+so that he can decide if a park is going to be built or not?
+
+| *Write a function named that takes two values ``v_for`` and
+  ``v_against`` and returns 1 if the park is going to be built, 0 if
+  not.*
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   is_built(12,36)
+
+   Output:
+
+   0
+
+   Input:
+
+   is_built(27,13)
+
+   Output
+
+   1
+
+| **Answer**
+
+.. code:: python
+
+   def is_built(v_for, v_against):
+       if v_for >= 2 * v_against:
+           return 1
+       else:
+           return 0
+
+| **Question** [q:leslies_parks_revisited]
+  :math:`\bigstar \bigstar \bigstar \largestar \largestar`
+
+Ron Swanson is Leslie’s boss who thinks government is a waste of
+taxpayers money. He hates when Leslie builds parks. So he puts an extra
+limitation on the voting process. If the votes for the park to be built
+(``v_for``) is less than the value ``min_for`` or votes against the park
+to be built (``v_against``) is more than the value ``max_against`` he
+does not allow Leslie to build that park.
+
+| *Update the function from the previous question to check Ron’s extra
+  limitations. The new function should take 4 values, ``v_for``,
+  ``v_against``, ``min_for`` and ``max_against``.*
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   is_built(27,13,24,12)
+
+   Output:
+
+   0
+
+   Input:
+
+   is_built(27,13,3,2)
+
+   Output
+
+   1
+
+| **Answer**
+
+.. code:: python
+
+   def is_built(v_for, v_against, min_for, max_against):
+       if min_for > v_for or max_against < v_against:
+           return 0
+       if v_for >= 2 * v_against:
+           return 1
+       else:
+           return 0
+
+| **Question** [q:calculate_median]
+  :math:`\bigstar \bigstar \largestar \largestar \largestar`
+
+Calculus exam results are announced and your result is above the
+announced average. You want to have an idea about the letter grade you
+will get, and to do this you ask everyone you know about their exam
+results. You want to calculate the median of the results, which will
+give you some more idea about the distribution of the grades so that you
+can take a better guess about your letter grade.
+
+| *You will be given a list of exam results, you need to return the
+  median value. If the list has an even length, return the higher of the
+  two middle elements. Write a function named ``find_median`` for this
+  task.*
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   find_median([72,32,49,20,33])
+
+   Output:
+
+   33
+
+   Input:
+
+   find_median([27,48,9,63,99,61,33,80,43,84,39,46,40,46,16,55,69,43,11,57])
+
+   Output
+
+   46
+
+| **Answer**
+
+.. code:: python
+
+   def find_median(results):
+       n = len(results)
+       return sorted(results)[n//2]
+
+| **Question** [q:palindrome]
+  :math:`\bigstar \bigstar \largestar \largestar \largestar`
+
+A palindrome is a piece of text which reads the same backwards and
+forward. For example, "onion" is not a palindrome whereas "onino" is.
+Your task is to write a function that finds whether the input text is
+palindrome or not.
+
+| *You will be given a string, you need to return True if the string is
+  a palindrome and False otherwise.*
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   "ilsa"
+
+   Output:
+
+   False
+
+   Input:
+
+   "dammitimmad"
+
+   Output:
+
+   True
+
+| **Answer**
+
+.. code:: python
+
+   s = input()
+
+   def is_palindrome(s):
+       n = len(s)
+       flag = True
+       
+       for i in range(n//2):
+           if s[i] != s[n-i-1]:
+               flag=False
+               break
+
+       return flag
+
+   print(is_palindrome(s))
+
+| **Question** [q:divisors_game]
+  :math:`\bigstar \bigstar \bigstar \largestar \largestar`
+
+Nazif and Osman were really bored during the lockout and they have come
+up with an exciting game. The rules are simple, they both choose an
+integer and whoever has an integer with more divisors wins. Given the
+integers they have picked, can you write the function to decide who is
+the winner?
+
+| *You will be given two integers, first one is Nazif’s number and the
+  second one is Osman’s. You should return "nazif" if Nazif wins,
+  "osman" if Osman wins and "draw" if the results are equal.*
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   120 144
+
+   Output:
+
+   "nazif"
+
+   Input:
+
+   191 190
+
+   Output:
+
+   "osman"
+
+   Input:
+
+   4 121
+
+   Output:
+
+   "draw"
+
+| **Answer**
+
+.. code:: python
+
+   nazif, osman = list(map(int, input().split()))
+
+   def divisors(n):
+       ans = 0
+       for i in range(1,n+1):
+           if n%i==0:
+               ans+=1
+       return ans
+
+   def winner(nazif, osman):
+       n = divisors(nazif)
+       o = divisors(osman)
+       if n > o:
+           return "nazif"
+       elif n < o:
+           return "osman"
+       else:
+           return "draw"
+       
+   print(winner(nazif, osman))
+
+| **Question** [q:sherlock_holmes]
+  :math:`\bigstar \bigstar \bigstar \bigstar \largestar`
+
+Sherlock Holmes is one of the best detectives globally, which works with
+Detective Lestrade from English Police, Scotland Yard. One day Detective
+Lestrade receives an anonymous, very long letter, which probably is
+related to the case Lestrade currently works. However, it does not look
+like a meaningful letter when you read it. That’s why he asks Holmes to
+understand what precisely the message means.
+
+Holmes understands the mystery behind the letter. The letter is
+meaningful only if you order the sentences alphabetically, but there are
+too many sentences to be ordered. That’s why Lestrade asks you, the
+computer department (Yes, it is 2010 adaptation).
+
+| *You will be given the whole paragraph as one line. You should write a
+  python script to read the text, order the sentences alphabetically,
+  and print the output. You know that all of the sentences end with a
+  period, and the only place periods used the end of sentences.*
+| *Hint: You can use the sort function to order sentence list
+  alphabetically, split function to split using period’s and join
+  function to combine them. Also split function creates an empty string
+  due to the last sentence ends with a period.*
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   Probably there will be a bank robbery. You have to come alone. Meet me at the Central Perk at 16 pm. I have important things to say.
+
+   Output:
+
+   I have important things to say. Meet me at the Central Perk at 16 pm. Probably there will be a bank robbery. You have to come alone.
+
+| **Answer**
+
+.. code:: python
+
+   def trim_sentence(s):
+       return s.strip() # Remove the spaces from the start and the end of the string
+
+   # Use the strip function to prevent empty string in the list and split the text
+   # later trim the sentences using map and trim_sentence functions
+   items = list(map(trim_sentence, input().strip('.').split('.')))
+   items.sort()
+
+   # Add period at the end of the paragraph
+   print('. '.join(items) + '.')
+
+| **Question** [q:discriminant_problem]
+  :math:`\bigstar \bigstar \largestar \largestar \largestar`
+
+Ozi wants to help his sister with programming, which is taking Python
+course in high school. Her teacher wants students to write a program
+that takes the coefficient of a quadratic equation and calculate that is
+there a real root of the equation using the discriminant method.
+
+The calculation is as follows. Let’s call the coefficient of the
+:math:`x^2` :math:`a`, coefficient of the :math:`x` :math:`b`, and the
+constant :math:`c`. The discriminant is calculated using the formula
+:math:`b^2 - 4ac`. If the discriminant value is greater than or equal to
+:math:`0`, then there is a real root for the quadratic equation.
+
+| *Write a function called calculate to find discriminant, and using
+  that function to decide the quadratic equation has any real root or
+  not. The values :math:`a`, :math:`b`, :math:`c` will be given to you
+  in a space-separated format in one line. You have to print "yes" if
+  the equation has any real root, or "no" if it has not.*
+| **Sample IO:**
+
+.. code:: default
+
+   Input 1:
+
+   1 -4 4
+
+   Output 1:
+
+   yes
+
+   Input 2:
+
+   1 -2 4
+
+   Output 2:
+
+   no
+
+| **Answer**
+
+.. code:: python
+
+   def calculate(a, b, c):
+       return b**2 - 4*a*c
+
+   a, b, c = list(map(int, input().strip().split()))
+
+   if calculate(a, b, c) >= 0:
+       print("yes")
+   else:
+       print("no")
+
+| **Question** [q:even_customers]
+  :math:`\bigstar \bigstar \bigstar \largestar \largestar`
+| In this question, the task is helping a shop owner who wants to know
+  whether even number of customers in her shop at any time.
+
+Whenever she needs the answer, she should call *is_even* function with
+no argument and this function must return True or False according to the
+number of customers in the shop. To keep track of the incoming and
+outgoing customers, she will call *incoming* and *outgoing* functions.
+These functions do not take any arguments and do not return anything.
+
+| **Sample IO:**
+
+.. code:: default
+
+   >>> from even_customers import *
+   >>> incoming()
+   >>> incoming()
+   >>> incoming()
+   >>> is_even()
+   False
+   >>> outgoing()
+   >>> is_even()
+   True
+
+In these sample calls, as 3 consecutive calls of *incoming* function
+shows, 3 customers arrived to the shop. That’s why the first call of
+*is_even* function returns False. Then a customer left, as indicated by
+the call of *outgoing* function. At that time there were 2 customers in
+the shop, therefore, the second call of *is_even* returns True.
+
+| **Answer**
+
+The solution will be constructed incrementally with requested functions
+and a common, global variable. First of all, let’s define this global
+variable:
+
+.. code:: python
+
+   counter = 0
+
+Since the definition of this variable is not in any function, it will be
+in the global scope. Therefore, all of the functions will be able to
+reach this variable.
+
+Now we can define *incoming* function as below:
+
+.. code:: python
+
+   def incoming():
+       global counter
+       counter += 1
+
+This function needs to update global variable *counter*, and to be able
+to do that, it is declared with global keyword at the beginning of
+function.
+
+The *outgoing* function can be defined in the same manner:
+
+.. code:: python
+
+   def outgoing():
+       global counter
+       counter -= 1
+
+Finally, the definition of *is_even* function becomes like following:
+
+.. code:: python
+
+   def is_even():
+       return counter % 2 == 0
+
+Note that the global variable, *counter* is used read-only and not
+updated. Therefore declaration with global keyword is not necessary.
+
+| **Question** [q:2d_euclidian_distance]
+  :math:`\bigstar \bigstar \largestar \largestar \largestar`
+
+| Finding the distance between two distinct *values* is a simple task
+  yet it has applications in many branches including but not limited to
+  image processing, computer graphics, statistics, and robotics. When
+  dealing with real world objects, we usually regard those values as
+  points in 2-dimensional Euclidian plane or 3-dimensional Euclidian
+  space. However, scientific computations often require us to work on
+  space with more than 3 dimensions, namely n-dimensional space. In the
+  following examples you are required to implement functions for
+  computing the distance between points in 2-dimensional plane,
+  3-dimensional space, and finally n-dimensional space by generalizing
+  the former two functions.
+| Implement a function ``two_dim_distance(p1, p2)`` that accepts two
+  2-tuples (also called pairs) and returns the distance between these
+  two points. Just like lists, you can index tuples. Also, you certainly
+  need to use the ``sqrt()`` function from math library. After that,
+  implement another fuction ``three_dim_distance(p1, p2)`` that accepts
+  two 3-tuples and returns the the Euclidian distance between these two
+  points in Euclidian space. Going from 2-dimensional distance to
+  3-dimensional distance should be trivial.
+| **Sample IO:**
+
+.. code:: default
+
+   >>> two_dim_distance((1, 0), (3, 0))
+   2.0
+   >>> two_dim_distance((-10, 15), (5, -5))
+   25.0
+   >>> three_dim_distance((0, 0, 0), (3, 4, 12))
+   13.0
+   >>> three_dim_distance((1, 1, 0), (0, -1, 1))
+   2.449489742783178
+
+| **Question** [q:general_euclidian_distance]
+  :math:`\bigstar \bigstar \bigstar \largestar \largestar`
+
+| Now, try to find a regularity in the distance formula while going from
+  1D to 2D, or 2D to 3D. Can we generalize the notion of Euclidian
+  distance to more than 3 dimensions? Implement a function
+  ``general_euclidian(p1, p2, n)`` that takes two values ``p1`` and
+  ``p2`` as n-tuples, the number of dimensions ``n``, and returns the
+  Euclidian distance between these two values. You need some form of
+  iteration or recursion to compute this.
+| **Sample IO:**
+
+.. code:: default
+
+   >>> general_euclidian((0, 0, 0, 0), (1, 1, 1, 1), 4)
+   2.0
+   >>> general_euclidian((-1, 0, 10, 0, 1), (-21, 0, 10, 0, 1), 5)
+   20.0
+   >>> general_euclidian((1, 1), (-10, -15), 2)
+   19.4164878389476
+
+| **Answer**
+
+.. code:: python
+
+   def general_euclidian(x, y, n): 
+       return math.sqrt(sum(
+           [(x[i] - y[i]) ** 2 for i in range(0, n)]))
+
+| **Exercise** [q:is_perfect]
+  :math:`\bigstar \bigstar \bigstar \bigstar \largestar`
+| “In number theory, a perfect number is a positive integer that is
+  equal to the sum of its positive divisors, excluding the number
+  itself. For instance, 6 has divisors 1, 2 and 3 (excluding itself),
+  and 1 + 2 + 3 = 6, so 6 is a perfect number.” (Wikipedia, Available
+  at: https://en.wikipedia.org/wiki/Perfect_number)
+| Write a function named *is_perfect*, takes an integer and returns True
+  if the given integer is perfect, and False otherwise.
+
+| **Sample IO:**
+
+.. code:: default
+
+   >>> is_perfect(6)
+   True
+   >>> is_perfect(7)
+   False
+   >>> is_perfect(28)
+   True
+   >>> is_perfect(30)
+   False
+
+| **Question** [q:basic_calculator]
+  :math:`\bigstar \largestar \largestar \largestar \largestar`
+
+In this question, you are expected to write a function named
+‘simple\ :math:`\_`\ calculator’ that has two arguments which are the
+numbers and the operations as two different arrays and print the result
+of calculation. The function was named as
+‘simple\ :math:`\_`\ calculator’ because it can do only two mathematical
+operations which are addition and substraction. As an example, let our
+first array be [1, 2, 3, 4] and our second arrray be [‘+’, ‘-’, ‘+’],
+the expected calculation that your function must do is 1 + 2 - 3 + 4. At
+final, your function must return the result value and in this example it
+is 4.
+
+| Please note that, the first array must always have 1 more element than
+  the second array.
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   print( simple_calculator([1, 2, 3], ['+', '-']) )
+
+   Output:
+
+   0
+
+   Input:
+
+   print( simple_calculator([16356, -34324, 98597, -25483], ['+', '-', '-']) )
+
+   Output:
+
+   -91082
+
+| **Answer**
+
+.. code:: python
+
+   def simple_calculator(numbers, operations):
+       calculated_total = numbers[0]
+       for i in range(0, len(operations)):
+           if operations[i] == '+':
+               calculated_total += numbers[i+1]
+           elif operations[i] == '-':
+               calculated_total -= numbers[i+1]
+       return calculated_total
+
+| **Question** [q:sum_of_digits]
+  :math:`\bigstar \bigstar \bigstar \bigstar \bigstar`
+
+If a number has two or more digits, the sum of the digits of that number
+is another number. In this question, firstly, you are expected to write
+a function named
+‘find\ :math:`\_`\ sum\ :math:`\_`\ of\ :math:`\_`\ digits’ that finds
+the sum of the digits of the given number. Secondly, you should read an
+integer value from user as input. Then you should call this function
+with the value read from input. You should repeat the function calling
+step with the argument of the returned value of the previous call until
+the returned number has one digit. At final, you should print the last
+one digit number.
+
+For example, let’s say we read 325565 and called
+‘find\ :math:`\_`\ sum\ :math:`\_`\ of\ :math:`\_`\ digits’ function
+with 325565 as argument, then the result must be 26. However, 26 is a
+two digit number, then we should call
+‘find\ :math:`\_`\ sum\ :math:`\_`\ of\ :math:`\_`\ digits’ again this
+time with 26 as argument and the result must be 8. 8 is a one digit
+number, then we should stop and print 8 because we have found what we
+have been looking for.
+
+| You can use the code template in the box below and start to fill it
+  with ‘find\ :math:`\_`\ sum\ :math:`\_`\ of\ :math:`\_`\ digits’
+  function.
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   589564123
+
+   Output:
+
+   7
+
+   Input:
+
+   19999999999999
+
+   Output:
+
+   1
+
+| **Answer**
+
+.. code:: python
+
+   number = int(input())
+
+   def find_sum_of_digits(number):
+       sum = 0
+       while number > 0:
+           sum += number % 10
+           number = int(number / 10)
+       return sum
+
+   while number > 9:
+       number = find_sum_of_digits(number)
+   print(number)
+
+| **Question** [q:substring_count]
+  :math:`\bigstar \bigstar \bigstar \largestar \largestar`
+
+| Can you print the number of string :math:`K`\ ’s located in the
+  substring :math:`S`?
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   S = "stanrandystancartmanstankenny"
+   K = "stan"
+
+   Output:
+
+   3
+
+   Input:
+
+   S = "taktakatutakatakataktuk"
+   K = "ta"
+
+   Output
+
+   5
+
+| **Answer**
+
+.. code:: python
+
+   S = input()
+   K = input()
+
+   def substring_count(s, k):
+       ans = 0
+       for i in range(0, len(s)-len(k)+1):
+           if s[i:i+len(k)] == k:
+               ans+=1
+       return ans
+       
+   print(substring_count(S, K))
+
+| **Question** [q:city_sushi]
+  :math:`\bigstar \bigstar \largestar \largestar \largestar`
+
+| Cartman wanted to eat some sushi. So, he went to City Sushi. The menu
+  has :math:`N` sushis in it, and he wants to eat all the sushis between
+  :math:`L` and :math:`R`. Can you help him how much would it cost for
+  him to eat what he wants?
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   sushi_prices = [1, 5, 2, 6, 12, 5, 23, 15] 
+   L = 2
+   R = 6
+
+   Output:
+
+   25
+
+   Input:
+
+   sushi_prices = [7, 7, 7, 5, 6, 3, 5, 7, 8]
+   L = 1
+   R = 9
+
+   Output
+
+   47
+
+| **Answer**
+
+.. code:: python
+
+   sushi_prices = [7, 7, 7, 5, 6, 3, 5, 7, 8]
+   L = int(input())
+   R = int(input())
+
+   def total_price_between_l_and_r(prices, l, r):
+       ans = 0
+       for i in range(l-1, r-1):
+           ans += prices[i]
+       return ans
+
+   # alternative solution
+   def total_price_between_l_and_r_2(prices, l, r):
+       return sum(prices[l-1:r-1])
+       
+   print(total_price_between_l_and_r(sushi_prices, L, R))
+
+| **Question** [q:range]
+  :math:`\bigstar \largestar \largestar \largestar \largestar`
+
+| In statistics, range is defined as the difference between the largest
+  and the smallest values in a set of values. Implement a function that
+  computes the range for a given list of integers. The elements in list
+  are not necessarily in ascending order. You can use built-in function
+  min and max or iterate over the list manually, storing the maximum and
+  the minimum elements in temporary variables along the way.
+| **Sample IO:**
+
+.. code:: default
+
+   >>> range_of([1, 4, 6, 28, -10, 0, 0, 1])
+   38
+
+   >>> range_of([1])
+   0
+
+   >>> range_of([2, 2])
+   0
+
+| **Answer**
+
+.. code:: python
+
+   def range_of(lst):
+       min_elem, max_elem = lst[0], lst[0]
+       for elem in lst[1:]:
+           if elem < min_elem:
+               min_elem = elem
+           elif elem > max_elem:
+               max_elem = elem
+       return max_elem - min_elem
+
+| **Question** [q:mutate]
+  :math:`\bigstar \bigstar \largestar \largestar \largestar`
+
+| Write a function that takes a list of integers and returns a new list
+  with all of it elements incremented by one. You need to make sure that
+  the original list is not mutated. To achieve this, you will need to
+  make a copy of the original list.
+| **Sample IO:**
+
+.. code:: default
+
+   # Use variable assignment to be able to observe the original list after the function call
+
+   >>> a = [1, 2, 3, 10, 15] 
+   >>> a
+   [1, 2, 3, 10, 15] 
+   >>> increment_list(a)
+   [2, 3, 4, 11, 16]
+   >>> a
+   [1, 2, 3, 10, 15]
+
+**Question** [q:bankruptcy_countdown]
+
+| :math:`\bigstar \bigstar \largestar \largestar \largestar`
+
+Your friend Tom co-owns an entertainment company called "Entertainment
+720", but none of the owners know anything about finance or accounting.
+Tom asks for your help to manage their finances and you agree. When
+looking into the numbers you realize that they are about to go bankrupt.
+
+Write a function named ``countdown`` that calculates how many months
+Entertainment 720 has before going fully bankrupt. This function takes
+two arguments: an integer and a list of integers, as the amount of money
+Entertainment 720 has left and the monthly payments done to the
+employes, respectively.
+
+| **Sample IO:**
+
+.. code:: default
+
+   Input:
+
+   countdown(2000, [2900, 1000, 400, 23000])
+
+   Output:
+
+   0
+
+   Input:
+
+   countdown(83000, [7000, 4500, 750, 150, 7100, 1000])
+
+   Output
+
+   4
+
+| **Question** [q:best_food]
+  :math:`\bigstar \largestar \largestar \largestar \largestar`
+| Ben and Leslie are fighting to decide if waffles or calzones are more
+  delicious. After debating over a pros and cons list for hours, they
+  flip a coin to decide.
+
+Write a function named ``best_food`` that takes a string. If the string
+is *HEADS* function should return *CALZONES* and if the string is
+*TAILS* the function should return *WAFFLES*. If the string is not
+*HEADS* or *TAILS*, it should return *flip again*.
+
+| **Sample IO:**
+
+.. code:: default
+
+   Input: 
+
+   best_food("HEADS")
+
+   Output:
+
+   CALZONES
+
+   Input: 
+
+   best_food("NONE")
+
+   Output:
+
+   flip again
+
+| **Answer**
+
+.. code:: python
+
+   def best_food(coin):
+       if coin == "HEADS":
+           return "CALZONES"
+       elif coin == "TAILS":
+           return "WAFFLES"
+       else:
+           return "flip again"
+
+| **Question** [q:middle_point]
+  :math:`\bigstar \largestar \largestar \largestar \largestar`
+| Write a function named *middle_point* that calculates the middle point
+  of two points in a 2D plane. The Function must take two points as
+  arguments, and must return the middle point.
+
+The points are represented as a two dimensional tuple, x and y
+coordinates.
+
+| **Sample IO:**
+
+.. code:: default
+
+   >>> middle_point((1, 2), (4, 4))
+   (2.5, 3.0)
+
+
+   >>> middle_point((-4, 2), (3, -4))
+   (-0.5, -1.0)
+
+| **Answer**
+
+.. code:: python
+
+   def middle_point(point1, point2):
+       return ((point1[0] + point2[0]) / 2, (point1[1] + point2[1]) / 2)
+
+| **Question** [q:find_first_non_prime]
+  :math:`\bigstar \bigstar \bigstar \bigstar \largestar`
+
+Write a function named ``is_prime`` that finds if the given number is a
+prime number or not.
+
+Then write a second function named ``find_first_non_prime`` to find the
+first non-prime number in the given list. If all the numbers are prime,
+return ``False``.
+
+You can use the code template below.
+
+| 
+| **Sample IO:**
+
+.. code:: default
+
+   >>> find_first_non_prime([2,3,4,7])
+   4
+
+   >>> find_first_non_prime([2,3,5,7])
+   False
+
+   >>> find_first_non_prime([2,3,51,19])
+   51
+
+| **Answer**
+
+.. code:: python
+
+   def is_prime(number):
+       for i in range(2, number):
+           if number % i == 0:
+               return False
+
+       return True
+
+   def find_first_non_prime(items):
+       for item in items:
+           if not is_prime(item):
+               return item
+
+       return False
