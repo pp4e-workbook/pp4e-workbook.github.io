@@ -15,8 +15,8 @@ Exercise: Incomplete Data |2|
 
 -  :math:`M` and :math:`N` can be any positive integer.
 
--  Assume that the the list of lists of floats representing the matrix
-   will be given to you in variable :math:`\texttt{R}`.
+-  Assume that the list of lists of floats representing the matrix will
+   be given to you in variable :math:`\texttt{R}`.
 
 *Hint:* It is necessary to keep the count of uncorrepted data in the
 given matrix
