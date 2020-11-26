@@ -1,0 +1,64 @@
+
+Even Numbers |2|
+~~~~~~~~~~~~~~~~
+
+Write a recursive function named *is_even* that determines whether a
+given integer is even or not. The function takes one integer value as
+input which is greater than or equal to zero and returns ``True`` if the
+given number is even or returns ``False`` if the given number is odd.
+
+**You cannot use modulo operator (``%``).**
+
+*Hint:* You should think what are the base conditions for the function.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_four.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> is_even(122)
+   True
+
+
+   >>> is_even(55)
+   False
+
+
+   >>> is_even(1)
+   False
+
+
+   >>> is_even(0)
+   True
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def is_even(number):
+       if(number == 1):
+           return False
+       elif(number == 0):
+           return True
+       else:
+           return is_even(number-2)
+
+.. raw:: html
+
+   </div>

@@ -1,0 +1,56 @@
+
+Andy’s Songs |2|
+~~~~~~~~~~~~~~~~
+
+Andy is a guitar player, and nowadays he and his band (Mouse Rat) are
+not on the best terms. His band members want to force him to practice
+more, but they also know that Andy cannot play songs with complexity
+values larger than a number depending on his mood. Every day the band
+members give Andy a list of new songs to practice.
+
+Write a function named as *andys_songs* that takes the list of song
+complexity values as a *list of integers* and Andy’s mood as parameters
+as an *integer*, and return an *integer* indicating how many songs that
+Andy can play on that day.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> andys_songs([2, 7, 12, 5, 1, 0, 6, 8], 5)
+   4
+
+   >>> andys_songs([4, 8, 15, 16, 23, 42, 108, 271, 49, 88], 55)
+   7
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def andys_songs(song_list, mood):
+       can_play = 0
+       for song in song_list:
+           if song <= mood:
+               can_play += 1
+       return can_play
+
+.. raw:: html
+
+   </div>

@@ -1,0 +1,34 @@
+
+Exercise: Bankruptcy Countdown |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+*“When a person, company or organization is unable to pay their debts or
+make payment to their employees, it is called bankruptcy.”*
+
+Your friend Tom co-owns an entertainment company called "Entertainment
+720", but none of the owners know anything about finance or accounting.
+Tom asks for your help to manage their finances and you accept to help.
+When looking into the numbers, you realize that the company is about to
+go bankrupt.
+
+Write a function named *countdown* that takes two arguments: (1) an
+integer for the amount of money Entertainment 720 has left and (2) a
+list of integers for the monthly payments done to the employees. This
+function should return how many months Entertainment 720 has before
+going fully bankrupt as an integer. If their money is insufficient from
+the beginning then the function must return 0.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> countdown(2000, [2900, 1000, 400, 23000])
+   0
+
+   >>> countdown(12500, [7000, 4500, 750, 150, 7100, 1000])
+   4

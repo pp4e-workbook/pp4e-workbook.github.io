@@ -1,0 +1,52 @@
+
+Sampled Average |2|
+~~~~~~~~~~~~~~~~~~~
+
+Write a function named *sampled_average* that takes a list of integers
+and an integer as a target average. This function return “yes” if we can
+remove a single element from the given list so that the average of the
+remaining is equal to target average, prints “no” otherwise.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   Sample input and output:
+
+   >>> sampled_average([1,2,3,10], 2)
+   'yes'
+
+   >>> sampled_average([1,3], 2)
+   'no'
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def sampled_average(numbers, k):
+       n = len(numbers)
+       if sum(numbers) - k * (n - 1) in numbers:
+           return "yes"
+       else:
+           return "no"
+
+.. raw:: html
+
+   </div>

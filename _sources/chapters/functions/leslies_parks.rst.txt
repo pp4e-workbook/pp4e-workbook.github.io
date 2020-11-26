@@ -1,0 +1,32 @@
+
+Exercise: Leslie’s Parks |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Leslie Knope is the deputy director of the department of Parks and
+Recreation. She wants to build a park in front of all of her friends’
+houses. She loves her friends so much, but she also loves being a
+servant to the citizens and values their opinions. Being the reasonable
+thing to do, she holds a public forum to take a vote for each park to be
+built or not. For each park, if the votes in favor are **double or more
+than** the votes against, that park is decided to be built. Can you help
+Tom, Leslie’s lazy co-worker who is in charge of doing the calculation,
+so that he can decide if a park is going to be built or not?
+
+Write a function named *to_be_built* that takes two integers as the
+votes in favor and against the park and returns a string either
+``"YES"`` if the park is going to be built, or ``"NO"`` if not.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> to_be_built(12, 36)
+   'NO'
+
+   >>> to_be_built(27, 13)
+   'YES'

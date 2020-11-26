@@ -1,0 +1,58 @@
+
+Range of |2|
+~~~~~~~~~~~~
+
+In mathematics, range is defined as the difference between the largest
+and the smallest values in a set of values. Implement a function named
+*range_of* that takes a list of integers and returns the range of it as
+an integer. The elements in list are not necessarily in ascending order.
+You cannot use built-in functions :math:`\color{purple}{\texttt{min()}}`
+or :math:`\color{purple}{\texttt{max()}}`.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> range_of([1, 4, 6, 28, -10, 0, 0, 1])
+   38
+
+   >>> range_of([1])
+   0
+
+   >>> range_of([2, 2])
+   0
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   # as the non-trivial solution
+   def range_of(lst):
+       min_elem, max_elem = lst[0], lst[0]
+       for elem in lst[1:]:
+           if elem < min_elem:
+               min_elem = elem
+           elif elem > max_elem:
+               max_elem = elem
+       return max_elem - min_elem
+
+.. raw:: html
+
+   </div>

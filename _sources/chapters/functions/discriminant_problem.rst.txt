@@ -1,0 +1,57 @@
+
+Discriminant Problem |2|
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Ozi wants to help his sister with her math homework, which is about
+determinig whether a given quadratic equation has real roots or not.
+
+Remember that a given quadratic equation :math:`ax^2 + bx + c` has real
+roots if the discriminant is greater than or equal to 0, where the
+discriminant is defined as follows:
+
+.. math::  \Delta = b^2 - 4ac 
+
+.
+
+Write a function called *has_real_roots* that takes three integers as
+the coefficients of the equation and returns ``True`` if this equation
+has real roots and ``False`` if not.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> has_real_roots(1, -4, 4)
+   True
+
+   >>> has_real_roots(1, -2, 4)
+   False
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def has_real_roots(a, b, c):
+       delta = b**2 - 4*a*c
+       return delta >= 0
+
+.. raw:: html
+
+   </div>

@@ -1,0 +1,56 @@
+
+Best Food |2|
+~~~~~~~~~~~~~
+
+Ben and Leslie are fighting to decide if waffles or calzones are more
+delicious. After debating over a pros-vs-cons list for hours, they flip
+a coin to decide.
+
+Write a function named ``best_food`` that takes a string. If the string
+is ``"HEADS"``, the function should return ``"CALZONES"`` and if the
+string is ``"TAILS"``, the function should return ``"WAFFLES"``. If the
+string is not ``"HEADS"`` or ``"TAILS"``, it should return
+``"flip again"``.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> best_food("HEADS")
+   'CALZONES'
+
+   >>> best_food("NONE")
+   'flip again'
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def best_food(coin):
+       if coin == "HEADS":
+           return "CALZONES"
+       elif coin == "TAILS":
+           return "WAFFLES"
+       else:
+           return "flip again"
+
+.. raw:: html
+
+   </div>

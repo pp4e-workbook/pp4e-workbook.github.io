@@ -1,0 +1,26 @@
+
+Exercise: Palindrome |2|
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+A palindrome is a piece of text which can be read as the same backwards
+and forward. For example, “onino” is a palindrom whereas “onion” is not.
+Your task is to write a function called *is_palindrome* that takes a
+string and returns ``True`` if the given string is palindrome and
+``False`` otherwise.
+
+*Hint:* Use recursion.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> is_palindrome("ilsa")
+   False
+
+   >>> is_palindrome("dammitimmad")
+   True

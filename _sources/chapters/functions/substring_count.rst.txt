@@ -1,0 +1,56 @@
+
+Substring Count |2|
+~~~~~~~~~~~~~~~~~~~
+
+Write a function called *substring_count* that takes two strings and
+returns how many times the second string occurs in the first one as an
+integer. Note that the overlapping occurrences should be counted as well
+(*see 3rd example in Sample I/O*).
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   >>> substring_count("stanrandystancartmanstankenny","stan")
+   3
+
+   >>> substring_count("taktakatutakatakataktuk","ta")
+   5
+
+   >>> substring_count("ababa","aba")
+   2
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def substring_count(first, second):
+       count = 0
+       length_of_first = len(first)
+       length_of_second = len(second)
+       for i in range(0, length_of_first-length_of_second+1):    # Notice the narrowing of the indices to possible occurrence range.
+           if s[i:i+length_of_second] == k:
+               count+=1
+       return count
+
+.. raw:: html
+
+   </div>

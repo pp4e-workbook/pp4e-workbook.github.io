@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+    <title>3.13. Range of &#8212; The Workbook for Programming with Python for Engineers 0.0.1 documentation</title>
+
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/d2l.css" />
+    <link rel="stylesheet" href="../../_static/material-design-lite-1.3.0/material.red-deep_orange.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx_materialdesign_theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fontawesome/all.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/fonts.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/d2l.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3.14. Exercise: Increment List" href="increment_list.html" />
+    <link rel="prev" title="3.12. Exercise: Palindrome" href="palindrome.html" /> 
+  </head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer"><header class="mdl-layout__header mdl-layout__header--waterfall ">
+    <div class="mdl-layout__header-row">
+        
+        <nav class="mdl-navigation breadcrumb">
+            <a class="mdl-navigation__link" href="index.html"><span class="section-number">3. </span>Functions</a><i class="material-icons">navigate_next</i>
+            <a class="mdl-navigation__link is-active"><span class="section-number">3.13. </span>Range of </a>
+        </nav>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+        
+<form class="form-inline pull-sm-right" action="../../search.html" method="get">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+        <label id="quick-search-icon" class="mdl-button mdl-js-button mdl-button--icon"  for="waterfall-exp">
+          <i class="material-icons">search</i>
+        </label>
+        <div class="mdl-textfield__expandable-holder">
+          <input class="mdl-textfield__input" type="text" name="q"  id="waterfall-exp" placeholder="Search" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </div>
+      </div>
+      <div class="mdl-tooltip" data-mdl-for="quick-search-icon">
+      Quick search
+      </div>
+</form>
+        
+<a id="button-show-source"
+    class="mdl-button mdl-js-button mdl-button--icon"
+    href="../../_sources/chapters/functions/range_of.rst.txt" rel="nofollow">
+  <i class="material-icons">code</i>
+</a>
+<div class="mdl-tooltip" data-mdl-for="button-show-source">
+Show Source
+</div>
+        </nav>
+    </div>
+    <div class="mdl-layout__header-row header-links">
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+      </nav>
+    </div>
+</header><header class="mdl-layout__drawer">
+    
+          <!-- Title -->
+      <span class="mdl-layout-title">
+          <a class="title" href="../../index.html">
+              <span class="title-text">
+                  The Workbook for Programming with Python for Engineers
+              </span>
+          </a>
+      </span>
+    
+    
+      <div class="globaltoc">
+        <span class="mdl-layout-title toc">Table Of Contents</span>
+        
+        
+            
+            <nav class="mdl-navigation">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dive_into_python/index.html">1. Dive into Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/debt.html">1.1. Debt </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/varying_debt.html">1.2. Varying Debt </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/division.html">1.3. Division </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/greetings.html">1.4. Exercise: Greetings </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/headphones.html">1.5. Exercise: Headphones </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/conflict_of_metrics.html">1.6. Exercise: Conflict of Metrics </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/lcd_shipment.html">1.7. LCD Shipment </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/jogging_at_devrim.html">1.8. Exercise: Jogging at Devrim </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/tiling_the_floor.html">1.9. Tiling the Floor </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/tiling_the_floor_min.html">1.10. Exercise: Tiling the Floor with Minimum Tiles </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/movie_festival.html">1.11. Movie Festival </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/circle_and_sphere.html">1.12. Exercise: Circle and Sphere </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/reflection_point.html">1.13. Reflection Point </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/bmi.html">1.14. Exercise: BMI </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/distance_between_circles.html">1.15. Exercise: Distance between Circles </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/cube_extraction.html">1.16. Cube Extraction </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/pool.html">1.17. Pool </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/django.html">1.18. Exercise: Django </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/vector.html">1.19. Vector </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/slogan.html">1.20. Slogan </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/grading_in_ceng314.html">1.21. Exercise: Grading in CENG314 </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/fuel_tank.html">1.22. Exercise: Fuel Tank </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/tuples_and_lists.html">1.23. Tuples and Lists </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/inner_elements.html">1.24. Inner Elements </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/lego.html">1.25. Lego </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/dictionaries.html">1.26. Dictionaries </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/min_and_max_of_three.html">1.27. Exercise: Minimum and Maximum of Three </a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../conditional_and_repetitive_execution/index.html">2. Conditional and Repetitive Execution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/letter_grade.html">2.1. Letter Grade </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/even_or_odd.html">2.2. Even or Odd </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/ticket_price.html">2.3. Ticket Price </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/orders_from_abroad.html">2.4. Orders from Abroad </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/winner_team.html">2.5. Winner Team in Board Game </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/apple_tree_garden.html">2.6. Apple Tree Garden </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/new_apple_tree_garden.html">2.7. Exercise: New Apple Garden Tree </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/repeated_strings.html">2.8. Repeated Strings </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/office_olympics.html">2.9. Exercise: Office Olympics </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/good_old_tiling.html">2.10. Exercise: Good Old Tiling </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/triangle.html">2.11. Exercise: Triangle </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/fizz_buzz.html">2.12. Exercise: Fizz Buzz </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/binary_planet.html">2.13. Binary Planet </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/runlength_encoding.html">2.14. Run-length Encoding </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/connect_four.html">2.15. Exercise: Connect Four </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/obsessed_tiler.html">2.16. Obsessed Tiler </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/matrix_multiplication.html">2.17. Matrix Multiplication </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/incomplete_data.html">2.18. Exercise: Incomplete Data </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/emotional_chatbot.html">2.19. Emotional Chatbot </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/minesweeper.html">2.20. Minesweeper </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/original_minesweeper.html">2.21. Exercise: Original Minesweeper </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/n_queen.html">2.22. N-Queen </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/helping_deroro.html">2.23. Helping Deroro </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/helping_deroro_quickly.html">2.24. Helping Deroro Quickly </a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Functions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="best_food.html">3.1. Best Food </a></li>
+<li class="toctree-l2"><a class="reference internal" href="temperature_conversion.html">3.2. Temperature Conversion </a></li>
+<li class="toctree-l2"><a class="reference internal" href="leslies_parks.html">3.3. Exercise: Leslie’s Parks </a></li>
+<li class="toctree-l2"><a class="reference internal" href="discriminant_problem.html">3.4. Discriminant Problem </a></li>
+<li class="toctree-l2"><a class="reference internal" href="finding_median.html">3.5. Exercise: Finding Median </a></li>
+<li class="toctree-l2"><a class="reference internal" href="middle_point.html">3.6. Exercise: Middle Point </a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampled_average.html">3.7. Sampled Average </a></li>
+<li class="toctree-l2"><a class="reference internal" href="andys_songs.html">3.8. Andy’s Songs </a></li>
+<li class="toctree-l2"><a class="reference internal" href="bankruptcy_countdown.html">3.9. Exercise: Bankruptcy Countdown </a></li>
+<li class="toctree-l2"><a class="reference internal" href="city_sushi.html">3.10. City Sushi </a></li>
+<li class="toctree-l2"><a class="reference internal" href="health_bar.html">3.11. Health Bar </a></li>
+<li class="toctree-l2"><a class="reference internal" href="palindrome.html">3.12. Exercise: Palindrome </a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.13. Range of </a></li>
+<li class="toctree-l2"><a class="reference internal" href="increment_list.html">3.14. Exercise: Increment List </a></li>
+<li class="toctree-l2"><a class="reference internal" href="even_number_of_customers.html">3.15. Even Number of Customers </a></li>
+<li class="toctree-l2"><a class="reference internal" href="substring_count.html">3.16. Substring Count </a></li>
+<li class="toctree-l2"><a class="reference internal" href="reduce_number.html">3.17. Exercise: Reduce Number </a></li>
+<li class="toctree-l2"><a class="reference internal" href="my_range.html">3.18. My Range </a></li>
+<li class="toctree-l2"><a class="reference internal" href="even_numbers.html">3.19. Even Numbers </a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_non_prime.html">3.20. First Non-Prime </a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_game_of_divisors.html">3.21. The Game of Divisors </a></li>
+<li class="toctree-l2"><a class="reference internal" href="perfect_number.html">3.22. Exercise: Perfect Number </a></li>
+<li class="toctree-l2"><a class="reference internal" href="anagram.html">3.23. Anagram </a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        
+        </div>
+    
+</header>
+        <main class="mdl-layout__content" tabIndex="0">
+
+	<script type="text/javascript" src="../../_static/sphinx_materialdesign_theme.js "></script>
+    <header class="mdl-layout__drawer">
+    
+          <!-- Title -->
+      <span class="mdl-layout-title">
+          <a class="title" href="../../index.html">
+              <span class="title-text">
+                  The Workbook for Programming with Python for Engineers
+              </span>
+          </a>
+      </span>
+    
+    
+      <div class="globaltoc">
+        <span class="mdl-layout-title toc">Table Of Contents</span>
+        
+        
+            
+            <nav class="mdl-navigation">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dive_into_python/index.html">1. Dive into Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/debt.html">1.1. Debt </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/varying_debt.html">1.2. Varying Debt </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/division.html">1.3. Division </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/greetings.html">1.4. Exercise: Greetings </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/headphones.html">1.5. Exercise: Headphones </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/conflict_of_metrics.html">1.6. Exercise: Conflict of Metrics </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/lcd_shipment.html">1.7. LCD Shipment </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/jogging_at_devrim.html">1.8. Exercise: Jogging at Devrim </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/tiling_the_floor.html">1.9. Tiling the Floor </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/tiling_the_floor_min.html">1.10. Exercise: Tiling the Floor with Minimum Tiles </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/movie_festival.html">1.11. Movie Festival </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/circle_and_sphere.html">1.12. Exercise: Circle and Sphere </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/reflection_point.html">1.13. Reflection Point </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/bmi.html">1.14. Exercise: BMI </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/distance_between_circles.html">1.15. Exercise: Distance between Circles </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/cube_extraction.html">1.16. Cube Extraction </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/pool.html">1.17. Pool </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/django.html">1.18. Exercise: Django </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/vector.html">1.19. Vector </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/slogan.html">1.20. Slogan </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/grading_in_ceng314.html">1.21. Exercise: Grading in CENG314 </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/fuel_tank.html">1.22. Exercise: Fuel Tank </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/tuples_and_lists.html">1.23. Tuples and Lists </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/inner_elements.html">1.24. Inner Elements </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/lego.html">1.25. Lego </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/dictionaries.html">1.26. Dictionaries </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dive_into_python/min_and_max_of_three.html">1.27. Exercise: Minimum and Maximum of Three </a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../conditional_and_repetitive_execution/index.html">2. Conditional and Repetitive Execution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/letter_grade.html">2.1. Letter Grade </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/even_or_odd.html">2.2. Even or Odd </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/ticket_price.html">2.3. Ticket Price </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/orders_from_abroad.html">2.4. Orders from Abroad </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/winner_team.html">2.5. Winner Team in Board Game </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/apple_tree_garden.html">2.6. Apple Tree Garden </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/new_apple_tree_garden.html">2.7. Exercise: New Apple Garden Tree </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/repeated_strings.html">2.8. Repeated Strings </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/office_olympics.html">2.9. Exercise: Office Olympics </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/good_old_tiling.html">2.10. Exercise: Good Old Tiling </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/triangle.html">2.11. Exercise: Triangle </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/fizz_buzz.html">2.12. Exercise: Fizz Buzz </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/binary_planet.html">2.13. Binary Planet </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/runlength_encoding.html">2.14. Run-length Encoding </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/connect_four.html">2.15. Exercise: Connect Four </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/obsessed_tiler.html">2.16. Obsessed Tiler </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/matrix_multiplication.html">2.17. Matrix Multiplication </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/incomplete_data.html">2.18. Exercise: Incomplete Data </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/emotional_chatbot.html">2.19. Emotional Chatbot </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/minesweeper.html">2.20. Minesweeper </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/original_minesweeper.html">2.21. Exercise: Original Minesweeper </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/n_queen.html">2.22. N-Queen </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/helping_deroro.html">2.23. Helping Deroro </a></li>
+<li class="toctree-l2"><a class="reference internal" href="../conditional_and_repetitive_execution/helping_deroro_quickly.html">2.24. Helping Deroro Quickly </a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. Functions</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="best_food.html">3.1. Best Food </a></li>
+<li class="toctree-l2"><a class="reference internal" href="temperature_conversion.html">3.2. Temperature Conversion </a></li>
+<li class="toctree-l2"><a class="reference internal" href="leslies_parks.html">3.3. Exercise: Leslie’s Parks </a></li>
+<li class="toctree-l2"><a class="reference internal" href="discriminant_problem.html">3.4. Discriminant Problem </a></li>
+<li class="toctree-l2"><a class="reference internal" href="finding_median.html">3.5. Exercise: Finding Median </a></li>
+<li class="toctree-l2"><a class="reference internal" href="middle_point.html">3.6. Exercise: Middle Point </a></li>
+<li class="toctree-l2"><a class="reference internal" href="sampled_average.html">3.7. Sampled Average </a></li>
+<li class="toctree-l2"><a class="reference internal" href="andys_songs.html">3.8. Andy’s Songs </a></li>
+<li class="toctree-l2"><a class="reference internal" href="bankruptcy_countdown.html">3.9. Exercise: Bankruptcy Countdown </a></li>
+<li class="toctree-l2"><a class="reference internal" href="city_sushi.html">3.10. City Sushi </a></li>
+<li class="toctree-l2"><a class="reference internal" href="health_bar.html">3.11. Health Bar </a></li>
+<li class="toctree-l2"><a class="reference internal" href="palindrome.html">3.12. Exercise: Palindrome </a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.13. Range of </a></li>
+<li class="toctree-l2"><a class="reference internal" href="increment_list.html">3.14. Exercise: Increment List </a></li>
+<li class="toctree-l2"><a class="reference internal" href="even_number_of_customers.html">3.15. Even Number of Customers </a></li>
+<li class="toctree-l2"><a class="reference internal" href="substring_count.html">3.16. Substring Count </a></li>
+<li class="toctree-l2"><a class="reference internal" href="reduce_number.html">3.17. Exercise: Reduce Number </a></li>
+<li class="toctree-l2"><a class="reference internal" href="my_range.html">3.18. My Range </a></li>
+<li class="toctree-l2"><a class="reference internal" href="even_numbers.html">3.19. Even Numbers </a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_non_prime.html">3.20. First Non-Prime </a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_game_of_divisors.html">3.21. The Game of Divisors </a></li>
+<li class="toctree-l2"><a class="reference internal" href="perfect_number.html">3.22. Exercise: Perfect Number </a></li>
+<li class="toctree-l2"><a class="reference internal" href="anagram.html">3.23. Anagram </a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        
+        </div>
+    
+</header>
+
+    <div class="document">
+        <div class="page-content" role="main">
+        
+  <div class="section" id="range-of-2">
+<h1><span class="section-number">3.13. </span>Range of <img alt="2" class="difficulty" src="../../_images/difficulty_two2.png" /><a class="headerlink" href="#range-of-2" title="Permalink to this headline">¶</a></h1>
+<p>In mathematics, range is defined as the difference between the largest
+and the smallest values in a set of values. Implement a function named
+<em>range_of</em> that takes a list of integers and returns the range of it as
+an integer. The elements in list are not necessarily in ascending order.
+You cannot use built-in functions <span class="math notranslate nohighlight">\(\color{purple}{\texttt{min()}}\)</span>
+or <span class="math notranslate nohighlight">\(\color{purple}{\texttt{max()}}\)</span>.</p>
+<div class="sampleio docutils container">
+<p>Sample I/O:</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">range_of</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="go">38</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">range_of</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
+<span class="go">0</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">range_of</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="go">0</span>
+</pre></div>
+</div>
+<button type="button" class="collapsible" onclick="toggle()"><p>Show the Answer</p>
+</button><div class="hiddenanswer"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># as the non-trivial solution</span>
+<span class="k">def</span> <span class="nf">range_of</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="n">min_elem</span><span class="p">,</span> <span class="n">max_elem</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="k">if</span> <span class="n">elem</span> <span class="o">&lt;</span> <span class="n">min_elem</span><span class="p">:</span>
+            <span class="n">min_elem</span> <span class="o">=</span> <span class="n">elem</span>
+        <span class="k">elif</span> <span class="n">elem</span> <span class="o">&gt;</span> <span class="n">max_elem</span><span class="p">:</span>
+            <span class="n">max_elem</span> <span class="o">=</span> <span class="n">elem</span>
+    <span class="k">return</span> <span class="n">max_elem</span> <span class="o">-</span> <span class="n">min_elem</span>
+</pre></div>
+</div>
+</div></div>
+
+
+        </div>
+        <div class="side-doc-outline">
+            <div class="side-doc-outline--content"> 
+            </div>
+        </div>
+
+      <div class="clearer"></div>
+    </div><div class="pagenation">
+     <a id="button-prev" href="palindrome.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="P">
+         <i class="pagenation-arrow-L fas fa-arrow-left fa-lg"></i>
+         <div class="pagenation-text">
+            <span class="pagenation-direction">Previous</span>
+            <div>3.12. Exercise: Palindrome</div>
+         </div>
+     </a>
+     <a id="button-next" href="increment_list.html" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" role="botton" accesskey="N">
+         <i class="pagenation-arrow-R fas fa-arrow-right fa-lg"></i>
+        <div class="pagenation-text">
+            <span class="pagenation-direction">Next</span>
+            <div>3.14. Exercise: Increment List</div>
+        </div>
+     </a>
+  </div>
+        
+        </main>
+    </div>
+  </body>
+</html>

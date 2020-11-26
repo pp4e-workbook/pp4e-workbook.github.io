@@ -1,0 +1,31 @@
+
+Exercise: Increment List |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a function named *increment_list* that takes a list of integers
+and returns a new list with all elements of the argument list
+incremented by one. You need to make sure that the original list does
+**not** change. To achieve this, you will need to make a copy of the
+original list.
+
+*Hint:* You can use slicing to get a (shallow) copy of the list.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   # Use variable assignment to be able to observe the original list
+   # after the function call
+
+   >>> a = [1, 2, 3, 10, 15]
+   >>> a
+   [1, 2, 3, 10, 15]
+   >>> increment_list(a)
+   [2, 3, 4, 11, 16]
+   >>> a
+   [1, 2, 3, 10, 15]

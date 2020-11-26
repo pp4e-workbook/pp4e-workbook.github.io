@@ -19,3 +19,5 @@ course.
    chapters/dive_into_python/index.md
 
    chapters/conditional_and_repetitive_execution/index.md
+
+   chapters/functions/index.md

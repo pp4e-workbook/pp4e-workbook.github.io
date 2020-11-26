@@ -1,0 +1,104 @@
+
+Even Number of Customers |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this question, the task is for helping a shop owner who wants to know
+whether there are even number of customers in her shop at any time.
+
+Whenever she needs the answer, she should call *even_customers* function
+with no argument and this function must return ``True`` or ``False``
+according to the number of customers in the shop being even or odd
+respectively. To keep track of the incoming and outgoing customers, she
+will call *incoming* and *outgoing* functions. These functions do not
+take any arguments and do not return anything.
+
+*Hint:* Think about using a ``global`` variable which is accessible to
+all three functions.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> from even_customers import *
+   >>> incoming()
+   >>> incoming()
+   >>> incoming()
+   >>> even_customers()
+   False
+   >>> outgoing()
+   >>> even_customers()
+   True
+
+In these sample calls, as 3 consecutive calls of *incoming* function
+shows, 3 customers arrived to the shop. That’s why the first call of
+*even_customers* function returns ``False``. Then a customer left, as
+indicated by the call of *outgoing* function. At that time, there were 2
+customers in the shop, therefore, the second call of *even_customers*
+returns ``True``.
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+The solution will be constructed incrementally with requested functions
+and a common, global variable. First of all, let’s define this global
+variable:
+
+.. code:: python
+
+   counter = 0
+
+Since the definition of this variable is not in any function, it will be
+in the global scope. Therefore, all of the functions will be able to
+reach this variable.
+
+Now we can define *incoming* function as below:
+
+.. code:: python
+
+   def incoming():
+       global counter
+       counter += 1
+
+This function needs to update global variable *counter*, and to be able
+to do that, it is declared with global keyword at the beginning of
+function.
+
+The *outgoing* function can be defined in the same manner:
+
+.. code:: python
+
+   def outgoing():
+       global counter
+       if counter > 0: counter -= 1
+
+Finally, the definition of *even_customers* function becomes like
+following:
+
+.. code:: python
+
+   def even_customers():
+       return counter % 2 == 0
+
+Note that the global variable, *counter* is used read-only and not
+updated here. Therefore declaration with global keyword is not
+necessary.
+
+.. raw:: html
+
+   </div>

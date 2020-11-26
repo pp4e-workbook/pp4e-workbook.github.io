@@ -1,0 +1,71 @@
+
+Health Bar |2|
+~~~~~~~~~~~~~~
+
+You are a warrior who is given a difficult quest to complete. In this
+journey, you encounter various types of troubles including monsters. You
+have to fight them off to continue and you want to see how much the next
+attack will hurt you.
+
+Write a function called *health_bar* to show your current health status.
+This function takes 3 integers: (1) your base health, (2) your current
+health and (3) the damage you take. The function returns your current
+health status as a string with “X”s (remaining health) and "_"s (missing
+health). Here are some accompanying specifications:
+
+-  Your base health and the damage you take will always be a positive
+   integer.
+-  The damage you take can be more than your current health.
+-  The length of your health bar string must match your base health.
+
+Consider the following case: If your base health is 9 and your current
+health is 7 when you take 3 damage, your current health bar becomes
+“XXXX____\_”.
+
+*Hint:* You can use string repetition.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> health_bar(11, 11, 4)
+   'XXXXXXX____'
+
+   >>> health_bar(8, 2, 6)
+   '________'
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def health_bar(base_health, current_health, damage):
+       remaining_health = current_health - damage
+
+       if(remaining_health < 0):       #deciding if you are dead or not
+           remaining_health = 0
+
+       missing_health = base_health - remaining_health
+       health_bar = "X"*remaining_health + "_"*missing_health
+
+       return health_bar
+
+.. raw:: html
+
+   </div>

@@ -1,0 +1,64 @@
+
+Temperature Conversion |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For this task, you need to write a function named ``convert`` that
+converts temperature values in Fahrenheit to Celcius and vice versa. The
+function will take 2 arguments, an integer and a one-character string.
+The integer will denote the temperature and the string will denote the
+unit of temperature. (‘F’ means that the given temperature is in
+Fahrenheit and ‘C’ means that it is in Celcius). If the unit is not ‘F’
+or ‘C’, you should simply return “invalid unit”. If the given unit is
+valid, then the function must return a *float* as the result of
+conversion.
+
+*Hint:* You can use the formula
+:math:`\frac{C}{100} = \frac{F-32}{180}`. In this formula, :math:`C` is
+the value in Celcius and :math:`F` is the value in Fahrenheit.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> convert(-35, 'C')
+   -31.0
+
+   >>> convert(212, 'F')
+   100.0
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def convert(temperature, unit):
+       if(unit == 'C'):
+           new_temperature = (180/100) * temperature + 32
+           return new_temperature
+
+       elif(unit == 'F'):
+           new_temperature = (100/180) * (temperature - 32)
+           return new_temperature
+
+       else:
+           return "invalid unit"
+
+.. raw:: html
+
+   </div>

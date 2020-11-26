@@ -1,0 +1,33 @@
+
+Exercise: Reduce Number |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a function named *reduce_number* that takes an integer and reduces
+the number by taking the sum of the digits. If the summation has more
+than one digit, the reduction is applied again. This continues until the
+result is a single digit number. The function must return the reduced
+number as a one-digit integer.
+
+For example, if we call the *reduce_number* function with 325565 as
+argument, then the number is reduced to 26 first. Since 26 is a
+two-digit number, then we reduce it again and we get 8 as the final
+result.
+
+*Hint:* You can define a helper function to calculate the sum of a
+number’s digits.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   Input:
+   >>> reduce_number(589564123)
+   7
+
+   >>> reduce_number(19999999999999)
+   1

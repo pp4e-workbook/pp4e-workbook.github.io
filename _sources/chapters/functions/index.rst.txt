@@ -1,0 +1,72 @@
+
+Functions
+=========
+
+.. toctree::
+   best_food
+
+.. toctree::
+   temperature_conversion
+
+.. toctree::
+   leslies_parks
+
+.. toctree::
+   discriminant_problem
+
+.. toctree::
+   finding_median
+
+.. toctree::
+   middle_point
+
+.. toctree::
+   sampled_average
+
+.. toctree::
+   andys_songs
+
+.. toctree::
+   bankruptcy_countdown
+
+.. toctree::
+   city_sushi
+
+.. toctree::
+   health_bar
+
+.. toctree::
+   palindrome
+
+.. toctree::
+   range_of
+
+.. toctree::
+   increment_list
+
+.. toctree::
+   even_number_of_customers
+
+.. toctree::
+   substring_count
+
+.. toctree::
+   reduce_number
+
+.. toctree::
+   my_range
+
+.. toctree::
+   even_numbers
+
+.. toctree::
+   first_non_prime
+
+.. toctree::
+   the_game_of_divisors
+
+.. toctree::
+   perfect_number
+
+.. toctree::
+   anagram

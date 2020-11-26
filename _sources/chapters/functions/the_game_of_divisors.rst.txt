@@ -1,0 +1,73 @@
+
+The Game of Divisors |2|
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Nazif and Osman were really bored during the lockout and they have come
+up with an exciting game. The rules are simple: they both choose an
+integer and whoever has an integer with more divisors wins.
+
+Write a function named *winner* that takes two integers where the first
+one is the choice of Nazif and the second is Osman’s number. The
+function must return a string of either “Nazif” or “Osman” depending on
+that who is the winner of the game. If there is a tie, then the function
+must return “Draw”.
+
+*Hint:* You can define a helper function to calculate the number of
+divisors of a given number.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> winner(120, 144)
+   'Nazif'
+
+   >>> winner(191, 190)
+   'Osman'
+
+   >>> winner(4, 121)
+   'Draw'
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   nazif, osman = list(map(int, input().split()))
+
+   def divisors(n):
+       count = 0
+       for i in range(1, n+1):
+           if n%i == 0:
+               count+=1
+       return count
+
+   def winner(nazif, osman):
+       N = divisors(nazif)
+       O = divisors(osman)
+       if N > O:
+           return "Nazif"
+       elif N < O:
+           return "Osman"
+       else:
+           return "Draw"
+
+.. raw:: html
+
+   </div>
