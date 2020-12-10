@@ -1,0 +1,57 @@
+
+Shopping List |2|
+~~~~~~~~~~~~~~~~~
+
+It is your turn to buy groceries. Your friend sends you a shopping list.
+But you have a problem, the list is difficult to read. The items are
+separated by commas, uppercase and lowercase characters are mixed up and
+there are blank spaces all over. So you decide to make the list
+readable.
+
+Write a function named *readable* that takes input as a *string*, the
+shopping list, separated by commas. You need to print each item in a
+single line, with no leading blank spaces, and in lowercase letters.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> readable("LemOn,   gaRlic, PASta")
+   lemon
+   garlic
+   pasta
+
+   >>> readable("CheeSe, cHeesE,    CHEESE")
+   cheese
+   cheese
+   cheese
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def readable(s):
+       l = s.split(",")
+       for i in l:
+           print(i.strip().lower())
+
+.. raw:: html
+
+   </div>

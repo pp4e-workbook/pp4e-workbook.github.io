@@ -21,3 +21,5 @@ course.
    chapters/conditional_and_repetitive_execution/index.md
 
    chapters/functions/index.md
+
+   chapters/a_gentle_introduction_to_object_oriented_programming/index.md

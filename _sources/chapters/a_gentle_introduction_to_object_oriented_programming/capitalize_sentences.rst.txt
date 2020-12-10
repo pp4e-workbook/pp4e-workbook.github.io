@@ -1,0 +1,64 @@
+
+Capitalize Sentences |2|
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a function named *capitalize_sentences* which takes input a string
+and return a strings where the first letter of each sentence to
+uppercase in the original string to correct the typos.
+
+A sentence may end with the following characters: ``'.'``, ``'?'``,
+``'!'``. Your function should not interfere with other parts of the
+string.
+
+You may assume that there will be a single blank character between each
+sentence. You must preserve this blank character in the recovered
+string. There will be no blank characters after the last sentence.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_four.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> capitalize_sentences('lorem. ipsum? dolor sit amet, consectetur! adipiscing elit.')
+   'Lorem. Ipsum? Dolor sit amet, consectetur! Adipiscing elit.'
+
+   >>> capitalize_sentences('string methods are really useful in Python! you need to know them to succeed in CENG240.')
+   'String methods are really useful in Python! You need to know them to succeed in CENG240.'
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def capitalize_sentences(string):
+       def upper_initial(string):
+           return string[0].upper() + string[1:] if string else string
+
+       def split_by_and_capitalize(string, delimiter):
+           sentences = [sentence.lstrip() for sentence in string.split(delimiter)]
+           return (delimiter + ' ').join(
+                   [sentence.capitalize() for sentence in sentences])
+
+       delimiters = ['.', '?', '!']
+       for delimiter in delimiters:
+           string = split_by_and_capitalize(string, delimiter)
+       return string.rstrip() # discard trailing whitespace
+
+.. raw:: html
+
+   </div>

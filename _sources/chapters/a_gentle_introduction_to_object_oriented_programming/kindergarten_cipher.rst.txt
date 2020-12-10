@@ -1,0 +1,56 @@
+
+Kindergarten Cipher |2|
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Jess is a kindergarten teacher who taught her students the letters just
+recently. Now, the students can read, and they love to play with
+letters. One day, she noticed that one of the students used numbers
+instead of some letters, and she wanted to decipher what the students
+wrote. So, after finding which number corresponds to which letter, she
+decided to write a Python function to solve them.
+
+Write a function named *decipher* that takes two arguments, the ciphered
+text and a solution list, and return the deciphered text.
+
+*Hint:* You can use a string method for the replacement of a character
+in a string.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> decipher("H45k3ll 15 4 g3n3r4l-purpo53, 5t4t1c4lly typ3d, pur3ly funct1on4l progr4mm1ng l4ngu4g3 w1th typ3 1nf3r3nc3 4nd l4zy 3v4lu4t1on.", [("3", "e"), ("4", "a"), ("5", "s"), ("1", "i")])
+   Haskell is a general-purpose, statically typed, purely functional programming language with type inference and lazy evaluation.
+
+   >>> decipher("APL (nam3d af73r 7h3 b00k A Pr0gramming Languag3) is a pr0gramming languag3 d3v3l0p3d by K3nn37h 3. Iv3rs0n. I7s c3n7ral da7a7yp3 is 7h3 mul7idim3nsi0nal array.", [("7", "t"), ("3", "e"), ("0", "o")])
+   APL (named after the book A Programming Language) is a programming language developed by Kenneth e. Iverson. Its central datatype is the multidimensional array.
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def decipher(text, pattern_list):
+       for pattern in pattern_list:
+           text = text.replace(pattern[0], pattern[1])
+       return text
+
+.. raw:: html
+
+   </div>

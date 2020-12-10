@@ -1,0 +1,23 @@
+
+Exercise: Maximum Occurrence |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Write a function named *maximum_occurrence* which takes one input as a
+*list of integers* and returns the *integer* in the list that occurs the
+most. It is guaranteed that the number of occurrences of items in the
+list will be different from each other.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> maximum_occurrence([1,1,1,0,4,4])
+   1
+
+   >>> maximum_occurrence([0,3,3,3,1,0])
+   3

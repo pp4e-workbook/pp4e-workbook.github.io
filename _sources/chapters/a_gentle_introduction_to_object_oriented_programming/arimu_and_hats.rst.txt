@@ -1,0 +1,30 @@
+
+Exercise: Arimu and Hats |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Our friend Arimu loves hats and wants to buy as many hats as possible.
+Unfortunately, he can’t always afford all the hats in the store. So he
+needs to spend his money wisely, to be able to purchase the maximum
+number of hats.
+
+Write a function named *buy_hats* which takes a *list of integers* as
+the costs of hats and an *integer* as Arimu’s money. This function finds
+the maximum number of hats Arimu can buy and returns it as an *integer*.
+
+*Hint: You might want to rearrange the list of hats in the increasing
+order of their prices.*
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> buy_hats([12, 3, 7, 5, 4, 8], 12)
+   3
+
+   >>> buy_hats([4, 3, 6, 2, 5, 5], 27)
+   6

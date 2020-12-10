@@ -1,0 +1,35 @@
+
+Exercise: Database Recovery |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Our database has broken. Fortunately, we have a backup database.
+However, the data was stored as a string. We need to rearrange it. Can
+you help us?
+
+Write a function named *reinstall* that has to do the following three
+tasks: 1- Separate the rows 2- Clean and prettify the data 3- Save the
+data
+
+The input of function will be given in the following format:
+
+| Entry-1 : Number-1 \|=\| Entry-2 : Number-2 \|=\| …
+
+The return value should be a dictionary where the keys are the given
+entries, and the values are the numbers corresponding to these entries.
+You also need to make sure that each entry starts with a capital letter
+and continue with the lowercase characters.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_four.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> reinstall("| ahmet : 16 |=| Mehmet : 19 |=| selin : 32 |=| PINAR : 8 |")
+   {'Ahmet': 16, 'Mehmet': 19, 'Pinar': 8, 'Selin': 32}
+
+   >>> reinstall("| SiLa : 2 |=| AbDuLlAh : 28 |=| PeLIN : 49 |=| PolaT : 99 |")
+   {'Abdullah': 28, 'Pelin': 49, 'Polat': 99, 'Sila': 2}

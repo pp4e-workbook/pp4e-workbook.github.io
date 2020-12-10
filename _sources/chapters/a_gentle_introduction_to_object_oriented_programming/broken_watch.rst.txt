@@ -1,0 +1,69 @@
+
+Broken Watch |2|
+~~~~~~~~~~~~~~~~
+
+*(Before looking at this question and the rest of this chapter of
+workbook, you are strongly recommended to take a look into the commonly
+used methods of built-in containers from the*
+`textbook <https://pp4e-book.github.io/chapters/ch7_OOP.html#widely-used-member-functions-of-containers>`__\ *.)*
+
+Deniz wanted to check the time, but his watch broke. So he asked Aslı to
+tell him the time. But Aslı doesn’t always tell the truth, so the time
+she says may not be valid.
+
+Write a function named *is_time_valid* to determine whether a given time
+is correct or not.
+
+Note that the given time is only valid when the given string is between
+00.00 and 23.59.
+
+*Hint:* You need to divide the given string into the hour and minute
+parts somehow.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> is_time_valid("23.20")
+   True
+
+   >>> is_time_valid("22.61")
+   False
+
+   >>> is_time_valid("ten past eleven")
+   False
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def is_time_valid(s):
+     l = s.split('.')
+     if(len(l)!=2):
+       return False
+     if(l[0]<"00" or l[0]>"23"):
+       return False
+     if(l[1]<"00" or l[1]>"59"):
+       return False
+     return True
+
+.. raw:: html
+
+   </div>

@@ -1,0 +1,61 @@
+
+Reverse Left |2|
+~~~~~~~~~~~~~~~~
+
+You are given a list of integers and a single integer from that list.
+The first occurrence of that integer divides our list to 2 sub-lists,
+left sub-list and right sub-list.
+
+Write a function called *reverse_left* that takes a list of integers and
+an integer in that list, and reverses the left sub-list of a given list.
+The function should return a new list.
+
+Note that the same integer can occur any number of times in the right
+sub-list.
+
+*Hint:* There are list methods for finding the first occurrence of an
+element and reversing a list.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> reverse_left([8,1,4,5,6,6,3,2], 6)
+   [5,4,1,8,6,6,3,2]
+
+   >>> reverse_left([64, 51, 77, 34, 77, 39, 57, 67, 58, 63, 51], 39)
+   [77, 34, 77, 51, 64, 39, 57, 67, 58, 63, 51]
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def reverse_left(i_list, occurrence):
+       occurrence_index = i_list.index(occurrence)           #finding the index of the first occurrence
+
+       left_sub_list = i_list[:occurrence_index]             #constructing the left sub-list
+       left_sub_list.reverse()                               #reversing the left sub-list
+       right_sub_list = i_list[occurrence_index:]            #constructing the right sub-list
+
+       return left_sub_list + right_sub_list
+
+.. raw:: html
+
+   </div>

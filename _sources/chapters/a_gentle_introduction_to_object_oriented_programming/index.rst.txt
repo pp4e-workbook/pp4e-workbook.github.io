@@ -1,0 +1,33 @@
+
+A Gentle Introduction to Object Oriented Programming
+====================================================
+
+.. toctree::
+   broken_watch
+
+.. toctree::
+   kindergarten_cipher
+
+.. toctree::
+   maximum_occurrence
+
+.. toctree::
+   reverse_left
+
+.. toctree::
+   shopping_list
+
+.. toctree::
+   arimu_and_hats
+
+.. toctree::
+   is_diagonal
+
+.. toctree::
+   capitalize_sentences
+
+.. toctree::
+   database_recovery
+
+.. toctree::
+   single_sorted_copy

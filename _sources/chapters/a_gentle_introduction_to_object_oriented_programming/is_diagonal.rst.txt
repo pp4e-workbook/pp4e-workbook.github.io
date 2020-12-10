@@ -1,0 +1,63 @@
+
+Is Diagonal |2|
+~~~~~~~~~~~~~~~
+
+In mathematics, a diagonal matrix is a matrix in which all non-diagonal
+entries are zero. That is, :math:`\mathbf{A_{i,j} = 0}` if
+:math:`\mathbf{i\neq j}`. Since it is easier to work with diagonal
+matrices, we should check them if they are diagonal or not.
+
+Write a function called *is_diagonal* that takes an
+:math:`\mathbf{n\times n}` matrix as a *list of list of integers* and
+returns a *Boolean* value stating whether the matrix is diagonal or not.
+
+Note that in a diagonal matrix, diagonal entries can be zero as well,
+but in our case diagonal entries are non-zero integers.
+
+*Hint:* There is a list method that returns the number of occurrences of
+a given element in that list.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> is_diagonal([[1,0,0],[0,1,0],[0,0,1]])
+   True
+
+   >>> is_diagonal([[1,1,1],[2,4,0],[3,3,3]])
+   False
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def is_diagonal(matrix):
+       n = len(matrix)
+
+       for i in range(n):
+           zeros = matrix[i].count(0)
+           if(zeros != n-1 or matrix[i][i] == 0):      
+               return False
+
+       return True
+
+.. raw:: html
+
+   </div>
