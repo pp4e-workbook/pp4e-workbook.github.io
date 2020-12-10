@@ -3,7 +3,7 @@ Capitalize Sentences |2|
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Write a function named *capitalize_sentences* which takes a string
-including multiple sentences and return a string where the first letter
+including multiple sentences and returns a string where the first letter
 of each sentence in the original string is converted to uppercase to
 correct the typos.
 
