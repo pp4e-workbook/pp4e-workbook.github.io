@@ -4,8 +4,8 @@ Capitalize Sentences |2|
 
 Write a function named *capitalize_sentences* which takes a string
 including multiple sentences and return a string where the first letter
-of each sentence to uppercase in the original string to correct the
-typos.
+of each sentence in the original string is converted to uppercase to
+correct the typos.
 
 A sentence may end with the following characters: ``'.'``, ``'?'``,
 ``'!'``. Your function should not interfere with other parts of the
