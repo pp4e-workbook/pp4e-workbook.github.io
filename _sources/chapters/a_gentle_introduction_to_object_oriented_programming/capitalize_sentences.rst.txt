@@ -2,9 +2,10 @@
 Capitalize Sentences |2|
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write a function named *capitalize_sentences* which takes input a string
-and return a strings where the first letter of each sentence to
-uppercase in the original string to correct the typos.
+Write a function named *capitalize_sentences* which takes a string
+including multiple sentences and return a string where the first letter
+of each sentence to uppercase in the original string to correct the
+typos.
 
 A sentence may end with the following characters: ``'.'``, ``'?'``,
 ``'!'``. Your function should not interfere with other parts of the
@@ -52,7 +53,7 @@ Show the Answer
        def split_by_and_capitalize(string, delimiter):
            sentences = [sentence.lstrip() for sentence in string.split(delimiter)]
            return (delimiter + ' ').join(
-                   [sentence.capitalize() for sentence in sentences])
+                   [upper_initial(sentence) for sentence in sentences])
 
        delimiters = ['.', '?', '!']
        for delimiter in delimiters:

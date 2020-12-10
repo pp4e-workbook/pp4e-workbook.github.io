@@ -324,9 +324,10 @@ Show Source
         
   <div class="section" id="capitalize-sentences-2">
 <h1><span class="section-number">4.8. </span>Capitalize Sentences <img alt="2" class="difficulty" src="../../_images/difficulty_four.png" /><a class="headerlink" href="#capitalize-sentences-2" title="Permalink to this headline">¶</a></h1>
-<p>Write a function named <em>capitalize_sentences</em> which takes input a string
-and return a strings where the first letter of each sentence to
-uppercase in the original string to correct the typos.</p>
+<p>Write a function named <em>capitalize_sentences</em> which takes a string
+including multiple sentences and return a string where the first letter
+of each sentence to uppercase in the original string to correct the
+typos.</p>
 <p>A sentence may end with the following characters: <code class="docutils literal notranslate"><span class="pre">'.'</span></code>, <code class="docutils literal notranslate"><span class="pre">'?'</span></code>,
 <code class="docutils literal notranslate"><span class="pre">'!'</span></code>. Your function should not interfere with other parts of the
 string.</p>
@@ -351,7 +352,7 @@ string. There will be no blank characters after the last sentence.</p>
     <span class="k">def</span> <span class="nf">split_by_and_capitalize</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">delimiter</span><span class="p">):</span>
         <span class="n">sentences</span> <span class="o">=</span> <span class="p">[</span><span class="n">sentence</span><span class="o">.</span><span class="n">lstrip</span><span class="p">()</span> <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">delimiter</span><span class="p">)]</span>
         <span class="k">return</span> <span class="p">(</span><span class="n">delimiter</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
-                <span class="p">[</span><span class="n">sentence</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">])</span>
+                <span class="p">[</span><span class="n">upper_initial</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span> <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">])</span>
 
     <span class="n">delimiters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="s1">&#39;?&#39;</span><span class="p">,</span> <span class="s1">&#39;!&#39;</span><span class="p">]</span>
     <span class="k">for</span> <span class="n">delimiter</span> <span class="ow">in</span> <span class="n">delimiters</span><span class="p">:</span>
