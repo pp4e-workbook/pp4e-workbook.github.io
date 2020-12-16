@@ -1,0 +1,121 @@
+
+Fix Operation File |2|
+~~~~~~~~~~~~~~~~~~~~~~
+
+You need to fix files that have some operations written in them and
+return their results.
+
+Write a function named *fix_operation_file* which gets two inputs as
+*string*, the input and output file names, respectively. The input file
+will be consisting of some basic operations, such that integers and
+operators are written line by line instead of a single line. For
+example, the operation *3+5* becomes *3*, *+*, *5* and written in 3
+lines in the input file (see Sample I/O below). Your function should
+read the input file, and write the operations in a fixed form (*3+5* in
+this example) to the output file and return the results of these
+operations in a list ([8] in this example).
+
+Note that the input file can contain more than 1 operation. You can
+assume that the input file will end with a newline character
+(\*:raw-latex:`\n*`), and each of the consecutive 3 lines will represent
+an operation.
+
+The operators might be basic arithmetic operators as one of ``'+'``,
+``'-'``, ``'*'``, ``'/'``.
+
+*Hint:* While reading the input file line by line, you can use the
+*rstrip*\ () method to get rid of the newline character ``'\n'``. Also
+you might consider using *eval*\ () function for the calculating the
+result part.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_five.png
+   :class: difficulty
+
+.. code:: default
+
+   Sample function call:  
+     fix_operation_file("input.txt", "output.txt")  
+
+   Content of the file "input.txt":  
+     3
+     +
+     5
+     6
+     *
+     7
+     2
+     /
+     1
+     18
+     -
+     9
+
+
+   Content of the file "output.txt" after function call:  
+     3+5
+     6*7
+     2/1
+     18-9
+
+
+   Return value:
+     [8, 42, 2.0, 9]
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def fix_operation_file(input_file_name, output_file_name):
+     operation_results = []
+
+     # Open files in read and write modes, respectively
+     input_file = open(input_file_name, "r")
+     output_file = open(output_file_name, "w")
+     count = 0
+     operation_string = ""
+
+     # Read lines from input file
+     for line in input_file:
+       # Add the number or operator to operation string to save
+       # Get rid of the new line character
+       operation_string += line.rstrip("\n")
+
+       count += 1
+
+       # If an operation is read completely
+       if count == 3:
+         output_file.write(operation_string)
+         output_file.write("\n")
+
+         # Use eval to evaluate the operation in operation string
+         operation_results.append(eval(operation_string))
+
+         # Reset the count and operation string
+         count = 0
+         operation_string = ""
+
+     # closing the files
+     input_file.close()
+     output_file.close()
+
+     return operation_results
+
+.. raw:: html
+
+   </div>

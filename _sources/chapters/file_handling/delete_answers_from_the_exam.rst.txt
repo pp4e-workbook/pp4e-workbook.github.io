@@ -1,0 +1,91 @@
+
+Delete Answers from the Exam |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Hasan is a teaching assistant at his university. He wrote exam questions
+for students, but right before he uploaded them into the website he
+realized that he forgot the answers of the questions in the text file.
+Can you help Hasan with writing a function that deletes answers from the
+question texts. Every 6th line in the text is the answer line.
+
+Write a function named *delete_answers* which gets a *string* as a file
+name where the question and answers are recorded as strings. This
+function must write the questions without answers to a new file called
+*new_questions.txt*.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   Sample function call:  
+       delete_answers("questions.txt")  
+
+   Content of the file "questions.txt":  
+       Q1: What does RAM stand for?
+       A) Right Access Memory
+       B) Real Actual Memory
+       C) Read Access Memory
+       D) Random Access Memory
+       Answer is D
+       Q2: What is the electronic circuitry within a computer that executes instructions that make up a computer program?
+       A) CPU
+       B) RAM
+       C) ROM
+       D) Motherboard
+       Answer is A
+
+   Content of the new file created by the function "new_questions.txt":
+       Q1: What does RAM stand for?
+       A) Right Access Memory
+       B) Real Actual Memory
+       C) Read Access Memory
+       D) Random Access Memory
+       Q2: What is the electronic circuitry within a computer that executes instructions that make up a computer program?
+       A) CPU
+       B) RAM
+       C) ROM
+       D) Motherboard
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def delete_answers(input_path):
+       count = 1
+       lines = []
+
+       input_file = open(input_path, "r")
+       lines = input_file.readlines()
+       input_file.close()
+
+       output_file = open("new_questions.txt", "w")
+       for line in lines:
+           if (count%6==0):
+               count+=1
+               continue
+           else:
+               output_file.write(line)
+               count+=1
+
+       output_file.close()
+
+.. raw:: html
+
+   </div>

@@ -1,0 +1,79 @@
+
+Average Weight of Deliveries |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Suppose a shipping company needs your help to analyze the recorded
+weights of their deliveries and calculate the average weights within a
+range.
+
+Write a function named *average_weight* which gets a *string* as a file
+name where the weights are recorded as *integers* separated with a blank
+character in multiple lines. This function must return a *float* which
+is the average for the deliveries weighted in the range of **[45, 125]**
+kilograms. If there is no recorded delivery in the given range, the
+function must return 0.
+
+*Hint:* You can use built-in *map*\ () and *filter()* functions.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: default
+
+   Sample function call:  
+       average_weight("input.txt")  
+
+   Content of the file "input.txt":  
+       61 49 92 159 212 257 107 320
+       237 282 354 240 120 330 243
+       95 113 300 114 271
+       191 303 396 117 175 350
+
+   Return value:
+       96.444444
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def average_weight(input_path):
+       min_weight = 45
+       max_weight = 125
+       weights_in_range = []
+       input_file = open(input_path, 'r')    # open input file in read mode
+       for line in input_file.readlines():
+           all_weights = list(map(int,list(line.split())))   # getting integer values in a line.
+           filtered = list(filter(lambda x: int(x) >= min and int(x) <= max, all_weights))   # filtering the weights
+           weights_in_range += filtered
+
+       input_file.close()    # do not forget to close
+
+       count = 0
+       total = 0
+       for w in weights_in_range:
+           total += w
+           count += 1
+       if count:
+           return (total / count)
+       else:
+           return 0
+
+.. raw:: html
+
+   </div>

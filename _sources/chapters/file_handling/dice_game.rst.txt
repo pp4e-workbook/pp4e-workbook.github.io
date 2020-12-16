@@ -1,0 +1,56 @@
+
+Exercise: Dice Game |2|
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Suppose three players are playing a simple dice game. The player with
+the highest number in each round gets one point. In case of a draw, the
+players share the one point. For example, if the dice throws for the
+three players are 1, 5, 5; player 2 and player 3 will get 0.5 points if
+the throws are 4, 4, 4; each of them will get 0.33 points.
+
+Write a function named *dice_game* which gets a *string* as a file path
+where the players’ names are recorded as *strings* in the first line
+separated with a blank character, and their dice numbers are recorded in
+bottom lines as *integers* separated with a blank character. The
+function must return the winner player’s name and the points the player
+got as *string*. In case of a draw, the function must return all winner
+player’s names.
+
+*Hint:* You may need to use *split*\ (), *readline*\ () and *rstrip*\ ()
+functions.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_four.png
+   :class: difficulty
+
+.. code:: default
+
+   Sample function call:  
+   dice_game("input.txt")  
+
+   Content of the file "input.txt":  
+   A B C
+   3 4 5
+   3 3 3
+   0 4 5
+   2 3 1
+
+   Return value:
+   'C 2.33'
+
+   Sample function call:  
+   dice_game("input.txt")  
+
+   Content of the file "input.txt":  
+   Ahmet Beyza Celal
+   6 4 5
+   3 4 3
+   5 4 5
+   2 2 2
+   1 2 6
+
+   Return value:
+   'Ahmet,Celal 1.83'

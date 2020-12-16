@@ -1,0 +1,51 @@
+
+Exercise: Pass or Fail |2|
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Write a function named *pass_or_fail*, which takes two *strings* as the
+paths of input and output files. Each line in the input file consists of
+the names of students as *string*, their grades for first and second
+midterm and final exam as *integers*, all separated with comma character
+``','``.
+
+The weights of the first and second midterm exams are **30%** each, and
+the weight of the final exam is **40%** and a student *pass* if overall
+grade is **60 and above** *fails* otherwise.
+
+The function must write two *strings* separated with a comma character
+``','`` in each line into the output file for each of student as their
+name and status with either ``"Pass"`` or ``"Fail"``.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   Sample function call:
+       pass_or_fail("input.txt", "output.txt")
+
+   Content of the file "input.txt":
+       Gorkem Yildiz,70,90,50
+       Naz Kaya,100,80,20
+
+   Content of the file "output.txt" after function call:
+       Gorkem Yildiz,Pass
+       Naz Kaya,Pass
+
+
+   Sample function call:
+       pass_or_fail("input.txt", "output.txt")
+
+   Content of the file "input.txt":
+       Bilgin Irmak,60,55,63
+       Aleyna Catak,80,60,50
+       Bayram Durak,70,30,90
+
+   Content of the file "output.txt" after function call:
+       Bilgin Irmak,Fail
+       Aleyna Çatak,Pass
+       Bayram Durak,Pass

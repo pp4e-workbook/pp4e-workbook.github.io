@@ -1,0 +1,100 @@
+
+Evaluate Attendees |2|
+~~~~~~~~~~~~~~~~~~~~~~
+
+The cast and crew of TGS attended a seminar and they were required to
+take a test after finishing a series of educational material. The
+results of the test are critically important because it will determine
+the fate of the show, being a clear indication of how much they care
+about the company policies. To determine the results with the highest
+possible accuracy, they hire you to create a program that calculates the
+results.
+
+Write a function named *evaluate_attendees* which takes two *string*
+arguments, namely *answer key* and *responses* files. The *answer key*
+file consists of a single line of *uppercase letters between A-E*
+separated with a space character. The *responses* file consists of
+multiple lines where each line has *attendee name* and *responses*
+separated with a space character. Your function should generate the
+points of each attendee and return the list of tuples consisting of
+attendee’s name as *string* and her/his point as *float* in descending
+order with respect to points.
+
+A point of a participant can be calculated as follows: point = correct
+answers - wrong answers \* 0.25
+
+*Hint:* You can use built in *sorted*\ () function by using *lambda*
+expression.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   Sample function call:  
+       evaluate_attendees("key.txt", "attendees.txt")
+
+   Content of the file "key.txt":  
+       A B A B C
+
+   Content of the file "attendees.txt":  
+       Jenna A A A A A
+       Tracy D E D E A
+       Liz A B A B E
+       Lutz A B A D D
+       Toofer E B A B C
+       Frank E E E E E
+
+   Return Value:
+       [('Liz',3.75),('Toofer',3.75),('Lutz',2.5),('Jenna',1.25),('Tracy',-1.25),('Frank',-1.25)]
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def evaluate_attendees(key_path, grade_path):
+       attendees = []
+       
+       key_file = open(key_path, "r")
+       key = key_file.read().split()
+       key_file.close()
+
+       questions = len(key)
+
+       input_file = open(grade_path, 'r')
+       for line in input_file.readlines():
+           correct = 0
+           wrong = 0
+           name = line.split()[0]                # seperating name from the rest of the list
+           responses = line.split()[1:]          # getting the responses for the exam
+           for i in range(questions):            # checking responses one by one to determine result
+               if responses[i] == key[i]:
+                   correct += 1
+               else:
+                   wrong += 1
+           attendees.append((name, correct - 0.25 * wrong))
+
+       input_file.close()
+
+       attendees_sorted = sorted(attendees, key=lambda item: item[1], reverse=True) # sort the list according to points
+       return attendees_sorted
+
+.. raw:: html
+
+   </div>

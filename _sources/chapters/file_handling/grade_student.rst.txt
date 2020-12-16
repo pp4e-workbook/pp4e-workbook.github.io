@@ -1,0 +1,58 @@
+
+Exercise: Grade Student |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You are a teacher who is reading exam papers. Since it can be tiring to
+read and grade hundreds of papers, you decide to write a function that
+does the job for you.
+
+Write a function named *grade_student* which gets two *strings* as the
+file names. The first file contains the answer key, where each line
+holds a record of question’s number, answer and grade separated by a
+blank character. The second file contains a student’s answers, where
+each line holds a record of question’s number and student’s answer. This
+function should return an *integer* which is the total grade student
+gets.
+
+Note that your students answer all the questions. That means both files
+always have the same number of lines.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_two.png
+   :class: difficulty
+
+.. code:: default
+
+   Sample function call:  
+       grade_student("answer_key.txt", "student.txt")  
+
+   Content of the file "answer_key.txt":  
+       1 A 5
+       2 C 15
+       3 A 10
+       4 B 5
+       5 D 5
+       6 C 15
+       7 C 15
+       8 A 10
+       9 D 15
+       10 C 5
+
+   Content of the file "student.txt":  
+       1 A
+       2 C
+       3 D
+       4 A
+       5 C
+       6 C
+       7 D
+       8 A
+       9 D
+       10 C
+
+
+   Return value:
+       65

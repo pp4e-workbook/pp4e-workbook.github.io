@@ -1,0 +1,98 @@
+
+Cheapest Flour |2|
+~~~~~~~~~~~~~~~~~~
+
+Your friend Ozan is a great cook and wants to buy some flour in a market
+to make some cookies. In this market, all brands of flour is marked with
+prices **P** per **W** kilograms instead of 1 kilogram. He does not want
+to be overcharged, so you should help him. Can you order all these
+brands with their prices per kg in decreasing order?
+
+Write a function named *cheapest_flour* which gets two *string*\ s as
+input and output file names. In the input file, each line stands for a
+brand and includes two *integers*, **P** and **W** separated by a space
+where **P** is the price of the **W** kilograms of this brand. The
+function must write the price per kg of each brand in the decreasing
+order to the output file.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   Sample function call:  
+       cheapest_flour("input.txt", "output.txt")
+
+   Content of the file "input.txt":  
+       12 3
+       25 2
+       15 6
+       23 8
+       11 2
+
+   Content of the file "output.txt" after function call:
+       12.5
+       5.5
+       4.0
+       2.875
+       2.5
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+In this solution, you will see an example of ``with`` structure in file
+handling.
+
+.. code:: python
+
+   with open(...) as f:
+     block
+
+is equivalent to
+
+.. code:: python
+
+   f = open(...)
+   block
+   f.close()
+
+``with`` structure closes the file automatically when the code block in
+its scope is terminated for any reason.
+
+.. code:: python
+
+   def cheapest_flour(input_path, output_path):
+
+       prices_per_kg = []
+
+       with open(input_path, 'r') as input_file:     # opening the file in read mode
+           for line in input_file.readlines():
+               brand = list(map(int,list(line.split())))   # getting integer values in a line.
+               price = brand[0]
+               weight = brand[1]
+               prices_per_kg.append(price/weight)
+
+       prices_per_kg.sort(reverse=True)        # sorting in decreasing order
+
+       with open(output_path, 'w') as output_file:     # opening the file in write mode
+           for brand in prices_per_kg:
+               output_file.write(str(brand)+"\n") # print values into the file with newlines
+
+.. raw:: html
+
+   </div>

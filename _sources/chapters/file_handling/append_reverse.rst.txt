@@ -1,0 +1,92 @@
+
+Append Reverse |2|
+~~~~~~~~~~~~~~~~~~
+
+For this question, you will be given an input file. The file will
+consist of names and surnames of some people, with a space character
+between a name and a surname. On each line, only 1 person’s name and
+surname will be given. You should read the names and surnames from the
+file and add them again at the bottom of the file in the reversed order,
+i.e., “surname name”. Write a function named *append_reverse* which
+takes an input *string* for the file name and returns a *list* of
+*tuples* where each tuple consists of the name, surname pair you read
+from the file.
+
+The file will be ending with a newline character (\*:raw-latex:`\n*`),
+so you don’t need to bother with that. This also lets you run your code
+multiple times to double the person records in the file decently.
+
+*Hint:* Check out the *string* method *split()*.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   Sample function call:  
+       append_reverse("input.txt")  
+
+   Content of the file "input.txt" before the function call:  
+       Lewis Hamilton
+       Nicholas Latifi
+       Charles Leclerc
+       Esteban Ocon
+       Kimi Raikkonen
+
+   Return value:
+       [('Lewis', 'Hamilton'), ('Nicholas', 'Latifi'), ('Charles', 'Leclerc'), ('Esteban', 'Ocon'), ('Kimi', 'Raikkonen')]
+
+   Content of the file "input.txt" after the function call:  
+       Lewis Hamilton
+       Nicholas Latifi
+       Charles Leclerc
+       Esteban Ocon
+       Kimi Raikkonen
+       Hamilton Lewis
+       Latifi Nicholas
+       Leclerc Charles
+       Ocon Esteban
+       Raikkonen Kimi
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def append_reverse(input_file_name):
+       person_list = []
+       input_file = open(input_file_name, "r")
+       for line in input_file:
+           name, surname = line.split()
+           # Save as a tuple
+           person_list.append((name, surname))
+
+       input_file.close()
+       # Re-open in append mode
+       input_file = open(input_file_name, "a")
+       for person in person_list:
+           # first is name, second is surname
+           string_to_write = person[1] + " " + person[0] + "\n"
+           input_file.write(string_to_write)
+
+       input_file.close()
+       return person_list
+
+.. raw:: html
+
+   </div>

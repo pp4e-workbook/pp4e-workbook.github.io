@@ -1,0 +1,111 @@
+
+Exercise: Database Migration |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You are working for a fan club website, and for pricing reasons,
+management told you that they have decided to change the database
+service. Since you are in charge of the database, you are also in charge
+of the database migration. You need to read from your old database files
+and create new files that are compatible with the new database service.
+
+The old database files are in the following format:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+::
+
+   Actor,EpisodeCount,LastOccurence
+   Kenan Thompson,353,2020
+   Seth Meyers,255,2018
+   Fred Armisen,238,2020
+   Kate McKinnon,179,2020
+
+New database files should be in the following format:
+
+::
+
+   Actor:Kenan Thompson,EpisodeCount:353,LastOccurence:2020
+   Actor:Seth Meyers,EpisodeCount:255,LastOccurence:2018
+   Actor:Fred Armisen,EpisodeCount:238,LastOccurence:2020
+   Actor:Kate McKinnon,EpisodeCount:179,LastOccurence:2020
+
+Write a function named *format_for_migration* which takes input two
+*string* values as file paths for input and output files, where the
+format of the input and the output files are shown above. This function
+must fill the output file with the records. The function should also
+return an *integer* which is the number of records that are formatted.
+
+*Hint:* You can use the built-in *map*\ (), *join*\ (), *rstrip*\ () and
+*split*\ () functions.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. code:: default
+
+   Sample function call:  
+       format_for_migration("input.txt", "output.txt")  
+
+   Content of the file "input.txt":  
+       Actor,EpisodeCount,LastOccurence
+       Kenan Thompson,353,2020
+       Seth Meyers,255,2018
+       Fred Armisen,238,2020
+       Kate McKinnon,179,2020
+       Cecily Strong,174,2020
+       Bill Hader,167,2020
+       Maya Rudolp,166,2020
+       Will Forte,159,2016
+       Tina Fey,154,2020
+       Tracy Morgan,154,2019
+       Amy Poehler,153,2020
+       Will Ferrell,151,2019
+       Rachel Dracht,150,2020
+       Colin Jost,149,2020
+       Kristen Wiig,145,2020
+       Andy Samberg,144,2018
+       Michael Che,132,2020
+       Pete Davidson,132,2020
+       Alec Baldwin,65,2020
+       Julia Louis-Dreyfus,60,2016
+       Jenny Slate,22,2010
+       Steve Martin,32,2019
+       Martin Short,28,2020
+       Nancy Carell,22,2018
+       Steve Carell,18,2018
+       Tom Hanks,18,2020
+       John Mulaney,14,2020
+
+   Return value:
+       27
+
+   Content of the file "output.txt" after function call:
+       Actor:Kenan Thompson,EpisodeCount:353,LastOccurence:2020
+       Actor:Seth Meyers,EpisodeCount:255,LastOccurence:2018
+       Actor:Fred Armisen,EpisodeCount:238,LastOccurence:2020
+       Actor:Kate McKinnon,EpisodeCount:179,LastOccurence:2020
+       Actor:Cecily Strong,EpisodeCount:174,LastOccurence:2020
+       Actor:Bill Hader,EpisodeCount:167,LastOccurence:2020
+       Actor:Maya Rudolp,EpisodeCount:166,LastOccurence:2020
+       Actor:Will Forte,EpisodeCount:159,LastOccurence:2016
+       Actor:Tina Fey,EpisodeCount:154,LastOccurence:2020
+       Actor:Tracy Morgan,EpisodeCount:154,LastOccurence:2019
+       Actor:Amy Poehler,EpisodeCount:153,LastOccurence:2020
+       Actor:Will Ferrell,EpisodeCount:151,LastOccurence:2019
+       Actor:Rachel Dracht,EpisodeCount:150,LastOccurence:2020
+       Actor:Colin Jost,EpisodeCount:149,LastOccurence:2020
+       Actor:Kristen Wiig,EpisodeCount:145,LastOccurence:2020
+       Actor:Andy Samberg,EpisodeCount:144,LastOccurence:2018
+       Actor:Michael Che,EpisodeCount:132,LastOccurence:2020
+       Actor:Pete Davidson,EpisodeCount:132,LastOccurence:2020
+       Actor:Alec Baldwin,EpisodeCount:65,LastOccurence:2020
+       Actor:Julia Louis-Dreyfus,EpisodeCount:60,LastOccurence:2016
+       Actor:Jenny Slate,EpisodeCount:22,LastOccurence:2010
+       Actor:Steve Martin,EpisodeCount:32,LastOccurence:2019
+       Actor:Martin Short,EpisodeCount:28,LastOccurence:2020
+       Actor:Nancy Carell,EpisodeCount:22,LastOccurence:2018
+       Actor:Steve Carell,EpisodeCount:18,LastOccurence:2018
+       Actor:Tom Hanks,EpisodeCount:18,LastOccurence:2020
+       Actor:John Mulaney,EpisodeCount:14,LastOccurence:2020

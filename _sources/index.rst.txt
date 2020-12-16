@@ -23,3 +23,5 @@ course.
    chapters/functions/index.md
 
    chapters/a_gentle_introduction_to_object_oriented_programming/index.md
+
+   chapters/file_handling/index.md

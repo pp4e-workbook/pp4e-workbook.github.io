@@ -1,0 +1,33 @@
+
+File Handling
+=============
+
+.. toctree::
+   average_weight_of_deliveries
+
+.. toctree::
+   evaluate_attendees
+
+.. toctree::
+   grade_student
+
+.. toctree::
+   cheapest_flour
+
+.. toctree::
+   pass_or_fail
+
+.. toctree::
+   delete_answers_from_the_exam
+
+.. toctree::
+   database_migration
+
+.. toctree::
+   append_reverse
+
+.. toctree::
+   dice_game
+
+.. toctree::
+   fix_operation_file
