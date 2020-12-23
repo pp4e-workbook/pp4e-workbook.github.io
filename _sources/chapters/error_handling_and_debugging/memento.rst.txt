@@ -1,0 +1,48 @@
+
+Exercise: Memento |2|
+~~~~~~~~~~~~~~~~~~~~~
+
+Assume that nowadays you suffer from not being able to remember things
+that you used to. In order to strengthen your memory, you decide to
+create a function that helps you to refresh your memory.
+
+Write a function named *memento* that takes a string as a path of
+possibly existing file. This function tries to read the file with the
+given name. The function returns a *string* according to following
+conditions:
+
+-  If the file does not exist, the function must catch the exception and
+   return ``"File not found, try again!"``.
+-  If the file exists, read the file. if the content that is read
+   contains only digits, the function must return the *string*
+   ``"Finally you found the correct one! The password is: {number in the file}"``.
+-  If there are non-numeric characters in the file, then the function
+   must return ``"Wrong file, try again!"``.
+
+**Note**: Any string methods that helps you to detect a non-numeric
+character is forbidden. Instead, you can try to cast the content to an
+*integer*.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_five.png
+   :class: difficulty
+
+.. code:: default
+
+   Content of the file "test1.txt":  
+       dasdkjlkldsa9102801
+
+   Content of the file "test2.txt":  
+       15646456
+
+   >>> memento("test.txt")
+   'File not found, try again!'
+
+   >>> memento("test1.txt")
+   'Wrong file, try again!'
+
+   >>> memento("test2.txt")
+   'Finally you found the correct one! The password is: 15646456'

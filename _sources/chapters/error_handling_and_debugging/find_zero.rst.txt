@@ -1,0 +1,63 @@
+
+Find Zero |2|
+~~~~~~~~~~~~~
+
+Write a function named *find_zero* which takes a *list of integers* as
+argument. The function returns an *integer* as the index of **first
+occurrence** of zero in the given list. If the given list does not
+contain any zeros, then the function must return **-1**.
+
+**Note:** You can not use any built-in function that gives the index of
+an element in a list. The equality operator(“==”) is also forbidden for
+this question.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: default
+
+   >>> find_zero([1,2,3,4,5])
+   -1
+
+
+   >>> find_zero([123,35,0,46,2567])
+   2
+
+
+   >>> find_zero([0,1,0,1,1,0])
+   0
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def find_zero(numbers):
+       index_of_zero = -1
+       index_counter = -1
+       try:
+           for number in numbers:
+               index_counter += 1
+               temporary = 32/number   # Apply division to catch ZeroDivisionError exception.
+       except ZeroDivisionError:       # 32 and temporary have no meaning here. They can be anything.
+           index_of_zero = index_counter
+       return index_of_zero
+
+.. raw:: html
+
+   </div>

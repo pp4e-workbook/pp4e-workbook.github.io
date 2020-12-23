@@ -1,0 +1,93 @@
+
+Calculate Expenses |2|
+~~~~~~~~~~~~~~~~~~~~~~
+
+A group of people who needs to do some shopping wants to know how much
+they will spend in total approximately. As being a good samaritan, you
+decide to help them. You have the following function to calculate the
+total price of a shopping list, at hand. This function takes a shopping
+list as *a list of tuples* where the first element is supposed to be the
+name of an item as *string*, where the second one should be the price of
+this item as *float*.
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: python
+
+   def sum_prices(shopping_list):
+
+       total = 0
+       for (item, price) in shopping_list:
+           total += price
+
+       return round(total, 2)
+
+This simple function can help you to calculate the total cost of each of
+the given shopping lists by rounding it 2 digits after the decimal
+point. However, although people know all of the items that they want to
+buy, they might not be sure about the price of each one. So, a list
+provided by one of these people may include a note indicating their lack
+of knowledge near the item’s name, instead of the price. Since these
+notes can differ from person to person, you have to deal with this
+problem in a way that covers all such notes.
+
+Write a function named *calculate_expenses* which takes the list of
+shopping lists, where each of them is *a list of tuples* as explained
+above. This function must return a *list* including the total prices for
+the complete shopping lists as *floats* and ``"Incomplete"`` *string*
+for the incomplete ones using the function above.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. code:: default
+
+   >>> calculate_expenses([[("chocolate", 4.25), ("jambonbutter", 4.75), ("ice cream", 3.5), ("milk", 3.25)], [("coffee", 4.75), ("olive", 2.25), ("ice cream", 2.99)]])
+   [15.75, 9.99]
+
+   >>> calculate_expenses([[("coffee", 2.5), ("milk", "dunno"), ("ice cream", 2.75)],
+                           [("candy", 2.99), ("chocolate", 3.99), ("tea", 3.5), ("coffee", 2.99), ("olive", 2.99)],
+                           [("tea", 3.99), ("coffee", 2.5), ("olive", 2.25), ("chocolate", 4.25), ("jambonbutter", 4.25), ("egg", 2.25)]])
+   ['Incomplete', 16.46, 19.49]
+
+   >>> calculate_expenses([[("tea", 4.99), ("olive", 3.5), ("chocolate", 4.75), ("coffee", 3.99),
+                            ("milk", 2.99), ("egg", 3.99), ("jambonbutter", "not sure")],
+                            [("jambonbutter", 3.5), ("egg", 3.75), ("tea", 3.99), ("coffee", 4.5), ("olive", 3.75)],
+                            [("jambonbutter", 3.99), ("milk", 3.5), ("chocolate", 4.25), ("ice cream", 3.5),
+                             ("cheese", 2.75), ("candy", 2.75), ("tea", 4.5), ("olive", "unknown")],
+                             [("ice cream", 3.99), ("olive", 3.75), ("chocolate", 2.99), ("coffee", 4.5),
+                             ("milk", 3.25), ("tea", 2.25), ("candy", 4.25), ("cheese", 4.75)],
+                             [("ice cream", 3.75), ("coffee", 3.25), ("candy", "unknown"),
+                             ("chocolate", 3.99), ("egg", 4.99), ("olive", 3.25), ("milk", 2.5)]])
+   ['Incomplete', 19.49, 'Incomplete', 29.73, 'Incomplete']
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def calculate_expenses(shopping_lists):
+       result = []
+       for lst in shopping_lists:
+           try:
+               result.append(sum_prices(lst))
+           except TypeError:
+               result.append("Incomplete")
+       return result
+
+.. raw:: html
+
+   </div>

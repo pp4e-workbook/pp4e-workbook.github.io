@@ -1,0 +1,53 @@
+
+Exercise: Calculate Discount Averages |2|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+A researcher in economics wants to know average discount amount of
+selected stores for a project. This researcher has the following
+function which calculates the average discount given the price changes:
+
+.. |2| image:: ../../figures/difficulty_three.png
+   :class: difficulty
+
+.. code:: python
+
+   def average_discount(list_of_changes):
+       total = 0
+       count = 0
+       for change in list_of_changes:
+           if change < 0:
+               total += (- change)     # to make it positive
+               count += 1
+
+       return round((total / count), 2)    # rounding 2 digits after decimal point
+
+Although this function seems as if it has been implemented well, it
+misses a critical point that a store may not have a discount for any of
+its products. In this case, the last statement of the function tries to
+divide the total value of zero by a count of zero, which causes a big
+fight with the mathematicians.
+
+Write a function named *calculate_discount_averages* which takes the
+list of changes in the stores as a *list of lists of floats*. This
+function must safely use the function above, and return the calculated
+average discounts as a *list of floats*.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. code:: default
+
+   >>> calculate_discount_averages([[-3.25, 4.5, 3.5], [-0.25, -2, -1, -1.5], [-4.25, -0.75, -2, 4.5]])
+   [3.25, 1.19, 2.33]
+
+   >>> calculate_discount_averages([[2.75, 3.25, -3.25], [2.5, 1.99, 1, 1, 0.5],
+                                    [-0.25, -4.5, -2.25, -4, 2, 2], [-3, -2.5, -3, -1.99, -4.5]])
+   [3.25, 0, 2.75, 3.0]
+
+   >>> calculate_discount_averages([[-0.75, 4, 2.25, 3.5, -1.25, 4.5],
+                                   [-1.5, -2.99, 3.99, -0.25, -0.25, -2, 2.99, -4, -3.25],
+                                   [1.25, 0.75, 0.5, 0.25, 1.5, 0.99],
+                                   [0.25, 0.25, 0.75, 1.5, 2.75, 3, 2.25],
+                                   [-3.25, 4.5, 4.99, 4.5, -1.99]])
+   [1.0, 2.03, 0, 0, 2.62]

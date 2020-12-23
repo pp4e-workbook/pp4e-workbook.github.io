@@ -1,0 +1,27 @@
+
+Error Handling and Debugging
+============================
+
+.. toctree::
+   send_bulk_sms
+
+.. toctree::
+   send_bulk_sms_revisited
+
+.. toctree::
+   calculate_expenses
+
+.. toctree::
+   find_zero
+
+.. toctree::
+   calculate_discount_averages
+
+.. toctree::
+   errors_in_general
+
+.. toctree::
+   ball_game
+
+.. toctree::
+   memento

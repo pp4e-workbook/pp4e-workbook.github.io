@@ -1,0 +1,130 @@
+
+Send Bulk SMS |2|
+~~~~~~~~~~~~~~~~~
+
+A small business wants to send bulk messages to a group of customers to
+boost their sales and to annoy the people (mostly to annoy the people).
+The phone book of the customers they have is implemented as a dictionary
+in the following buggy function which takes the name of person as a
+*string* and return their phone number in the same type:
+
+.. |2| image:: ../../figures/difficulty_one.png
+   :class: difficulty
+
+.. code:: python
+
+   def get_phone_number(person):
+       phone_dict = {"Jerry Seinfeld":"+1 960-454-6956",
+                     "George Constanza":"+1 844-833-4965",
+                     "Elaine Benes":"+1 543-920-5729",
+                     "Cosmo Kramer":"+1 556-673-6702",
+                     "Jim Halpert":"+1 867-767-7664",
+                     "Pam Beesly":"+1 410-570-7381",
+                     "Michael Scott":"+1 657-220-6601",
+                     "Dwight Schrute":"+1 940-573-6702",
+                     "Rachel Green":"+1 813-856-3347",
+                     "Monica Geller":"+1 527-324-1403",
+                     "Ross Geller":"+1 687-801-6781",
+                     "Phoebe Buffay":"+1 208-702-5161",
+                     "Joey Tribbiani":"+1 908-665-3975",
+                     "Chandler Bing":"+1 444-970-5300"}
+
+       return phone_dict[person]
+
+Why we called this function buggy? Because it never checks whether the
+given person is in the phone book or not. In Python, if a dictionary
+does not have the given key, :math:`\color{purple}{\texttt{KeyError}}`
+exception is raised.
+
+Although the function above is not safe for direct use, we have the
+reliable function that takes a phone number as a string, sends SMS to
+that phone number (hypothetically) and returns ``True``, indicating that
+the process is successfully performed, as given below:
+
+.. code:: python
+
+   def send_sms(number):
+       # sends message #
+       print("Message is successfully sent to " + number)
+       return True
+
+Write a function named *``send_bulk_sms``* which takes a list of
+customers’ names as *a list of strings* and sends message to each of
+them whose number is registered in the phone book by using the functions
+above. Obviously, any exception thrown by *``get_phone_number``*
+function must be handled in your implementation and reported in the
+following format:
+
+*“Customer is not found in the phone book: {Customer Name}”*
+
+*Note:* We normally do not want a function to print anything beside
+doing its task and return the value as it is excepted. However, in this
+case, the function is required to do logging. Therefore, it is proper to
+use :math:`\color{purple}{\texttt{print()}}` function and not to return
+any value.
+
+.. container:: sampleio
+
+   Sample I/O:
+
+.. code:: default
+
+   >>> send_bulk_sms(["Michael Scott", "Dwight Schrute", "Joey Tribbiani"])
+   Message is successfully sent to +1 657-220-6601
+   Message is successfully sent to +1 940-573-6702
+   Message is successfully sent to +1 908-665-3975
+
+   >>> send_bulk_sms(["Pam Beesly", "George Constanza", "Elaine Benes", "Michael Scott", "Maurice Moss"])
+   Message is successfully sent to +1 410-570-7381
+   Message is successfully sent to +1 844-833-4965
+   Message is successfully sent to +1 543-920-5729
+   Message is successfully sent to +1 657-220-6601
+   Customer is not in the phone book: Maurice Moss
+
+   >>> send_bulk_sms(["Roy Trenneman", "Monica Geller", "Michael Scott", "Pam Beesly",
+                      "Maurice Moss", "Jen Barber", "Ross Geller", "Joey Tribbiani",
+                      "Phoebe Buffay", "Denholm Reynholm", "Jim Halpert", "Cosmo Kramer",
+                      "Dwight Schrute", "Jerry Seinfeld", "George Constanza"])
+   Customer is not in the phone book: Roy Trenneman
+   Message is successfully sent to +1 527-324-1403
+   Message is successfully sent to +1 657-220-6601
+   Message is successfully sent to +1 410-570-7381
+   Customer is not in the phone book: Maurice Moss
+   Customer is not in the phone book: Jen Barber
+   Message is successfully sent to +1 687-801-6781
+   Message is successfully sent to +1 908-665-3975
+   Message is successfully sent to +1 208-702-5161
+   Customer is not in the phone book: Denholm Reynholm
+   Message is successfully sent to +1 867-767-7664
+   Message is successfully sent to +1 556-673-6702
+   Message is successfully sent to +1 940-573-6702
+   Message is successfully sent to +1 960-454-6956
+   Message is successfully sent to +1 844-833-4965
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. code:: python
+
+   def send_bulk_sms(list_of_customers):
+       for customer in list_of_customers:
+           try:
+               number = get_phone_number(customer)
+               send_sms(number)
+           except KeyError:
+               print("Customer is not found in the phone book: " + customer)
+
+.. raw:: html
+
+   </div>
