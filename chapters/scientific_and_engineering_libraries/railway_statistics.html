@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+    
     <title>7.1. Railway Statistics &#8212; The Workbook for Programming with Python for Engineers 0.0.1 documentation</title>
 
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
@@ -27,19 +27,19 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="7.2. Olive Production" href="olive_production.html" />
-    <link rel="prev" title="7. Scientific and Engineering Libraries" href="index.html" />
+    <link rel="prev" title="7. Scientific and Engineering Libraries" href="index.html" /> 
   </head>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer"><header class="mdl-layout__header mdl-layout__header--waterfall ">
     <div class="mdl-layout__header-row">
-
+        
         <nav class="mdl-navigation breadcrumb">
             <a class="mdl-navigation__link" href="index.html"><span class="section-number">7. </span>Scientific and Engineering Libraries</a><i class="material-icons">navigate_next</i>
             <a class="mdl-navigation__link is-active"><span class="section-number">7.1. </span>Railway Statistics </a>
         </nav>
         <div class="mdl-layout-spacer"></div>
         <nav class="mdl-navigation">
-
+        
 <form class="form-inline pull-sm-right" action="../../search.html" method="get">
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
         <label id="quick-search-icon" class="mdl-button mdl-js-button mdl-button--icon"  for="waterfall-exp">
@@ -55,7 +55,7 @@
       Quick search
       </div>
 </form>
-
+        
 <a id="button-show-source"
     class="mdl-button mdl-js-button mdl-button--icon"
     href="../../_sources/chapters/scientific_and_engineering_libraries/railway_statistics.rst.txt" rel="nofollow">
@@ -72,7 +72,7 @@ Show Source
       </nav>
     </div>
 </header><header class="mdl-layout__drawer">
-
+    
           <!-- Title -->
       <span class="mdl-layout-title">
           <a class="title" href="../../index.html">
@@ -81,13 +81,13 @@ Show Source
               </span>
           </a>
       </span>
-
-
+    
+    
       <div class="globaltoc">
         <span class="mdl-layout-title toc">Table Of Contents</span>
-
-
-
+        
+        
+            
             <nav class="mdl-navigation">
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../dive_into_python/index.html">1. Dive into Python</a><ul>
@@ -218,15 +218,15 @@ Show Source
 </ul>
 
             </nav>
-
+        
         </div>
-
+    
 </header>
         <main class="mdl-layout__content" tabIndex="0">
 
 	<script type="text/javascript" src="../../_static/sphinx_materialdesign_theme.js "></script>
     <header class="mdl-layout__drawer">
-
+    
           <!-- Title -->
       <span class="mdl-layout-title">
           <a class="title" href="../../index.html">
@@ -235,13 +235,13 @@ Show Source
               </span>
           </a>
       </span>
-
-
+    
+    
       <div class="globaltoc">
         <span class="mdl-layout-title toc">Table Of Contents</span>
-
-
-
+        
+        
+            
             <nav class="mdl-navigation">
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../dive_into_python/index.html">1. Dive into Python</a><ul>
@@ -372,32 +372,31 @@ Show Source
 </ul>
 
             </nav>
-
+        
         </div>
-
+    
 </header>
 
     <div class="document">
         <div class="page-content" role="main">
-
+        
   <div class="section" id="railway-statistics-2">
 <h1><span class="section-number">7.1. </span>Railway Statistics <img alt="2" class="difficulty" src="../../_images/difficulty_four6.png" /><a class="headerlink" href="#railway-statistics-2" title="Permalink to this headline">¶</a></h1>
-<p>In this question, you will analyze a data extracted for railway
-statistics regarding the length of all railroads and number of
-passengers year by year in Turkey.</p>
+<p>In this question, you will analyze some railway statistics regarding the
+length of all railroads and the number of passengers year by year in
+Turkey.</p>
 <p>You can fetch this data from the following link:</p>
-<p><a class="reference external" href="http://user.ceng.metu.edu.tr/~ceng240/data/railway.csv" target="_blank">http://user.ceng.metu.edu.tr/~ceng240/data/railway.csv</a></p>
-<p>Here are the instructions of the task to observe the change in this
-data:</p>
+<p><a class="reference external" href="http://user.ceng.metu.edu.tr/~ceng240/data/railway.csv">http://user.ceng.metu.edu.tr/~ceng240/data/railway.csv</a></p>
+<p>Here are the instructions of the task:</p>
 <ul>
 <li><p>Read this data by using <span class="math notranslate nohighlight">\(\color{purple}{\texttt{pandas}}\)</span>
 module.</p></li>
 <li><p>Get the lengths of railroads, in a
 <span class="math notranslate nohighlight">\(\color{purple}{\texttt{numpy}}\)</span> array with <em>dtype</em> as <em>int</em>
-from the field named <em>Length</em></p></li>
+from the field named <em>Length</em>.</p></li>
 <li><p>Get the number of passengers, in a
 <span class="math notranslate nohighlight">\(\color{purple}{\texttt{numpy}}\)</span> array with <em>dtype</em> as <em>int</em>
-from the field named <em>Passenger</em></p></li>
+from the field named <em>Passenger</em>.</p></li>
 <li><p>Plot the figure for the lengths of railroads vs. the number of
 passengers by using
 <span class="math notranslate nohighlight">\(\color{purple}{\texttt{matplotlib.pyplot}}\)</span> and save in your
@@ -452,7 +451,7 @@ define a function in case of a repeating task.</p>
 
         </div>
         <div class="side-doc-outline">
-            <div class="side-doc-outline--content">
+            <div class="side-doc-outline--content"> 
             </div>
         </div>
 
@@ -473,7 +472,7 @@ define a function in case of a repeating task.</p>
         </div>
      </a>
   </div>
-
+        
         </main>
     </div>
   </body>
