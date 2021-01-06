@@ -1,0 +1,92 @@
+
+Railway Statistics |2|
+~~~~~~~~~~~~~~~~~~~~~~
+
+In this question, you will analyze some railway statistics regarding the
+length of all railroads and the number of passengers year by year in
+Turkey.
+
+You can fetch this data from the following link:
+
+http://user.ceng.metu.edu.tr/~ceng240/data/railway.csv
+
+Here are the instructions of the task:
+
+-  Read this data by using :math:`\color{purple}{\texttt{pandas}}`
+   module.
+-  Get the lengths of railroads, in a
+   :math:`\color{purple}{\texttt{numpy}}` array with *dtype* as *int*
+   from the field named *Length*.
+-  Get the number of passengers, in a
+   :math:`\color{purple}{\texttt{numpy}}` array with *dtype* as *int*
+   from the field named *Passenger*.
+-  Plot the figure for the lengths of railroads vs. the number of
+   passengers by using
+   :math:`\color{purple}{\texttt{matplotlib.pyplot}}` and save in your
+   computer (see :math:`\color{purple}{\texttt{savefig()}}` function in
+   the related module.).
+-  Apply min max normalization to both fields. During this normalization
+   each value in the fields is calculated according to the formula
+   below:
+
+   .. math::  new\_value =  \frac{value - min\_value}{max\_value - min\_value} 
+
+-  Plot the figure for the lengths of railroads vs. the number of
+   passengers by using
+   :math:`\color{purple}{\texttt{matplotlib.pyplot}}` with their
+   normalized values again and save in your computer.
+
+Write a python program to complete tasks above. You are recommended to
+define a function in case of a repeating task.
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. |2| image:: ../../figures/difficulty_four.png
+   :class: difficulty
+
+.. code:: python
+
+   import pandas as pd
+   import numpy as np
+   import matplotlib.pyplot as plt
+
+   # function that applies min max normalization to given numpy array
+   def min_max_normalization(arr):
+       min_value = arr.min()
+       max_value = arr.max()
+
+       return (arr - min_value) / (max_value - min_value)
+
+   # function that plots and saves the figure with given data, title and output path
+   def plot_data(x, y, title, output_path):
+       plt.figure()
+       plt.plot(x, y)
+       plt.title(title)
+       plt.savefig(output_path)
+
+   raw_data = pd.read_csv("railway.csv")
+
+   lengths = np.array(raw_data["Length"], dtype=int)
+   passengers = np.array(raw_data["Passenger"], dtype=int)
+
+   normalized_lengths = min_max_normalization(lengths)
+   normalized_passengers = min_max_normalization(passengers)
+
+   plot_data(lengths, passengers, "RAW", "railway_raw.png")
+   plot_data(normalized_lengths, normalized_passengers, "NORMALIZED", "railway_normalized.png")
+
+.. raw:: html
+
+   </div>

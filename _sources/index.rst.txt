@@ -27,3 +27,5 @@ course.
    chapters/file_handling/index.md
 
    chapters/error_handling_and_debugging/index.md
+
+   chapters/scientific_and_engineering_libraries/index.md

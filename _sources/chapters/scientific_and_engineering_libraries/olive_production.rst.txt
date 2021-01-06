@@ -1,0 +1,89 @@
+
+Olive Production |2|
+~~~~~~~~~~~~~~~~~~~~
+
+In this question, you will analyze data extracted for the amounts of
+produced olives year by year in Turkey.
+
+You can fetch this data from the following link:
+
+http://user.ceng.metu.edu.tr/~ceng240/data/olives.csv
+
+Here are the instructions for analyzing this data:
+
+-  Read this data by using :math:`\color{purple}{\texttt{pandas}}`
+   module.
+-  Get the years, in a :math:`\color{purple}{\texttt{numpy}}` array with
+   *dtype* as *int* from the field named *Year*
+-  Get the amount of produced olives, in a
+   :math:`\color{purple}{\texttt{numpy}}` array with *dtype* as *int*
+   from the field named *Olive*
+-  Create a filter array depending on the values being over or under the
+   average of the productions in years.
+
+   -  *This filter array is automatically created when you make a
+      comparison between the array itself and the average value. It
+      includes Boolean values as much as the length of the original
+      array, True for the values that are greater than the average and
+      False for otherwise.*
+
+-  Get the production amounts that are over the average and their years
+   by using the filter array you created. (*Hint:* Use indexing [ ])
+-  Plot the figure for the years vs. the amount of produced olives by
+   using :math:`\color{purple}{\texttt{matplotlib.pyplot}}` for the
+   filtered data and save it in your computer (see
+   :math:`\color{purple}{\texttt{savefig()}}` function in the related
+   module.).
+
+Write a python program to complete tasks above.
+
+.. raw:: html
+
+   <button type="button" class="collapsible" onclick="toggle()">
+
+Show the Answer
+
+.. raw:: html
+
+   </button>
+
+.. raw:: html
+
+   <div class="hiddenanswer">
+
+.. |2| image:: ../../figures/difficulty_four.png
+   :class: difficulty
+
+.. code:: python
+
+   import pandas as pd
+   import numpy as np
+   import matplotlib.pyplot as plt
+
+
+   def plot_data(x, y, title, output_path):
+       plt.figure()
+       plt.plot(x, y)
+
+       plt.xticks(range(min(x),max(x)+1), rotation="vertical")   # to increase readability
+
+       plt.title(title)
+
+       plt.savefig(output_path)
+
+   raw_data = pd.read_csv("olives.csv")
+   years = np.array(raw_data["Year"], dtype=int)
+   olives = np.array(raw_data["Olive"], dtype=int)
+
+   average = np.average(olives)
+
+   filter_array = (olives > average)
+
+   filtered_olives = olives[filter_array]
+   filtered_years = years[filter_array]
+
+   plot_data(filtered_years, filtered_olives, "OVER AVERAGE", "over_average.png")
+
+.. raw:: html
+
+   </div>
