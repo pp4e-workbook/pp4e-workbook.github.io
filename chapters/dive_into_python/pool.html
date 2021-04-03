@@ -457,7 +457,7 @@ Output:
 <span class="c1"># Time to fill the rest</span>
 <span class="n">t3</span> <span class="o">=</span> <span class="p">((</span><span class="n">d_p</span> <span class="o">-</span> <span class="n">h5</span><span class="p">)</span> <span class="o">*</span> <span class="n">w_p</span> <span class="o">*</span> <span class="n">l_p</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">f1</span> <span class="o">+</span> <span class="n">f2</span> <span class="o">+</span> <span class="n">f3</span> <span class="o">-</span> <span class="n">f4</span> <span class="o">-</span> <span class="n">f5</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Time to fill the pool is %.f mins&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">t1</span> <span class="o">+</span> <span class="n">t2</span> <span class="o">+</span> <span class="n">t3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Time to fill the pool is {:.f} mins&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">t1</span> <span class="o">+</span> <span class="n">t2</span> <span class="o">+</span> <span class="n">t3</span><span class="p">))</span>
 </pre></div>
 </div>
 </div></div>

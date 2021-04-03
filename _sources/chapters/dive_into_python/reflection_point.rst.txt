@@ -98,10 +98,10 @@ Show the Answer
    rx = qx + (qx - px)
    ry = qy + (qy - py)
 
-   print('%.2f' % mx)
-   print('%.2f' % my)
-   print('%.2f' % rx)
-   print('%.2f' % ry)
+   print("{:.2f}".format(mx))
+   print("{:.2f}".format(my))
+   print("{:.2f}".format(rx))
+   print("{:.2f}".format(ry))
 
 .. raw:: html
 

@@ -95,7 +95,7 @@ Show the Answer
 
    (midterm, final) = db[student_id]   # notice the tuple matching
    average = (midterm + final) / 2
-   print("%.1f" % average)
+   print("{:.f}".format(average))
 
 .. raw:: html
 

@@ -405,7 +405,7 @@ the monthly payment for any amount of <em>given</em> debt.</p>
 </button><div class="hiddenanswer"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">debt</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 <span class="n">total_money</span> <span class="o">=</span> <span class="n">debt</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.02</span> <span class="o">**</span> <span class="mi">6</span><span class="p">)</span>
 <span class="n">monthly_payment</span> <span class="o">=</span> <span class="n">total_money</span> <span class="o">/</span> <span class="mi">6</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">monthly_payment</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">monthly_payment</span><span class="p">))</span>
 </pre></div>
 </div>
 </div></div>

@@ -17,7 +17,7 @@ room.
    8
 
    Output:
-   4
+   3
 
    Input:
    1

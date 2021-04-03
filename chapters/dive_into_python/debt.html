@@ -392,7 +392,7 @@ amount of money you have to pay every month until you clear your debt
 <button type="button" class="collapsible" onclick="toggle()"><p>Show the Answer</p>
 </button><div class="hiddenanswer"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">total_money</span> <span class="o">=</span> <span class="mi">3000</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.02</span> <span class="o">**</span> <span class="mi">6</span><span class="p">)</span>        <span class="c1"># notice the power operator</span>
 <span class="n">monthly_payment</span> <span class="o">=</span> <span class="n">total_money</span> <span class="o">/</span> <span class="mi">6</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.2f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">monthly_payment</span><span class="p">)</span>     <span class="c1"># 2 digits after decimal point</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">monthly_payment</span><span class="p">))</span>     <span class="c1"># 2 digits after decimal point</span>
 </pre></div>
 </div>
 </div></div>

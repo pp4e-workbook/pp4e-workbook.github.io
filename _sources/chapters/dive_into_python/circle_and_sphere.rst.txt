@@ -23,7 +23,7 @@ to import the :math:`\color{purple}{\texttt{pi}}` constant.
 
    Output:
    circle area: 78.54
-   sphere volume: 523.6
+   sphere volume: 523.60
 
    Input:
    4.25

@@ -450,7 +450,7 @@ instead of defining new ones.</p>
 
 <span class="p">(</span><span class="n">midterm</span><span class="p">,</span> <span class="n">final</span><span class="p">)</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="n">student_id</span><span class="p">]</span>   <span class="c1"># notice the tuple matching</span>
 <span class="n">average</span> <span class="o">=</span> <span class="p">(</span><span class="n">midterm</span> <span class="o">+</span> <span class="n">final</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.1f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">average</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{:.f}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">average</span><span class="p">))</span>
 </pre></div>
 </div>
 </div></div>

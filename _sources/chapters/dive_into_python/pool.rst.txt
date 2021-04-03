@@ -104,7 +104,7 @@ Show the Answer
    # Time to fill the rest
    t3 = ((d_p - h5) * w_p * l_p) / (f1 + f2 + f3 - f4 - f5)
 
-   print("Time to fill the pool is %.f mins" % (t1 + t2 + t3))
+   print("Time to fill the pool is {:.f} mins".format(t1 + t2 + t3))
 
 .. raw:: html
 
