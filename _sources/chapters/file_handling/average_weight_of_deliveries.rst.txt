@@ -59,7 +59,7 @@ Show the Answer
        input_file = open(input_path, 'r')    # open input file in read mode
        for line in input_file.readlines():
            all_weights = list(map(int,list(line.split())))   # getting integer values in a line.
-           filtered = list(filter(lambda x: int(x) >= min and int(x) <= max, all_weights))   # filtering the weights
+           filtered = list(filter(lambda x: int(x) >= min_weight and int(x) <= max_weight, all_weights))   # filtering the weights
            weights_in_range += filtered
 
        input_file.close()    # do not forget to close
