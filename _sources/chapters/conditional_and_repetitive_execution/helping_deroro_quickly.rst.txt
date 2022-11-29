@@ -32,12 +32,20 @@ be constructed or not?
    17
 
    Output:
+   YES
+
+   Input:
+   97
+   12
+   18
+
+   Output:
    NO
 
    Input:
    1000000
    3
-   5
+   6
 
    Output:
    NO
@@ -59,7 +67,7 @@ Show the Answer
 .. code:: python
 
    # This solution uses is an optimization technique called
-   # memorization which is NOT in the context of this course.
+   # memoization which is NOT in the context of this course.
 
    W = int(input())
    A = int(input())
@@ -72,7 +80,7 @@ Show the Answer
            achievable[i+A] = True
            achievable[i+B] = True
 
-   if achievable[W] == True:
+   if W in achievable:
        print("YES")
    else:
        print("NO")

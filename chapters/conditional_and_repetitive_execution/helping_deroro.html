@@ -396,8 +396,8 @@ height <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
 width <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
 </ul>
 <p><img alt="image1" class="height200" src="../../_images/ch5_shape1.png" /></p>
-<p>For instance, when Deroro’s rectangle block’s width is 3 (<span class="math notranslate nohighlight">\(A=2\)</span>)
-and height is 2 (<span class="math notranslate nohighlight">\(B=2\)</span>) as in the figure above. He can put one
+<p>For instance, when Deroro’s rectangle block’s width is 2 (<span class="math notranslate nohighlight">\(A=2\)</span>)
+and height is 3 (<span class="math notranslate nohighlight">\(B=3\)</span>) as in the figure above. He can put one
 block horizontally, and 5 blocks vertically next to each other to
 construct a shape whose total width is 13 (<span class="math notranslate nohighlight">\(W=1*3+5*2\)</span>) like the
 following figure:</p>
@@ -424,12 +424,20 @@ program must output “YES”, otherwise the output must be “NO”.</p>
 <span class="mi">17</span>
 
 <span class="n">Output</span><span class="p">:</span>
+<span class="n">YES</span>
+
+<span class="n">Input</span><span class="p">:</span>
+<span class="mi">97</span>
+<span class="mi">12</span>
+<span class="mi">18</span>
+
+<span class="n">Output</span><span class="p">:</span>
 <span class="n">NO</span>
 
 <span class="n">Input</span><span class="p">:</span>
 <span class="mi">1000000</span>
 <span class="mi">3</span>
-<span class="mi">5</span>
+<span class="mi">6</span>
 
 <span class="n">Output</span><span class="p">:</span>
 <span class="n">NO</span>
@@ -442,8 +450,8 @@ program must output “YES”, otherwise the output must be “NO”.</p>
 
 <span class="n">result</span> <span class="o">=</span> <span class="kc">False</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>    <span class="c1"># notice the 3rd argument as step-size in the range function</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">W</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>    <span class="c1"># notice the 3rd argument as step-size in the range function</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">W</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
         <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span> <span class="o">==</span> <span class="n">W</span><span class="p">):</span>
             <span class="n">result</span> <span class="o">=</span> <span class="kc">True</span>
 

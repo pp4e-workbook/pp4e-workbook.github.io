@@ -404,12 +404,20 @@ be constructed or not?</p>
 <span class="mi">17</span>
 
 <span class="n">Output</span><span class="p">:</span>
+<span class="n">YES</span>
+
+<span class="n">Input</span><span class="p">:</span>
+<span class="mi">97</span>
+<span class="mi">12</span>
+<span class="mi">18</span>
+
+<span class="n">Output</span><span class="p">:</span>
 <span class="n">NO</span>
 
 <span class="n">Input</span><span class="p">:</span>
 <span class="mi">1000000</span>
 <span class="mi">3</span>
-<span class="mi">5</span>
+<span class="mi">6</span>
 
 <span class="n">Output</span><span class="p">:</span>
 <span class="n">NO</span>
@@ -417,7 +425,7 @@ be constructed or not?</p>
 </div>
 <button type="button" class="collapsible" onclick="toggle()"><p>Show the Answer</p>
 </button><div class="hiddenanswer"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This solution uses is an optimization technique called</span>
-<span class="c1"># memorization which is NOT in the context of this course.</span>
+<span class="c1"># memoization which is NOT in the context of this course.</span>
 
 <span class="n">W</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
 <span class="n">A</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
@@ -430,7 +438,7 @@ be constructed or not?</p>
         <span class="n">achievable</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">A</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="n">achievable</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="n">B</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
 
-<span class="k">if</span> <span class="n">achievable</span><span class="p">[</span><span class="n">W</span><span class="p">]</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">W</span> <span class="ow">in</span> <span class="n">achievable</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;YES&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NO&quot;</span><span class="p">)</span>
